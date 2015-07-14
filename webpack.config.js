@@ -52,7 +52,8 @@ module.exports = {
         features: {
           customProperties: {
             variables: {
-              'font-family': '"Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif'
+              // Example
+              // 'font-family': '"Avenir Next", Avenir, "Helvetica Neue", Helvetica, sans-serif'
             }
           }
         }

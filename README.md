@@ -1,3 +1,39 @@
+# react-basscss-hot-boilerplate
+
+Fork of [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)
+with [Basscss](http://basscss.com) and [Rebass](http://jxnblk.com/rebass).
+
+Uses style-loader, css-loader, postcss-loader, and cssnext.
+
+## Usage
+
+```
+npm install
+npm start
+open http://localhost:3000
+```
+
+Edit `src/App.js` to get started.
+
+### Editing CSS
+
+The `src/app.css` is imported into `App.js` and is compiled through [postcss-basscss](https://github.com/basscss/postcss-basscss), which includes [conformance checking for Basscss](https://github.com/basscss/postcss-basscss#basscss-conformance).
+
+To adjust default custom property and custom media values, edit `app.css` or pass values in as options in `webpack.config.js`. Values defined in `webpack.config.js` will override those in the CSS file.
+
+### Importing Rebass Components
+
+```js
+import React, { Component } from 'react'
+import { Row, Col, Button } from 'rebass'
+```
+
+The complete list of components can be found on http://jxnblk.com/rebass
+
+---
+
+**Original README follows**
+
 react-hot-boilerplate
 =====================
 
@@ -11,7 +47,7 @@ npm start
 open http://localhost:3000
 ```
 
-Now edit `src/App.js`.  
+Now edit `src/App.js`.
 Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
 
 ### Linting
