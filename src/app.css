@@ -1,0 +1,11 @@
+
+/* Put custom app styles here.
+ * Basscss is loaded through the postcss-basscss plugin
+ */
+
+:root {
+  /* Put custom property values (i.e. variables) here
+   * or in webpack.config.js
+   */
+}
+
