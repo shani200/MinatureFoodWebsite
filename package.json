@@ -36,7 +36,7 @@
     "cssnext": "^1.8.0",
     "eslint-plugin-react": "^2.3.0",
     "node-libs-browser": "^0.5.2",
-    "postcss-basscss": "^0.2.2",
+    "postcss-basscss": "^0.2.3",
     "postcss-loader": "^0.5.1",
     "react-hot-loader": "^1.2.7",
     "rebass": "^0.1.4",
