@@ -1,0 +1,57 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.mainScreen {
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial ,sans-serif;
+    background: rgba(67, 142, 192, 0.37); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(67, 142, 192, 0.62),rgba(67, 142, 192, 0.13)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* Standard syntax */
+}
+
+.screenContainer{
+    display: flex;
+    height: calc(100% - 49px);
+    background-color: #f7f7f7;
+}
+
+.secondScreen{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.start{
+    font-size: 20px;
+    display: flex;
+    width: 280px;
+    min-width: 280px;
+    flex-direction: column;
+    z-index: 10;
+    background-color: #c0dcd8;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #2c5880;
+}
+
+
+.startIcon{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background: #ffc7f0;
+    color: rgba(99, 149, 255, 0.56);
+    -webkit-transition: width 2s, color 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, color 4s;
+
+}
+
+.startIcon:hover {
+    width: 200px;
+    color: white;
+}
