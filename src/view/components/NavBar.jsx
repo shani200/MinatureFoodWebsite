@@ -11,11 +11,11 @@ export default class NavBar extends React.Component {
 
     render() {
         return (
-            <div className="nav-bar">
-             <div className="nav-bar-header">
-              <LogIn />
-              <ShoopingCart/>
-             </div>
+            <div className="nav-bar-header">
+                <div className="flex-item"> <div className="login">Hi! Sign in or Register</div> </div>
+                <div className="shopping-cart">
+                    <span>Shooping cart</span>
+                </div>
             </div>
         );
     }

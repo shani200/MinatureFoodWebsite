@@ -1,0 +1,19 @@
+.alert-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-shrink: 0;
+    position: relative;
+    border-top: 2px solid lightgray;
+    font-size: 15px;
+    color: black;
+    width: 100%
+}
+
+.message{
+    position: relative;
+    /* animation-timing-function: ease;
+     -webkit-animation: move 7s infinite;
+     animation: move 7s infinite;*/
+}

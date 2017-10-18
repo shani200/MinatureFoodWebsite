@@ -1,4 +1,27 @@
 .body-content {
     flex-grow: 1;
+    width: 100%;
+    height: 81%;
 }
 
+.explanation{
+    position:relative;
+    width: 100px;
+    height:50px;
+    border: 3px dotted lightgray;
+    font-size: 14px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.content {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}

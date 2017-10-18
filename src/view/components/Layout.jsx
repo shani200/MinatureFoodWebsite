@@ -14,10 +14,9 @@ export default class Layout extends  React.Component {
         return(
             <div className="mainScreen">
                 <Header/>
-                <div className="secondScreen">
-                    <Body />
-                    <Footer  message={this.props.message}/>
-                </div>
+                 <Body />
+                 <Footer  message={this.props.message} />
+               
             </div>
         );
     }

@@ -7,13 +7,18 @@ export default class Body extends React.Component {
     constructor(props) {
         super(props);
     }
+    
+    
 
     render() {
         return (
-         <div>
+         <div className="body-content">
           <NavBar />
-         <Product />
-         </div>    
+           <div class="explanation">
+            
+                     <div class="content">Bla Bla Bla...</div>
+           </div>
+        </div>
         );
     }
 }
