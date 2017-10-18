@@ -6,11 +6,11 @@ html, body {margin: 0; height: 100%; overflow: hidden}
     flex-direction: column;
     align-items: center;
     font-family: Arial ,sans-serif;
-    background: rgba(67, 142, 192, 0.37); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(rgba(67, 142, 192, 0.62),rgba(67, 142, 192, 0.13)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* Standard syntax */
+   /* background: rgba(67, 142, 192, 0.37); /* For browsers that do not support gradients */
+    /*background: -webkit-linear-gradient(rgba(67, 142, 192, 0.62),rgba(67, 142, 192, 0.13)); /* For Safari 5.1 to 6.0 */
+   /* background: -o-linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* For Opera 11.1 to 12.0 */
+   /* background: -moz-linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* For Firefox 3.6 to 15 */
+   /* background: linear-gradient(rgba(67, 142, 192, 0.62), rgba(67, 142, 192, 0.13)); /* Standard syntax */
 }
 
 

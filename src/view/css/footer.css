@@ -1,11 +1,10 @@
 .alert-zone {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     z-index: 10;
     flex-shrink: 0;
     position: relative;
-    border-top: 2px solid lightgray;
+    border-top: 1.3px solid hotpink;
     font-size: 15px;
     color: black;
     width: 100%
@@ -13,7 +12,5 @@
 
 .message{
     position: relative;
-    /* animation-timing-function: ease;
-     -webkit-animation: move 7s infinite;
-     animation: move 7s infinite;*/
+    margin: 4px 15px;
 }

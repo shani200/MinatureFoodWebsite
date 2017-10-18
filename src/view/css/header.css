@@ -1,7 +1,7 @@
 .flex-container{
     display: -webkit-flex;
     display: flex;
-    background-color: #daffe5;
+    background-color: rgba(96, 103, 154, 0.54);
     width: 100%;
     -webkit-box-align: center;
     align-items: center;
