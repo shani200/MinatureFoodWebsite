@@ -14,3 +14,15 @@
     position: relative;
     margin: 4px 15px;
 }
+
+.table {
+    border-collapse: collapse;
+    width: 35%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}

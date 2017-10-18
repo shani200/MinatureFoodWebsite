@@ -6,7 +6,7 @@ import Layout from './view/components/Layout'
 export default class App extends Component {
   render() {
     return (
-        <Layout message="created by: SHANI KAHILA 2017"/>
+        <Layout />
     )
   }
 }

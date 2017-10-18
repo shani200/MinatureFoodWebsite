@@ -10,12 +10,29 @@ export default class Footer extends React.Component {
         };
 
     }
-
+  /*  {this.state.showMessage && <span className="message">{this.state.message}</span>}*/
   
     render() {
         return (
             <div className="alert-zone">
-                {this.state.showMessage && <span className="message">{this.state.message}</span>}
+                <table className="table">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         );
     }

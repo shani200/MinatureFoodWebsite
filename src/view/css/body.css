@@ -11,15 +11,16 @@
 img {
     width: 100%;
     height: auto;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .explain{
     position: absolute;
     border: 1.9px solid lightgrey;
     top: 18px;
-    left: 650px;
+    left: 445px;
     padding:15px;
+    text-align: center;
 
 }
 
