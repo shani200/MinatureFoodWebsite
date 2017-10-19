@@ -7,7 +7,8 @@
     border-top: 1.3px solid hotpink;
     font-size: 15px;
     color: black;
-    width: 100%
+    width: 100%;
+    background-color: rgba(2, 37, 28, 0.19);
 }
 
 .message{
@@ -15,9 +16,14 @@
     margin: 4px 15px;
 }
 
-.table {
+.Table {
     border-collapse: collapse;
-    width: 35%;
+    border-spacing: 0;
+    max-width: 100%;
+    width: 30%;
+    font-size: 15px;
+    color: rgba(76, 48, 48, 0.73);
+    margin-left: 550px;
 }
 
 th, td {
@@ -25,4 +31,8 @@ th, td {
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tbody {
+    display: table-row-group;
+    vertical-align: baseline;
+    border-color: inherit;
+}
