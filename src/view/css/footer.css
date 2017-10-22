@@ -32,9 +32,18 @@ th, td {
     text-align: left;
     padding: 8px;
 }
+thead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 tbody {
-    display: table-row-group;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     vertical-align: baseline;
     border-color: inherit;
 }

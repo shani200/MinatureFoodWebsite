@@ -14,12 +14,10 @@ export default class Body extends React.Component {
         return (
          <div className="body-container">
           <NavBar />
-          <div className="body-content">
-               <div className="explain">
+          <div className="explain">
                    Hi,I'm Shani welcome to my website.<br/>
                    I love to make miniatures out of polymer clay, especially minature food.<br/>
                    These is my creations.
-               </div>
            </div>
         </div>
         );
