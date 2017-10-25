@@ -1,0 +1,31 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 250px;
+}
+
+.modal{
+    background-color: #f5dddd;
+    border-radius: 5px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 90px;
+    color: black;
+}
+
+.btn-close{
+    background-color: rgba(181, 161, 179, 0.8);
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border :none;
+
+}

@@ -53,3 +53,14 @@
 .img-cart:hover{
     opacity: 0.5;
 }
+
+.signIn-button{
+    background-color: rgba(181, 161, 179, 0.8);
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border :none;
+}
