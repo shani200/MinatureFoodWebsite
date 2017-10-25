@@ -20,8 +20,8 @@ export default class NavBar extends React.Component {
     render() {
         return (
             <div className="nav-bar-header">
-                <div className="flex-item">
-                    <div className="login">
+                <div className="login">
+
                         <button className="signIn-button" onClick={this.toggleModal}>
                             Hi! Sign in or Register
                         </button>
@@ -29,7 +29,7 @@ export default class NavBar extends React.Component {
                                onClose={this.toggleModal}>
                             Here's some content for the modal
                         </LogIn>
-                    </div>
+
                 </div>
                 <div className="shopping-cart">
                     <img src={'http://findicons.com/files/icons/1700/2d/512/cart.png'} width="200" height="100" alt="shopping-cart" className="img-cart" />

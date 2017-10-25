@@ -1,25 +1,51 @@
 .backdrop{
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    padding: 250px;
+    background-color: rgba(43, 134, 134, 0.57);
+    padding: 250px 0;
 }
 
 .modal{
+    display: flex;
     background-color: #f5dddd;
     border-radius: 5px;
-    max-width: 500px;
-    min-width: 300px;
+    max-width: 400px;
+    min-height: 200px;
     margin: 0 auto;
-    padding: 90px;
+    padding: 60px;
     color: black;
 }
 
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+input[type=text]:focus{
+    border:2px dotted black;
+}
+
+.submit{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border :none;
+}
+
 .btn-close{
-    background-color: rgba(181, 161, 179, 0.8);
+    background-color: rgba(43, 36, 43, 0.8);
     color: white;
     padding: 3px;
     text-align: center;
