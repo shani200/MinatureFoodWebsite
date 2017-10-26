@@ -28,8 +28,7 @@ export default class LogIn extends React.Component {
         }
         return (
             <div className="backdrop">
-                <div className="modal">
-
+                <div className="LogInModal">
                     <form>
                         <h2>Sign in</h2>
                         <label>
@@ -38,7 +37,7 @@ export default class LogIn extends React.Component {
                         </label>
                         <label>
                             Password:
-                            <input type="text" name="name" />
+                            <input type="text" name="password" />
                         </label>
                         <input type="submit" value="Sign in" className="submit"/>
                     </form>

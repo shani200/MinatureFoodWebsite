@@ -1,4 +1,4 @@
-.backdrop{
+.RegisterBackdrop{
     display: flex;
     justify-content: center;
     position: fixed;
@@ -10,12 +10,12 @@
     padding: 255px 0;
 }
 
-.LogInModal{
+.RegisterModal{
     display: flex;
     background-color: #f5dddd;
     border-radius: 5px;
     max-width: 350px;
-    min-height: 250px;
+    min-height: 350px;
     margin: 0 auto;
     padding: 60px;
     color: black;
@@ -60,7 +60,7 @@ input[type=text]:focus{
     border-radius: 5px 5px 0 0;
 }
 
-.submit{
+.register{
     background-color: rgba(43, 36, 43, 0.8);
     color: white;
     padding: 3px;

@@ -1,8 +1,5 @@
 import React from 'react';
-import '../css/login.css'
-import Register from './Register';
-import SignIn from './SignIn';
-
+import '../css/register.css'
 
 export default class LogIn extends React.Component {
     constructor(props) {
@@ -27,20 +24,28 @@ export default class LogIn extends React.Component {
             return null;
         }
         return (
-            <div className="backdrop">
-                <div className="modal">
+            <div className="RegisterBackdrop">
+                <div className="RegisterModal">
 
                     <form>
                         <h2>Register</h2>
                         <label>
-                            Email or Username:
-                            <input type="text" name="name" />
+                            First Name:
+                            <input type="text" name="first-name" />
+                        </label>
+                        <label>
+                            Email:
+                            <input type="text" name="email" />
                         </label>
                         <label>
                             Password:
-                            <input type="text" name="name" />
+                            <input type="text" name="password" />
                         </label>
-                        <input type="submit" value="Sign in" className="submit"/>
+                        <label>
+                            Confirm Password:
+                            <input type="text" name="confirm-password" />
+                        </label>
+                        <input type="submit" value="Register" className="register"/>
                     </form>
 
                     <div className="footer">
