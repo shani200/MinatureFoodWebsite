@@ -21,9 +21,13 @@ export default class NavBar extends React.Component {
         return (
             <div className="nav-bar-header">
                 <div className="login">
-
+                         <span>Hi! </span>
                         <button className="signIn-button" onClick={this.toggleModal}>
-                            Hi! Sign in or Register
+                            Sign in
+                        </button>
+                        <span> or </span>
+                        <button className="register-button" onClick={this.toggleModal}>
+                           Register
                         </button>
                         <LogIn show={this.state.isOpen}
                                onClose={this.toggleModal}>

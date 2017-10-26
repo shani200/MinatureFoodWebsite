@@ -9,7 +9,17 @@ export default class LogIn extends React.Component {
         super(props);
     }
 
-
+/*
+    <div className="modal-header">
+                       <div>  <a classID="register-tab" href="#" aria-label="Registration form" role="tab"
+                                 aria-controls="registration-form" aria-selected="false" >Register</a>
+                       </div>
+                       <span>/</span>
+                       <div>  <a classID="sign-in-tab" href="#" aria-label="Sign In form" role="tab"
+                                 aria-controls="signin-form" aria-selected="true" >Sign In </a>
+                       </div>
+                   </div>
+ */
 
     render() {
         //render nothing if the prop show is false
@@ -19,6 +29,7 @@ export default class LogIn extends React.Component {
         return (
             <div className="backdrop">
                 <div className="modal">
+
                     <form>
                         <h2>Sign in</h2>
                         <label>

@@ -20,6 +20,20 @@
     color: black;
 }
 
+.modal-header{
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(181, 161, 179, 0.8);
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: baseline;
+    flex-shrink: 0;
+    font-size: 15px;
+    max-height: 30px;
+    padding: 3px 0 2px 0;
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -31,6 +45,18 @@ input[type=text] {
 
 input[type=text]:focus{
     border:2px dotted black;
+}
+
+.tabs-clear{
+    list-style: none;
+    padding: 0 10px 0 40px;
+    margin: 20px 0 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #FAF9F5;
+    border-bottom: 1px solid #E1E3DF;
+    border-top: 1px solid #FFF;
+    border-radius: 5px 5px 0 0;
 }
 
 .submit{
