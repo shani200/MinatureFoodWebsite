@@ -9,7 +9,7 @@
     flex-shrink: 0;
     font-size: 15px;
     max-height: 30px;
-    padding: 3px 0px 2px 0px;
+    padding: 3px 0 2px 0;
 }
 
 .login{
@@ -22,11 +22,44 @@
     cursor: pointer;
 }
 
+/*
 .login:hover{
     opacity: 0.5;
 }
+*/
 
 
+.signIn-button{
+    background-color: rgba(181, 161, 179, 0.8);
+    color: #98fff3;
+    padding: 0 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.signIn-button:hover{
+    opacity: 0.5;
+    color: black;
+}
+
+.register-button{
+    background-color: rgba(181, 161, 179, 0.8);
+    color: #98fff3;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.register-button:hover{
+    opacity: 0.5;
+    color: black;
+}
 
 .shopping-cart{
     padding: 7px 11px;
@@ -52,15 +85,4 @@
 
 .img-cart:hover{
     opacity: 0.5;
-}
-
-.signIn-button{
-    background-color: rgba(181, 161, 179, 0.8);
-    color: white;
-    padding: 3px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-    cursor: pointer;
-    border :none;
 }
