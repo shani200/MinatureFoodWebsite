@@ -30,7 +30,7 @@
 
 
 .signIn-button{
-    background-color: rgba(181, 161, 179, 0.8);
+    background-color: rgba(0, 100, 0, 0.03);
     color: #98fff3;
     padding: 0 3px;
     text-align: center;
@@ -46,7 +46,7 @@
 }
 
 .register-button{
-    background-color: rgba(181, 161, 179, 0.8);
+    background-color: rgba(0, 100, 0, 0.03);
     color: #98fff3;
     padding: 3px;
     text-align: center;
