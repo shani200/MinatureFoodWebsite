@@ -27,7 +27,6 @@ export default class NavBar extends React.Component {
                         </button>
                         <LogIn show={this.state.isOpen}
                                onClose={this.toggleModal}>
-                            Here's some content for the modal
                         </LogIn>
 
                 </div>

@@ -31,7 +31,7 @@ export default class LogIn extends React.Component {
                         </label>
                         <input type="submit" value="Sign in" className="submit"/>
                     </form>
-                    {this.props.children}
+
                   <div className="footer">
                     <button  className="btn-close" onClick={this.props.onClose}>
                         X
