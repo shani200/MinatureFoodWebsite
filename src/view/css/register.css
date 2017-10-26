@@ -6,19 +6,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(43, 134, 134, 0.57);
+    background-color: rgba(210, 214, 214, 0.78);
     padding: 255px 0;
 }
 
 .RegisterModal{
     display: flex;
-    background-color: #f5dddd;
+    background-color: rgba(24, 53, 88, 0.72);
     border-radius: 5px;
     max-width: 350px;
     min-height: 350px;
     margin: 0 auto;
     padding: 60px;
-    color: black;
+    color: white;
 }
 
 .modal-header{
@@ -35,6 +35,10 @@
     padding: 3px 0 2px 0;
 }
 
+h2{
+    text-shadow: 4px -5px 2px rgb(131, 156, 177);
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -45,13 +49,14 @@ input[type=text] {
 }
 
 input[type=text]:focus{
-    border:2px dotted black;
+    border:2px dotted rgb(124, 129, 152);
 }
 
+/*
 .tabs-clear{
     list-style: none;
     padding: 0 10px 0 40px;
-    margin: 20px 0 0px;
+    margin: 20px 0 0;
     margin-top: 0;
     margin-bottom: 0;
     background: #FAF9F5;
@@ -59,7 +64,7 @@ input[type=text]:focus{
     border-top: 1px solid #FFF;
     border-radius: 5px 5px 0 0;
 }
-
+*/
 .register{
     background-color: rgba(43, 36, 43, 0.8);
     color: white;
