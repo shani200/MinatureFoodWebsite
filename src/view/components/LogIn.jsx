@@ -7,6 +7,7 @@ import SignIn from './SignIn';
 export default class LogIn extends React.Component {
     constructor(props) {
         super(props);
+        this.randomUser = this.randomUser.bind(this);
     }
 
 /*
@@ -20,6 +21,30 @@ export default class LogIn extends React.Component {
                        </div>
                    </div>
  */
+
+ randomUser(){
+    const ul = document.getElementById('authors');
+    const url = 'https://randomuser.me/api/?results=1';
+    fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            let authors = data.results;
+            return authors.map(function(author) {
+                let li = document.createElement('li'),
+                    img = document.createElement('img'),
+                    span = document.createElement('span');
+                img.src = author.picture.medium;
+                span.innerHTML = `${author.name.first} ${author.name.last}`;
+                li.appendChild(img);
+                li.appendChild(span);
+                ul.appendChild( li);
+            })
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+}
 
     render() {
         //render nothing if the prop show is false
@@ -39,7 +64,7 @@ export default class LogIn extends React.Component {
                             Password:
                             <input type="text" name="password" />
                         </label>
-                        <input type="submit" value="Sign in" className="submit"/>
+                        <input type="submit" value="Sign in" className="submit" onClick={this.randomUser}/>
                     </form>
 
                   <div className="footer">

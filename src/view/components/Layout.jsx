@@ -10,8 +10,9 @@ export default class Layout extends  React.Component {
         super(props);
     }
 
+
     render() {
-        return(
+        return (
             <div className="mainScreen">
                 <Header/>
                 <Body />
@@ -20,3 +21,6 @@ export default class Layout extends  React.Component {
         );
     }
 }
+
+
+
