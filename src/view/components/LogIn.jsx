@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/login.css'
 import Register from './Register';
 import SignIn from './SignIn';
+import 'whatwg-fetch'
 
 
 export default class LogIn extends React.Component {
@@ -28,17 +29,18 @@ export default class LogIn extends React.Component {
     fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
-            let authors = data.results;
-            return authors.map(function(author) {
-                let li = document.createElement('li'),
-                    img = document.createElement('img'),
-                    span = document.createElement('span');
-                img.src = author.picture.medium;
-                span.innerHTML = `${author.name.first} ${author.name.last}`;
-                li.appendChild(img);
-                li.appendChild(span);
-                ul.appendChild( li);
-            })
+            alert(data.results);
+            // let authors = data.results;
+            // return authors.map(function(author) {
+            //     let li = document.createElement('li'),
+            //         img = document.createElement('img'),
+            //         span = document.createElement('span');
+            //     img.src = author.picture.medium;
+            //     span.innerHTML = `${author.name.first} ${author.name.last}`;
+            //     li.appendChild(img);
+            //     li.appendChild(span);
+            //     ul.appendChild( li);
+            // })
         })
         .catch(function(error) {
             console.log(error);
