@@ -1,5 +1,4 @@
 import React from 'react';
-import NotificationSystem from 'react-notification-system';
 import 'whatwg-fetch'
 
 
@@ -8,19 +7,11 @@ export default class Checkout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {authors: false};
-        this._notificationSystem=null;
-        this._addNotification = this._addNotification.bind(this);
         this._renderAuthors = this._renderAuthors.bind(this);
 
     }
 
-    _addNotification(event){
-        event.preventDefault();
-        this._notificationSystem.addNotification({
-            message: 'Notification message',
-            level: 'success'
-        });
-    }
+
 
     componentWillMount() {
         //const ul = document.getElementById('authors');
@@ -49,9 +40,7 @@ export default class Checkout extends React.Component {
             });
     }
 
-    componentDidMount() {
-        this._notificationSystem = this.refs.notificationSystem;
-    }
+
 
     _renderAuthors() {
         this.state.authors.map((author) =>
@@ -76,8 +65,7 @@ export default class Checkout extends React.Component {
                     You have {this.state.authors.length} unread messages.
                 </h2>
                 }
-                <button onClick={this._addNotification}>Add notification</button>
-                <NotificationSystem ref="notificationSystem" />
+
             </div>
         );
     }
