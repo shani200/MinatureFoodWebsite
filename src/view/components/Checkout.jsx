@@ -8,7 +8,7 @@ export default class Checkout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {authors: false};
-       this._notificationSystem=null;
+        this._notificationSystem=null;
         this._addNotification = this._addNotification.bind(this);
         this._renderAuthors = this._renderAuthors.bind(this);
 
@@ -23,9 +23,9 @@ export default class Checkout extends React.Component {
     }
 
     componentWillMount() {
-        const ul = document.getElementById('authors');
-        const url = 'https://randomuser.me/api/?results=11';
-        let myThis = this;
+        //const ul = document.getElementById('authors');
+        const url = 'https://randomuser.me/api/?results=1';
+        let myThis=this;
         fetch(url)
             .then((resp) => resp.json())
             .then(function(data) {
@@ -54,8 +54,11 @@ export default class Checkout extends React.Component {
     }
 
     _renderAuthors() {
-        this.state.authors.map((number) =>
-            <li>{number}</li>
+        this.state.authors.map((author) =>
+            <div>
+                <img src={'author.picture.medium'} alt="boohoo" className="img-responsive"/>
+                <span>Hello ${author.name.first} ${author.name.last}</span>
+            </div>
         );
         // alert('123');
         // this.state.authors.map(function(item, i){
