@@ -1,7 +1,6 @@
 import React from 'react';
 import 'whatwg-fetch'
 
-
 export default class Checkout extends React.Component {
 
     constructor(props) {
@@ -10,8 +9,6 @@ export default class Checkout extends React.Component {
         this._renderAuthors = this._renderAuthors.bind(this);
 
     }
-
-
 
     componentWillMount() {
         //const ul = document.getElementById('authors');
@@ -40,15 +37,14 @@ export default class Checkout extends React.Component {
             });
     }
 
-
-
     _renderAuthors() {
-        this.state.authors.map((author) =>
+           this.state.authors.map((author) =>
             <div>
-                <img src={'author.picture.medium'} alt="boohoo" className="img-responsive"/>
+             <img src={'author.picture.medium'} alt="user's-image" className="img-responsive"/>
                 <span>Hello ${author.name.first} ${author.name.last}</span>
             </div>
         );
+
         // alert('123');
         // this.state.authors.map(function(item, i){
         //     console.log('test');
@@ -61,9 +57,9 @@ export default class Checkout extends React.Component {
             <div>
                 {this._renderAuthors}
                 {this.state.authors.length > 0 &&
-                <h2>
+                <h3>
                     You have {this.state.authors.length} unread messages.
-                </h2>
+                </h3>
                 }
 
             </div>

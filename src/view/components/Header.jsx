@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/header.css'
 import NotificationSystem from 'react-notification-system';
+import Body from './Body';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ export default class Header extends React.Component {
             <div className="flex-container">
                <div className="name"> Sample </div>
                 <div className="Notification">
-                <button onClick={this._addNotification}>Add notification</button>
+                <button className="notification_btn" onClick={this._addNotification}>Add notification</button>
                 <NotificationSystem ref="notificationSystem" />
                 </div>
            </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import Product from './Product';
+import Checkout from './Checkout';
 import '../css/body.css';
 
 export default class Body extends React.Component {
@@ -14,6 +14,7 @@ export default class Body extends React.Component {
         return (
          <div className="body-container">
           <NavBar />
+           <Checkout/>
           <div className="explain">
                    Hi,I'm Shani welcome to my website.<br/>
                    I love to make miniatures out of polymer clay, especially minature food.<br/>

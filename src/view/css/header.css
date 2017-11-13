@@ -5,7 +5,7 @@
     width: 100%;
     -webkit-box-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-shrink: 0;
     font-size: 25px;
     max-height: 50px;
@@ -25,7 +25,16 @@
 
 .Notification{
     display: flex;
-    align-items: center ;
-    justify-content: space-between;
 
+}
+
+.notification_btn{
+    background-color: rgba(0, 100, 0, 0.03);
+    color: #fffcde;
+    padding: 0 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid white;
 }
