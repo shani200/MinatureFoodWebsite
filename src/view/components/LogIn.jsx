@@ -1,8 +1,7 @@
 import React from 'react';
 import '../css/login.css'
-import Register from './Register';
-import SignIn from './SignIn';
 import 'whatwg-fetch'
+
 
 
 export default class LogIn extends React.Component {
@@ -26,10 +25,13 @@ export default class LogIn extends React.Component {
  randomUser(){
     const ul = document.getElementById('authors');
     const url = 'https://randomuser.me/api/?results=1';
+    let myThis=this;
     fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
-            alert(data.results);
+            // alert(data.results);
+            myThis.setState({authors: data.results})
+            alert(myThis.authors);
             // let authors = data.results;
             // return authors.map(function(author) {
             //     let li = document.createElement('li'),
