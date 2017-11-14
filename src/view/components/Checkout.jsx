@@ -7,8 +7,8 @@ export default class Checkout extends React.Component {
         super(props);
         this.state = {authors: false};
         this._renderAuthors = this._renderAuthors.bind(this);
-
     }
+
 
     componentWillMount() {
         //const ul = document.getElementById('authors');
@@ -19,7 +19,6 @@ export default class Checkout extends React.Component {
             .then(function(data) {
                 // alert(data.results);
                 myThis.setState({authors: data.results})
-
                 // return authors.map(function(author) {
                 //     this.author = author;
                 // let li = document.createElement('li'),
@@ -37,13 +36,17 @@ export default class Checkout extends React.Component {
             });
     }
 
+
     _renderAuthors() {
-           this.state.authors.map((author) =>
-            <div>
-             <img src={'author.picture.medium'} alt="user's-image" className="img-responsive"/>
+     /*   this.state.authors.map((author) =>(
+            <div >
+                <img src={'author.picture.medium'} alt="user's-image" className="img-responsive"/>
                 <span>Hello ${author.name.first} ${author.name.last}</span>
             </div>
-        );
+        ));
+        */
+     alert('shalom');
+
 
         // alert('123');
         // this.state.authors.map(function(item, i){
@@ -55,7 +58,7 @@ export default class Checkout extends React.Component {
     render() {
         return (
             <div>
-                {this._renderAuthors}
+                {this._renderAuthors()}
                 {this.state.authors.length > 0 &&
                 <h3>
                     You have {this.state.authors.length} unread messages.

@@ -40,7 +40,18 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader!postcss-loader'
       }
-    ]
+    ],
+    rules: [
+          {
+              test: /\.(png|jpg|gif)$/,
+              use: [
+                  {
+                      loader: 'file-loader',
+                      options: {}
+                  }
+              ]
+          }
+      ]
   },
 
   postcss: function () {

@@ -35,6 +35,7 @@
     "css-loader": "^0.15.3",
     "cssnext": "^1.8.0",
     "eslint-plugin-react": "^2.3.0",
+    "file-loader": "^1.1.5",
     "node-libs-browser": "^0.5.2",
     "postcss-basscss": "^0.2.3",
     "postcss-loader": "^0.5.1",
@@ -47,6 +48,7 @@
   "dependencies": {
     "react": "^0.13.0",
     "react-color": "^2.13.8",
+    "react-imageloader": "^2.1.0",
     "react-notification-system": "^0.1.x",
     "whatwg-fetch": "^2.0.3"
   }
