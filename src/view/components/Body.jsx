@@ -26,7 +26,7 @@ export default class Body extends React.Component {
                    I love to make miniatures out of polymer clay, especially minature food.<br/>
                    These is my creations.
            </div>
-         <Product/>
+             <Product/>
         </div>
         );
     }

@@ -1,0 +1,69 @@
+.ProductBackdrop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(210, 214, 214, 0.78);
+    padding: 255px 0;
+}
+
+.ProductModal{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(24, 53, 88, 0.72);
+    border-radius: 5px;
+    min-width: 50%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 60px;
+    color: white;
+}
+
+.modal-header{
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(181, 161, 179, 0.8);
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: baseline;
+    flex-shrink: 0;
+    font-size: 15px;
+    max-height: 30px;
+    padding: 3px 0 2px 0;
+}
+
+h2{
+    text-shadow: 4px -5px 2px rgb(131, 156, 177);
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    width:50%;
+
+    align-items: center;
+    border-right: 1px solid lightblue;
+}
+
+.description{
+    width:50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-close{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border :none;
+
+}
