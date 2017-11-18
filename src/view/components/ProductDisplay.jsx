@@ -17,7 +17,7 @@ export default class ProductDisplay extends React.Component {
                 <div className="ProductModal">
                     <div className="images">555</div>
                     <div className="description">555</div>
-                    <div className="footer">
+                    <div className="btn-exit">
                         <button  className="btn-close" onClick={this.props.onClose}>
                             X
                         </button>

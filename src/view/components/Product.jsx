@@ -21,11 +21,11 @@ export default class Product extends React.Component {
         return (
             <div className="gallery-display">
                 <div className="gallery">
-                    <a target="_blank" href="http://www.mako.co.il/">
+
                     <div className="image">1</div>
 
                      <div className="desc">Add a description of the image here</div>
-                    </a>
+
                 </div>
 
                 <div className="gallery" onClick={this.toggleProduct}>
