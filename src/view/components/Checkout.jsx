@@ -36,21 +36,24 @@ export default class Checkout extends React.Component {
             });
     }
 
-
-    _renderAuthors() {
-
+    _renderAuthors () {
+        let listItems = undefined;
         if (this.state.authors) {
-            let author = this.state.authors[0];
-            return(
-                <div >
-                    <img src={author.picture.medium} alt="user's-image" className="img-responsive"/>
-                    <span>{`Hello ${author.name.first} ${author.name.last}`}</span>
-                </div>
+            listItems = this.state.authors.map((author) =>
+                (
+                    <div >
+                        <img src={author.picture.medium} alt="user's-image" className="img-responsive"/>
+                        <span>{`Hello ${author.name.first} ${author.name.last}`}</span>
+                    </div>
+                )
             );
         }
+        return listItems;
     }
 
     render() {
+
+
         return (
             <div>
                 {this._renderAuthors()}
