@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 import Checkout from './Checkout';
 import Product from './Product';
 import '../css/body.css';
-//import img from '../pictures/cactus.jpg'
+ import cactus from '../pictures/cactus.jpg'
 
 export default class Body extends React.Component {
     constructor(props) {
@@ -27,6 +27,7 @@ export default class Body extends React.Component {
                    These is my creations.
            </div>
              <Product/>
+             <cactus/>
         </div>
         );
     }
