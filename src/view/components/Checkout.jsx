@@ -38,23 +38,16 @@ export default class Checkout extends React.Component {
 
 
     _renderAuthors() {
-        /*
-      this.state.authors.map((author) =>(
-            <div >
-                <img src={'author.picture.medium'} alt="user's-image" className="img-responsive"/>
-                <span>Hello ${author.name.first} ${author.name.last}</span>
-            </div>
-        ));
-*/
-        return null;
 
-
-
-        // alert('123');
-        // this.state.authors.map(function(item, i){
-        //     console.log('test');
-        //     return <li>Test</li>
-        // })
+        if (this.state.authors) {
+            let author = this.state.authors[0];
+            return(
+                <div >
+                    <img src={author.picture.medium} alt="user's-image" className="img-responsive"/>
+                    <span>{`Hello ${author.name.first} ${author.name.last}`}</span>
+                </div>
+            );
+        }
     }
 
     render() {

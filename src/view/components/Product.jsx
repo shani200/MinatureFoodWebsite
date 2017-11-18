@@ -28,6 +28,7 @@ export default class Product extends React.Component {
 
                 </div>
 
+
                 <div className="gallery" onClick={this.toggleProduct}>
 
                     <div className="image">2</div>
@@ -52,7 +53,7 @@ export default class Product extends React.Component {
 
                 <div className="desc">Add a description of the image here</div>
                 </div>
-                <br/>
+
                 <div className="gallery">
 
                     <div className="image">5</div>
