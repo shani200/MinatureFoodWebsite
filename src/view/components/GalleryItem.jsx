@@ -1,19 +1,18 @@
 import React from 'react';
+import ProductDisplay from './ProductDisplay.jsx'
 import '../css/galleryItem.css';
 import '../css/product.css';
 import Cactus from '../pictures/cactus.jpg';
-import flower2 from '../pictures/cactus.jpg';
-import iceCream from '../pictures/cactus.jpg';
-import ProductDisplay from "./ProductDisplay";
+
 
 export default class GalleryItem extends React.Component {
     constructor(props) {
         super(props);
-        this.renderItems=this.renderItems.bind(this);
         this.renderItems2=this.renderItems2.bind(this);
+        this.renderItems=this.renderItems.bind(this);
     }
 
-    renderItems() {
+    renderItems2() {
         let listItems= undefined;
         let pictures = [
             <img src={Cactus}/>,
@@ -33,11 +32,11 @@ export default class GalleryItem extends React.Component {
     }
 
 
-    renderItems2(){
+    renderItems(){
 
         return(
             <div >
-                <div className="image">{this.props.index}</div>
+                <img className="image" src={Cactus}/>
                 <div className="desc">Add a description of the image here</div>
                 <ProductDisplay show={this.props.show}
                                 onClose={this.props.onClose}>
@@ -50,7 +49,7 @@ export default class GalleryItem extends React.Component {
     render() {
         return (
             <div >
-                {this.renderItems2()}
+                {this.renderItems()}
             </div>
 
         );

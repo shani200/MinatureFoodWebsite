@@ -2,7 +2,9 @@ import React from 'react';
 import ProductDisplay from './ProductDisplay.jsx'
 import '../css/product.css'
 import GalleryItem from "./GalleryItem";
-
+import Cactus from '../pictures/cactus.jpg';
+import flower2 from '../pictures/cactus.jpg';
+import iceCream from '../pictures/cactus.jpg';
 
 
 export default class Product extends React.Component {

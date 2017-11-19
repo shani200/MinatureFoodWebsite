@@ -12,8 +12,6 @@
 }
 
 .ProductModal{
-
-
     background-color: rgba(24, 53, 88, 0.72);
     border-radius: 5px;
     width: 70vw;
@@ -44,9 +42,11 @@ h2{
 
 .images {
     width: 49%;
+    height: 100%;
     display: inline-block;
     border-right: 1px solid lightblue;
 }
+
 
 .description{
     width: 49%;
@@ -54,8 +54,8 @@ h2{
 }
 .btn-exit{
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: -20px;
+    right: -15px;
 }
 .btn-close{
     background-color: rgba(43, 36, 43, 0.8);
