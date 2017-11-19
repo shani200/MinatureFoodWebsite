@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 import Checkout from './Checkout';
 import Product from './Product';
 import '../css/body.css';
- import cactus from '../pictures/cactus.jpg'
+ import Cactus from '../pictures/cactus.jpg'
 
 export default class Body extends React.Component {
     constructor(props) {
@@ -18,16 +18,16 @@ export default class Body extends React.Component {
 
     render() {
         return (
-         <div className="body-container">
+         <div  className="body-container">
           <NavBar />
            <Checkout/>
+            <img src={Cactus}/>
           <div className="explain">
                    Hi,I'm Shani welcome to my website.<br/>
                    I love to make miniatures out of polymer clay, especially minature food.<br/>
                    These is my creations.
            </div>
              <Product/>
-             <cactus/>
         </div>
         );
     }
