@@ -47,24 +47,63 @@ h2{
     border-right: 1px solid lightblue;
 }
 
-
 .description{
     width: 49%;
     display: inline-block;
+    position: absolute;
 }
+
+.title{
+    font-size: 29px;
+    padding: 0 0 55px 0;
+    font-family: Arial , sans-serif;
+    color: white;
+    text-align: center;
+
+}
+
+.price{
+    font-size: 17px;
+    color: white;
+    position: relative;
+    left: 56px;
+    padding-bottom: 22px;
+}
+
+.view {
+    font-size: 17px;
+    color: white;
+    position: relative;
+    left: 55px;
+    padding-top: 25px;
+}
+
+.overview{
+    color:white;
+    font-style: italic;
+    font-size: 19px;
+}
+
 .btn-exit{
     position: absolute;
     top: -20px;
     right: -15px;
 }
-.btn-close{
+
+.symbol{
+  padding-right: 7px;
+}
+
+.btn-cart{
     background-color: rgba(43, 36, 43, 0.8);
     color: white;
-    padding: 3px;
     text-align: center;
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
     border :none;
+    margin-left: 55px;
+    padding: 9px 195px;
+
 
 }

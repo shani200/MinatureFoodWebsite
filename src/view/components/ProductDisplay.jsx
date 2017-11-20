@@ -16,13 +16,35 @@ export default class ProductDisplay extends React.Component {
         return (
             <div className="ProductBackdrop">
                 <div className="ProductModal">
-                    <img className="images" src={Cactus}/>
-                    <div className="description">{this.props.itemsArray[1].title}</div>
+                    <img className="images" src={this.props.itemsArray[1].image}/>
+                    <div className="description">
+
+                        <div className="title">
+                        {this.props.itemsArray[1].title}
+                        </div>
+
+                        <div className="price">
+                            {this.props.itemsArray[1].price}$
+                        </div>
+
+                        <div className="cartBtn">
+                            <button  className="btn-cart" >
+                                Add to cart
+                            </button>
+                        </div>
+
+                        <div className="view">
+                            <div className="overview">Overview</div>
+                            <span className="symbol">~</span>{this.props.itemsArray[1].desc}
+                        </div>
+
+                        </div>
                     <div className="btn-exit">
                         <button  className="btn-close" onClick={this.props.onClose}>
                             X
                         </button>
                     </div>
+
                 </div>
             </div>
 

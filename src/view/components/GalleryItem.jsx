@@ -36,7 +36,7 @@ export default class GalleryItem extends React.Component {
         return(
             <div >
                 <img className="image" src={this.props.itemsArray[1].image}/>
-                <div className="desc">{this.props.itemsArray[1].desc}</div>
+                <div className="desc">{this.props.itemsArray[0].desc}</div>
                 <ProductDisplay itemsArray={this.props.itemsArray}
                                 show={this.props.show}
                                 onClose={this.props.onClose}>
