@@ -2,7 +2,7 @@ import React from 'react';
 import ProductDisplay from './ProductDisplay.jsx'
 import '../css/galleryItem.css';
 import '../css/product.css';
-import Cactus from '../pictures/cactus.jpg';
+
 
 
 export default class GalleryItem extends React.Component {
@@ -33,12 +33,12 @@ export default class GalleryItem extends React.Component {
 
 
     renderItems(){
-
         return(
             <div >
-                <img className="image" src={Cactus}/>
-                <div className="desc">Add a description of the image here</div>
-                <ProductDisplay show={this.props.show}
+                <img className="image" src={this.props.itemsArray[1].image}/>
+                <div className="desc">{this.props.itemsArray[1].desc}</div>
+                <ProductDisplay itemsArray={this.props.itemsArray}
+                                show={this.props.show}
                                 onClose={this.props.onClose}>
                 </ProductDisplay>
             </div>
