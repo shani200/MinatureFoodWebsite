@@ -70,6 +70,11 @@ h2{
     padding-bottom: 22px;
 }
 
+.price-tag{
+    padding-right: 3px;
+}
+
+
 .view {
     font-size: 17px;
     color: white;
