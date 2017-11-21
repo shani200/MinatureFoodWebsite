@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductDisplay from './ProductDisplay.jsx'
 import '../css/product.css'
 import GalleryItem from "./GalleryItem";
 import Cactus from '../pictures/cactus.jpg';
@@ -81,12 +80,12 @@ export default class Product extends React.Component {
 
     _renderGalleryItems () {
         let listItems = undefined;
-        let i=0;
+        let iterator=0;
         listItems = this.state.galleryItemArr.map((galleryItem,i) =>
                 (
                     <div className="gallery" key={i} onClick={this.toggleProduct}>
                         <GalleryItem itemsArray={this.state.galleryItemArr}
-                                     index={i++}
+                                     index={iterator++}
                                      show={this.state.isOpen}
                                      onClose={this.toggleProduct}>
                         </GalleryItem>

@@ -33,6 +33,7 @@ export default class GalleryItem extends React.Component {
 
 
     renderItems(){
+
         return(
             <div >
                 <img className="image" src={this.props.itemsArray[this.props.index].image}/>
