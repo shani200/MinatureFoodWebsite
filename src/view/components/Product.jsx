@@ -3,8 +3,8 @@ import ProductDisplay from './ProductDisplay.jsx'
 import '../css/product.css'
 import GalleryItem from "./GalleryItem";
 import Cactus from '../pictures/cactus.jpg';
-import flower2 from '../pictures/cactus.jpg';
-import iceCream from '../pictures/cactus.jpg';
+import flower2 from '../pictures/flower2.jpg';
+import iceCream from '../pictures/iceCream.jpg';
 
 
 export default class Product extends React.Component {
@@ -15,7 +15,7 @@ export default class Product extends React.Component {
             galleryItemArr: [
                     {
                         title: 'title1',
-                        price: 45.90,
+                        price: 15.90,
                         desc: 'Handmade item\n '+
                         'Material: polymer clay\n' +
                         ' Gift wrapping and message available',
@@ -23,13 +23,13 @@ export default class Product extends React.Component {
                     },
                     {
                         title: 'title2',
-                        price: 41.90,
+                        price: 21.90,
                         desc: 'dec2',
                         image: flower2
                     },
                     {
                         title: 'title3',
-                        price: 45.90,
+                        price: 25.90,
                         desc: 'dec3',
                         image: iceCream
                     }
@@ -97,7 +97,6 @@ export default class Product extends React.Component {
     }
 
     render() {
-        let index =0;
         return (
             <div className="gallery-display">
                 {this._renderGalleryItems()}

@@ -16,16 +16,16 @@ export default class ProductDisplay extends React.Component {
         return (
             <div className="ProductBackdrop">
                 <div className="ProductModal">
-                    <img className="images" src={this.props.itemsArray[0].image}/>
+                    <img className="images" src={this.props.itemsArray[this.props.index].image}/>
                     <div className="description">
 
                         <div className="title">
-                        {this.props.itemsArray[0].title}
+                        {this.props.itemsArray[this.props.index].title}
                         </div>
 
                         <div className="price">
                             <span className="price-tag">price:</span>
-                            {this.props.itemsArray[0].price}$
+                            {this.props.itemsArray[this.props.index].price}$
                         </div>
 
                         <div className="cartBtn">
@@ -36,7 +36,7 @@ export default class ProductDisplay extends React.Component {
 
                         <div className="view">
                             <div className="overview">Overview</div>
-                            <span className="symbol">~</span>{this.props.itemsArray[0].desc}
+                            <span className="symbol">~</span>{this.props.itemsArray[this.props.index].desc}
                         </div>
 
                         </div>
