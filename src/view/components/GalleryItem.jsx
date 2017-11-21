@@ -35,8 +35,8 @@ export default class GalleryItem extends React.Component {
     renderItems(){
         return(
             <div >
-                <img className="image" src={this.props.itemsArray[0].image}/>
-                <div className="desc">{this.props.itemsArray[0].title}</div>
+                <img className="image" src={this.props.itemsArray[this.props.index].image}/>
+                <div className="desc">{this.props.itemsArray[this.props.index].title}</div>
                 <ProductDisplay itemsArray={this.props.itemsArray}
                                 index={this.props.index}
                                 show={this.props.show}

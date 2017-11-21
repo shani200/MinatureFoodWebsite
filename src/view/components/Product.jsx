@@ -81,12 +81,12 @@ export default class Product extends React.Component {
 
     _renderGalleryItems () {
         let listItems = undefined;
-        let index=0;
-        listItems = this.state.galleryItemArr.map((galleryItem) =>
+        let i=0;
+        listItems = this.state.galleryItemArr.map((galleryItem,i) =>
                 (
-                    <div className="gallery" onClick={this.toggleProduct}>
+                    <div className="gallery" key={i} onClick={this.toggleProduct}>
                         <GalleryItem itemsArray={this.state.galleryItemArr}
-                                     index={index++}
+                                     index={i++}
                                      show={this.state.isOpen}
                                      onClose={this.toggleProduct}>
                         </GalleryItem>
@@ -101,7 +101,6 @@ export default class Product extends React.Component {
         return (
             <div className="gallery-display">
                 {this._renderGalleryItems()}
-
             </div>
         );
     }

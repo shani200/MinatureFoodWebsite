@@ -39,9 +39,9 @@ export default class Checkout extends React.Component {
     _renderAuthors () {
         let listItems = undefined;
         if (this.state.authors) {
-            listItems = this.state.authors.map((author) =>
+            listItems = this.state.authors.map((author,i) =>
                 (
-                    <div >
+                    <div key={i}>
                         <img src={author.picture.medium} alt="user's-image" className="img-responsive"/>
                         <span>{`Hello ${author.name.first} ${author.name.last}`}</span>
                     </div>
