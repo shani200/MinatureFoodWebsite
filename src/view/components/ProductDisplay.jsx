@@ -1,26 +1,26 @@
 import React from 'react';
 import '../css/productDisplay.css'
-import Cactus from '../pictures/cactus.jpg';
+
 
 export default class ProductDisplay extends React.Component {
     constructor(props) {
         super(props);
+        this.renderProducts=this.renderProducts.bind(this);
     }
 
-
-    render() {
+    renderProducts(){
         //render nothing if the prop show is false
         if(!this.props.show){
             return null;
         }
-        return (
+        return(
             <div className="ProductBackdrop">
                 <div className="ProductModal">
                     <img className="images" src={this.props.itemsArray[this.props.index].image}/>
                     <div className="description">
 
                         <div className="title">
-                        {this.props.itemsArray[this.props.index].title}
+                            {this.props.itemsArray[this.props.index].title}
                         </div>
 
                         <div className="price">
@@ -39,7 +39,7 @@ export default class ProductDisplay extends React.Component {
                             <span className="symbol">~</span>{this.props.itemsArray[this.props.index].desc}
                         </div>
 
-                        </div>
+                    </div>
                     <div className="btn-exit">
                         <button  className="btn-close" onClick={this.props.onClose}>
                             X
@@ -48,9 +48,19 @@ export default class ProductDisplay extends React.Component {
 
                 </div>
             </div>
+        );
+    }
 
+
+    render() {
+        return (
+            <div >
+                {this.renderProducts()}
+            </div>
 
         );
+
+
     }
 }
 
