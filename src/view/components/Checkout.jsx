@@ -37,6 +37,7 @@ export default class Checkout extends React.Component {
     }
 
     _renderAuthors () {
+        return undefined;
         let listItems = undefined;
         if (this.state.authors) {
             listItems = this.state.authors.map((author,i) =>
@@ -58,9 +59,9 @@ export default class Checkout extends React.Component {
             <div>
                 {this._renderAuthors()}
                 {this.state.authors.length > 0 &&
-                <h3>
+                <h4>
                     You have {this.state.authors.length} unread messages.
-                </h3>
+                </h4>
                 }
 
             </div>

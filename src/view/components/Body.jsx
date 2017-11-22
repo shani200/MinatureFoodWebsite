@@ -9,10 +9,9 @@ export default class Body extends React.Component {
     constructor(props) {
         super(props);
     }
-    
-    /* <img src={'https://i.pinimg.com/564x/12/19/cd/1219cdba2a62d4ae520de28d8d5a9f8b.jpg'} width="1000" height="300" alt="Cactus" className="img" />*/
 
-    /* <img src={img} />*/
+
+
 
 
 

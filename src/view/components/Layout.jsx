@@ -11,11 +11,11 @@ export default class Layout extends  React.Component {
     }
 
 
+
     render() {
         return (
             <div className="mainScreen">
-                <Header/>
-
+                <Header />
                 <Body />
                 <Footer  message={this.props.message} />
             </div>
