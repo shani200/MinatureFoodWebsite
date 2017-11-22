@@ -66,6 +66,7 @@ h2{
 
 .price{
     font-size: 17px;
+    font-style: italic;
     color: white;
     position: relative;
     left: 56px;

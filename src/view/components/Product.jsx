@@ -23,13 +23,17 @@ export default class Product extends React.Component {
                     {
                         title: 'title2',
                         price: 21.90,
-                        desc: 'dec2',
+                        desc: 'Handmade item\n '+
+                        'Material: polymer clay\n' +
+                        ' Gift wrapping and message available',
                         image: flower2
                     },
                     {
                         title: 'title3',
                         price: 25.90,
-                        desc: 'dec3',
+                        desc: 'Handmade item\n '+
+                        'Material: polymer clay\n' +
+                        ' Gift wrapping and message available',
                         image: iceCream
                     }
                 ]
@@ -41,41 +45,6 @@ export default class Product extends React.Component {
     toggleProduct(){
         this.setState( {isOpen: !this.state.isOpen});
     }
-
-    /*
-         <div className="gallery" onClick={this.toggleProduct}>
-                    <GalleryItem itemsArray={this.state.galleryItemArr}
-                                 index={index++}
-                                 show={this.state.isOpen}
-                                 onClose={this.toggleProduct}>
-                    </GalleryItem>
-                </div>
-
-                <div className="gallery" onClick={this.toggleProduct}>
-                    <GalleryItem itemsArray={this.state.galleryItemArr}
-                                 index={index++}
-                                 show={this.state.isOpen}
-                                 onClose={this.toggleProduct}>
-                    </GalleryItem>
-                </div>
-
-                <div className="gallery" onClick={this.toggleProduct}>
-                    <GalleryItem itemsArray={this.state.galleryItemArr}
-                                 index={index++}
-                                 show={this.state.isOpen}
-                                 onClose={this.toggleProduct}>
-                    </GalleryItem>
-                </div>
-
-                <div className="gallery" onClick={this.toggleProduct}>
-                    <GalleryItem itemsArray={this.state.galleryItemArr}
-                                 index={index++}
-                                 show={this.state.isOpen}
-                                 onClose={this.toggleProduct}>
-                    </GalleryItem>
-                </div>
-
-     */
 
 
     _renderGalleryItems () {

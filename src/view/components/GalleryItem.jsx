@@ -38,7 +38,6 @@ export default class GalleryItem extends React.Component {
             <div >
                 {this.renderItems()}
             </div>
-
         );
     }
 }
