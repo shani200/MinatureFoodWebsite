@@ -13,6 +13,8 @@ export default class ProductDisplay extends React.Component {
         if(!this.props.show){
             return null;
         }
+
+
         return(
             <div className="ProductBackdrop">
                 <div className="ProductModal">

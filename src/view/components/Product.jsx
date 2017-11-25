@@ -1,7 +1,8 @@
 import React from 'react';
 import '../css/product.css'
 import GalleryItem from "./GalleryItem";
-import birhday_cake from '../pictures/birhday_cake.jpg';
+import ProductDisplay from './ProductDisplay.jsx'
+import birthday_cake from '../pictures/birthday_cake.jpg';
 import burn_oven_glove from '../pictures/burn_oven_glove.jpg';
 import cookies from '../pictures/cookies.jpg';
 import blue_set from '../pictures/blue_set.jpg';
@@ -17,6 +18,7 @@ export default class Product extends React.Component {
         super(props);
         this.state={
             isOpen: false,
+            isOpenIndex: 0,
             galleryItemArr: [
                     {
                         title: 'Confetti Birthday Cake',
@@ -24,7 +26,7 @@ export default class Product extends React.Component {
                         desc: 'Handmade item\n '+
                         'Material: polymer clay\n' +
                         ' Gift wrapping and message available',
-                        image: birhday_cake
+                        image: birthday_cake
                     },
                     {
                         title: 'Brown & White Oven Glove',
@@ -35,7 +37,7 @@ export default class Product extends React.Component {
                         image: burn_oven_glove
                     },
                     {
-                        title: 'Cookies',
+                        title: 'Twisted Ring Chocolate Cookies',
                         price: 7.90,
                         desc: 'Handmade item\n '+
                         'Material: polymer clay\n' +
@@ -67,12 +69,12 @@ export default class Product extends React.Component {
                     image: blueberry_cake
                    },
                    {
-                    title: 'mini croissant',
+                    title: 'Éclair',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
                     ' Gift wrapping and message available',
-                    image: croissant
+                    image: eclair
                    },
                    {
                     title: 'mini Donuts',
@@ -83,12 +85,12 @@ export default class Product extends React.Component {
                     image: donuts
                    },
                    {
-                    title: 'Eclair',
+                    title: 'mini croissant',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
                     ' Gift wrapping and message available',
-                    image: eclair
+                    image: croissant
                    },
                    {
                     title: 'Ice Creams In Little Box',
@@ -104,20 +106,21 @@ export default class Product extends React.Component {
         this._renderGalleryItems = this._renderGalleryItems.bind(this);
     }
 
-    toggleProduct(){
+    toggleProduct(event, i){
+        let index= 0;
+        index= i.substr(i.indexOf('$')+1);
+        this.setState( {isOpenIndex: index});
         this.setState( {isOpen: !this.state.isOpen});
     }
 
 
     _renderGalleryItems () {
         let listItems = undefined;
-        let iterator=0;
         listItems = this.state.galleryItemArr.map((galleryItem,i) =>
                 (
-                    <div className="gallery" key={i} onClick={this.toggleProduct}>
+                    <div className="gallery" key={i} onClick={this.toggleProduct.bind(i)}>
                         <GalleryItem itemsArray={this.state.galleryItemArr}
-                                     index={iterator++}
-                                     show={this.state.isOpen}
+                                     index={i}
                                      onClose={this.toggleProduct}>
                         </GalleryItem>
                     </div>
@@ -127,9 +130,15 @@ export default class Product extends React.Component {
     }
 
     render() {
+        let iterator=0;
         return (
             <div className="gallery-display">
                 {this._renderGalleryItems()}
+                <ProductDisplay itemsArray={this.state.galleryItemArr}
+                                index={this.state.isOpenIndex}
+                                show={this.state.isOpen}
+                                onClose={this.toggleProduct}>
+                </ProductDisplay>
             </div>
         );
     }
