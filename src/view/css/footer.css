@@ -17,15 +17,18 @@
      display: flex;
     flex-direction: column;
     margin-right: 30px;
+    margin-top: 3px;
  }
 
 .year{
     display: flex;
     flex-direction: column;
     margin-right: 30px;
+    margin-top: 3px;
 }
 
 .contact{
     display: flex;
     flex-direction: column;
+    margin-top: 3px;
 }

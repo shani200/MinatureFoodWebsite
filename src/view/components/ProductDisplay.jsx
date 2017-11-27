@@ -6,6 +6,21 @@ export default class ProductDisplay extends React.Component {
     constructor(props) {
         super(props);
         this.renderProducts=this.renderProducts.bind(this);
+        this.renderOverview=this.renderOverview.bind(this);
+    }
+
+    renderOverview(){
+        let list=undefined;
+         for (let key in this.props.itemsArray[this.props.index].desc) {
+            if (this.props.itemsArray[this.props.index].desc.hasOwnProperty(key)) {
+
+               list=(<span> {`${key} : ${this.props.itemsArray[this.props.index].desc[key]}`}</span>);
+
+
+            }
+        }
+       return list;
+
     }
 
     renderProducts(){
@@ -13,7 +28,6 @@ export default class ProductDisplay extends React.Component {
         if(!this.props.show){
             return null;
         }
-
 
         return(
             <div className="ProductBackdrop">
@@ -38,7 +52,7 @@ export default class ProductDisplay extends React.Component {
 
                         <div className="view">
                             <div className="overview">Overview</div>
-                            <span className="symbol">~</span>{this.props.itemsArray[this.props.index].desc}
+                            <span className="symbol">~</span>{this.renderOverview()}
                         </div>
 
                     </div>
