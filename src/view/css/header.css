@@ -46,3 +46,18 @@
     font-weight: lighter;
     margin: 0 0 0 25px;
 }
+
+.user_container{
+    display: flex;
+    align-items: center;
+}
+
+.user_img{
+    width: 55px;
+    height: 50px;
+}
+
+.user_name{
+    text-align: center;
+    padding-left: 9px;
+}

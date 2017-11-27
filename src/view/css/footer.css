@@ -8,42 +8,24 @@
     font-size: 15px;
     color: black;
     width: 100%;
-    background-color: rgba(2, 37, 28, 0.19);
+     background-color: #928c8ea6;
     color: rgba(76, 48, 48, 0.73);
+    height: 20%;
 }
-/*
-.message{
-    position: relative;
-    margin: 4px 15px;
-}
-*/
 
-.Table {
+.create{
+     display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+ }
+
+.year{
     display: flex;
-    border-collapse: collapse;
-    border-spacing: 0;
-    max-width: 100%;
-    width: 30%; font-size: 15px;
-    color: rgba(76, 48, 48, 0.73);
-
+    flex-direction: column;
+    margin-right: 30px;
 }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-thead{
+.contact{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-tbody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    vertical-align: baseline;
-    border-color: inherit;
+    flex-direction: column;
 }

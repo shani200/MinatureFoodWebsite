@@ -23,13 +23,12 @@ import marshmallow from '../pictures/marshmallow.jpg';
 import mini_cookies from '../pictures/mini_cookies.jpg';
 import oven_glove from '../pictures/oven_glove.jpg';
 import pink_cake from '../pictures/pink_cake.jpg';
-import pink_donut from '../pictures/pink_donut.jpg';
+import baking_scene from '../pictures/baking_scene.jpg';
 import pink_ice_cream from '../pictures/pink_ice_cream.jpg';
 import plants from '../pictures/plants.jpg';
 import pusheen_cookies_set from '../pictures/pusheen_cookies_set.jpg';
 import pusheen_cookies from '../pictures/pusheen_cookies.jpg';
-import lollipop from '../pictures/lollipop.jpg';
-import yellow_set from '../pictures/lollipop.jpg';
+import yellow_set from '../pictures/yellow_set.jpg';
 
 
 
@@ -75,7 +74,7 @@ export default class Product extends React.Component {
                     image: breads
                    },
                    {
-                    title: 'Blue Planner & ice cream & croissant',
+                    title: 'Blue Planner & Ice Cream & Croissant',
                     price: 15.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -99,7 +98,7 @@ export default class Product extends React.Component {
                     image: eclair
                    },
                    {
-                    title: 'mini Donuts',
+                    title: 'Mini Donuts',
                     price: 7.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -107,7 +106,7 @@ export default class Product extends React.Component {
                     image: donuts
                    },
                    {
-                    title: 'mini croissant',
+                    title: 'Mini Croissant',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -123,7 +122,7 @@ export default class Product extends React.Component {
                     image: ice_cream_box
                    },
                 {
-                    title: 'mini croissant',
+                    title: 'Chocolate Ice Creams',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -131,7 +130,7 @@ export default class Product extends React.Component {
                     image: chocolate_ice_cream
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Croissant In Colors',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -139,15 +138,15 @@ export default class Product extends React.Component {
                     image: colors_croissant
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Yellow Planner & Ice Cream & Croissant',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
                     ' Gift wrapping and message available',
-                    image: cookies
+                    image: yellow_set
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Ice Plant',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -155,7 +154,7 @@ export default class Product extends React.Component {
                     image: ice_plant
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Strawberry Chocolate And Vanilla Ice Creams',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -163,7 +162,7 @@ export default class Product extends React.Component {
                     image: ice_creams
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Jar Of Sweets',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -171,7 +170,7 @@ export default class Product extends React.Component {
                     image: jar_of_sweets
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Macaroon Clips',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -179,7 +178,7 @@ export default class Product extends React.Component {
                     image: macaroon_clips
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Marshmallow',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -187,7 +186,7 @@ export default class Product extends React.Component {
                     image: marshmallow
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Mermaid Pusheen',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -195,7 +194,7 @@ export default class Product extends React.Component {
                     image: mermaid_pusheen
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Mini Cookies',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -203,7 +202,7 @@ export default class Product extends React.Component {
                     image: mini_cookies
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Oven Glove',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -211,7 +210,7 @@ export default class Product extends React.Component {
                     image: oven_glove
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Ombré Pink Cake',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -219,15 +218,15 @@ export default class Product extends React.Component {
                     image: pink_cake
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Baking Cookies Scene',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
                     ' Gift wrapping and message available',
-                    image: pink_donut
+                    image: baking_scene
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Ombré Pink Ice Cream',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -235,7 +234,7 @@ export default class Product extends React.Component {
                     image: pink_ice_cream
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Plants',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -243,7 +242,7 @@ export default class Product extends React.Component {
                     image: plants
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Pusheen Cookies Set',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -251,7 +250,7 @@ export default class Product extends React.Component {
                     image: pusheen_cookies_set
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Pusheen Cookies',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
@@ -259,14 +258,13 @@ export default class Product extends React.Component {
                     image: pusheen_cookies
                 },
                 {
-                    title: 'mini croissant',
+                    title: 'Pusheen Cookies',
                     price: 5.90,
                     desc: 'Handmade item\n '+
                     'Material: polymer clay\n' +
                     ' Gift wrapping and message available',
                     image: yellow_set
-                },
-
+                }
             ]
         };
         this.toggleProduct=this.toggleProduct.bind(this);

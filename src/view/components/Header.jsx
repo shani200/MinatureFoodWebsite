@@ -43,9 +43,9 @@ export default class Header extends React.Component {
         if (this.state.authors) {
             listItems = this.state.authors.map((author,i) =>
                 (
-                    <div key={i}>
-                        <img src={author.picture.medium} alt="user's-image" className="img-responsive"/>
-                        <span>{`Hello ${author.name.first} ${author.name.last}`}</span>
+                    <div className="user_container" key={i}>
+                        <img  src={author.picture.medium} alt="user's-image" className="user_img"/>
+                        <span className="user_name">{`Hello ${author.name.first} ${author.name.last}`}</span>
                     </div>
                 )
             );

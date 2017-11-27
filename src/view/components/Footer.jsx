@@ -15,22 +15,18 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div className="alert-zone">
-                <table className="Table">
-                    <thead>
-                    <tr>
-                        <th>Created by:</th>
-                        <th>Year:</th>
-                        <th>Contact:</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Shani Kahila</td>
-                        <td>2017</td>
-                        <td>shani20086@gmail.com</td>
-                    </tr>
-                    </tbody>
-                </table>
+              <div className="create">
+                  <span>Created By:</span>
+                  <span>Shani Kahila</span>
+              </div>
+               <div className="year">
+                   <span>Year:</span>
+                   <span>2017</span>
+               </div>
+               <div className="contact">
+                   <span>Contact:</span>
+                   <span>shani20086@gmail.com</span>
+                </div>
             </div>
         );
     }
