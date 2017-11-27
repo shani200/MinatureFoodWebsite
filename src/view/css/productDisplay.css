@@ -41,10 +41,11 @@ h2{
 }
 
 .images {
-    width: 49%;
-    height: 100%;
+    width: 45%;
+    height: 90%;
     display: inline-block;
     border-right: 1px solid lightblue;
+    margin-top: 50px;
 }
 
 .description{

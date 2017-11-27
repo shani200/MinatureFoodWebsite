@@ -4,14 +4,34 @@ import GalleryItem from "./GalleryItem";
 import ProductDisplay from './ProductDisplay.jsx'
 import birthday_cake from '../pictures/birthday_cake.jpg';
 import burn_oven_glove from '../pictures/burn_oven_glove.jpg';
-import cookies from '../pictures/cookies.jpg';
 import blue_set from '../pictures/blue_set.jpg';
 import breads from '../pictures/breads.jpg';
 import blueberry_cake from '../pictures/blueberry_cake.jpg';
 import croissant from '../pictures/croissant.jpg';
 import donuts from '../pictures/donuts.jpg';
 import eclair from '../pictures/eclair.jpg';
+import colors_croissant from '../pictures/colors_croissant.jpg';
+import chocolate_ice_cream from '../pictures/chocolate_ice_cream.jpg';
+import ice_plant from '../pictures/ice_plant.jpg';
+import cookies from '../pictures/cookies.jpg';
 import ice_cream_box from '../pictures/ice_cream_box.jpg';
+import jar_of_sweets from '../pictures/jar_of_sweets.jpg';
+import macaroon_clips from '../pictures/macaroon_clips.jpg';
+import ice_creams from '../pictures/ice_creams.jpg';
+import mermaid_pusheen from '../pictures/mermaid_pusheen.jpg';
+import marshmallow from '../pictures/marshmallow.jpg';
+import mini_cookies from '../pictures/mini_cookies.jpg';
+import oven_glove from '../pictures/oven_glove.jpg';
+import pink_cake from '../pictures/pink_cake.jpg';
+import pink_donut from '../pictures/pink_donut.jpg';
+import pink_ice_cream from '../pictures/pink_ice_cream.jpg';
+import plants from '../pictures/plants.jpg';
+import pusheen_cookies_set from '../pictures/pusheen_cookies_set.jpg';
+import pusheen_cookies from '../pictures/pusheen_cookies.jpg';
+import lollipop from '../pictures/lollipop.jpg';
+import yellow_set from '../pictures/lollipop.jpg';
+
+
 
 export default class Product extends React.Component {
     constructor(props) {
@@ -23,9 +43,11 @@ export default class Product extends React.Component {
                     {
                         title: 'Confetti Birthday Cake',
                         price: 15.90,
-                        desc: 'Handmade item\n '+
-                        'Material: polymer clay\n' +
-                        ' Gift wrapping and message available',
+                        desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                        },
                         image: birthday_cake
                     },
                     {
@@ -99,7 +121,152 @@ export default class Product extends React.Component {
                     'Material: polymer clay\n' +
                     ' Gift wrapping and message available',
                     image: ice_cream_box
-                   }
+                   },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: chocolate_ice_cream
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: colors_croissant
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: cookies
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: ice_plant
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: ice_creams
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: jar_of_sweets
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: macaroon_clips
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: marshmallow
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: mermaid_pusheen
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: mini_cookies
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: oven_glove
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: pink_cake
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: pink_donut
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: pink_ice_cream
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: plants
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: pusheen_cookies_set
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: pusheen_cookies
+                },
+                {
+                    title: 'mini croissant',
+                    price: 5.90,
+                    desc: 'Handmade item\n '+
+                    'Material: polymer clay\n' +
+                    ' Gift wrapping and message available',
+                    image: yellow_set
+                },
+
             ]
         };
         this.toggleProduct=this.toggleProduct.bind(this);
