@@ -5,8 +5,12 @@ import '../css/productDisplay.css'
 export default class ProductDisplay extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            value: ''
+        };
         this.renderProducts=this.renderProducts.bind(this);
         this.renderOverview=this.renderOverview.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     renderOverview(){
@@ -14,13 +18,14 @@ export default class ProductDisplay extends React.Component {
          for (let key in this.props.itemsArray[this.props.index].desc) {
             if (this.props.itemsArray[this.props.index].desc.hasOwnProperty(key)) {
 
-               list=(<span> {`${key} : ${this.props.itemsArray[this.props.index].desc[key]}`}</span>);
-
-
+                list=(<span> {`${key} : ${this.props.itemsArray[this.props.index].desc[key]}`}</span>);
             }
         }
-       return list;
+      return list;
+    }
 
+    handleChange(event) {
+        this.setState({value: event.target.value});
     }
 
     renderProducts(){
@@ -42,6 +47,15 @@ export default class ProductDisplay extends React.Component {
                         <div className="price">
                             <span className="price-tag">price:</span>
                             {this.props.itemsArray[this.props.index].price}$
+                        </div>
+
+                        <div className="amount">
+                            <span className="quantity">Quantity:</span>
+                            <input type="text"
+                                   value={this.state.value}
+                                   className="amount-box"
+                                   onChange={this.handleChange}
+                            />
                         </div>
 
                         <div className="cartBtn">
