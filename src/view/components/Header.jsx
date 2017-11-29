@@ -1,20 +1,26 @@
 import React from 'react';
 import NotificationSystem from 'react-notification-system';
 import 'whatwg-fetch';
+import WebsiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/header.css'
 
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
+        this.WebsiteCommonService = new WebsiteCommonService();
         this.state = {authors: false};
         this._renderAuthors = this._renderAuthors.bind(this);
+       // this.addNotification =this.WebsiteCommonService._addNotification;
         this._notificationSystem = null;
         this._addNotification = this._addNotification.bind(this);
+        this._createFetch = this.WebsiteCommonService.createFetch;
     }
 
     componentDidMount() {
-        this._notificationSystem = this.refs.notificationSystem;
+      this._notificationSystem = this.refs.notificationSystem;
     }
+
+
 
     _addNotification(event){
         event.preventDefault();
@@ -24,18 +30,10 @@ export default class Header extends React.Component {
         });
     }
 
+
     componentWillMount() {
         //const ul = document.getElementById('authors');
-        const url = 'https://randomuser.me/api/?results=1';
-        let myThis=this;
-        fetch(url)
-            .then((resp) => resp.json())
-            .then(function(data) {
-                myThis.setState({authors: data.results})
-            })
-            .catch(function(error) {
-                console.log(error);
-            });
+        this._createFetch();
     }
 
     _renderAuthors () {
