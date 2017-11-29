@@ -29,297 +29,299 @@ import plants from '../pictures/plants.jpg';
 import pusheen_cookies_set from '../pictures/pusheen_cookies_set.jpg';
 import pusheen_cookies from '../pictures/pusheen_cookies.jpg';
 import yellow_set from '../pictures/yellow_set.jpg';
-
-
+import WebsiteCommonService from '../../controller/WebsiteCommonService';
 
 export default class Product extends React.Component {
     constructor(props) {
         super(props);
+        this.WebsiteCommonService = new WebsiteCommonService();
+
         this.state={
             isOpen: false,
             isOpenIndex: 0,
-            galleryItemArr: [
-                    {
-                        title: 'Confetti Birthday Cake',
-                        price: 15.90,
-                        desc: {
-                            Type: 'Handmade item',
-                            Material: 'polymer clay',
-                            Usage: 'Gift wrapping and message available'
-                        },
-                        image: birthday_cake
-                    },
-                    {
-                        title: 'Brown & White Oven Glove',
-                        price: 11.90,
-                        desc: {
-                            Type: 'Handmade item',
-                            Material: 'polymer clay',
-                            Usage: 'Gift wrapping and message available'
-                        },
-                        image: burn_oven_glove
-                    },
-                    {
-                        title: 'Twisted Ring Chocolate Cookies',
-                        price: 7.90,
-                        desc: {
-                            Type: 'Handmade item',
-                            Material: 'polymer clay',
-                            Usage: 'Gift wrapping and message available'
-                        },
-                        image: cookies
-                    },
-                   {
-                    title: 'Bread Loaves',
-                    price: 12.00,
-                    desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
-                    },
-                    image: breads
-                   },
-                   {
-                    title: 'Blue Planner & Ice Cream & Croissant',
-                    price: 15.90,
-                    desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
+            _galleryArr: this.WebsiteCommonService.galleryItemArr
+            /* galleryItemArr: [
+                     {
+                         title: 'Confetti Birthday Cake',
+                         price: 15.90,
+                         desc: {
+                             Type: 'Handmade item',
+                             Material: 'polymer clay',
+                             Usage: 'Gift wrapping and message available'
+                         },
+                         image: birthday_cake
                      },
-                    image: blue_set
-                   },
-                   {
-                    title: 'Blueberry Cake',
-                    price: 13.90,
-                    desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
-                       },
-                    image: blueberry_cake
-                   },
-                   {
-                    title: 'Éclair',
-                    price: 5.90,
-                    desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
-                       },
-                    image: eclair
-                   },
-                   {
-                    title: 'Mini Donuts',
-                    price: 7.90,
-                    desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
-                       },
-                    image: donuts
-                   },
-                   {
-                    title: 'Mini Croissant',
-                    price: 5.90,
+                     {
+                         title: 'Brown & White Oven Glove',
+                         price: 11.90,
+                         desc: {
+                             Type: 'Handmade item',
+                             Material: 'polymer clay',
+                             Usage: 'Gift wrapping and message available'
+                         },
+                         image: burn_oven_glove
+                     },
+                     {
+                         title: 'Twisted Ring Chocolate Cookies',
+                         price: 7.90,
+                         desc: {
+                             Type: 'Handmade item',
+                             Material: 'polymer clay',
+                             Usage: 'Gift wrapping and message available'
+                         },
+                         image: cookies
+                     },
+                    {
+                     title: 'Bread Loaves',
+                     price: 12.00,
                      desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
-                       },
-                    image: croissant
-                   },
-                   {
-                    title: 'Ice Creams In Little Box',
-                    price: 9.90,
-                    desc: {
-                           Type: 'Handmade item',
-                           Material: 'polymer clay',
-                           Usage: 'Gift wrapping and message available'
-                       },
-                    image: ice_cream_box
-                   },
-                {
-                    title: 'Chocolate Ice Creams',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                     },
+                     image: breads
                     },
-                    image: chocolate_ice_cream
-                },
-                {
-                    title: 'Croissant In Colors',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                    {
+                     title: 'Blue Planner & Ice Cream & Croissant',
+                     price: 15.90,
+                     desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                      },
+                     image: blue_set
                     },
-                    image: colors_croissant
-                },
-                {
-                    title: 'Yellow Planner & Ice Cream & Croissant',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                    {
+                     title: 'Blueberry Cake',
+                     price: 13.90,
+                     desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                        },
+                     image: blueberry_cake
                     },
-                    image: yellow_set
-                },
-                {
-                    title: 'Ice Plant',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                    {
+                     title: 'Éclair',
+                     price: 5.90,
+                     desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                        },
+                     image: eclair
                     },
-                    image: ice_plant
-                },
-                {
-                    title: 'Strawberry Chocolate And Vanilla Ice Creams',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                    {
+                     title: 'Mini Donuts',
+                     price: 7.90,
+                     desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                        },
+                     image: donuts
                     },
-                    image: ice_creams
-                },
-                {
-                    title: 'Jar Of Sweets',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                    {
+                     title: 'Mini Croissant',
+                     price: 5.90,
+                      desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                        },
+                     image: croissant
                     },
-                    image: jar_of_sweets
-                },
-                {
-                    title: 'Macaroon Clips',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
+                    {
+                     title: 'Ice Creams In Little Box',
+                     price: 9.90,
+                     desc: {
+                            Type: 'Handmade item',
+                            Material: 'polymer clay',
+                            Usage: 'Gift wrapping and message available'
+                        },
+                     image: ice_cream_box
                     },
-                    image: macaroon_clips
-                },
-                {
-                    title: 'Marshmallow',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: marshmallow
-                },
-                {
-                    title: 'Mermaid Pusheen',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: mermaid_pusheen
-                },
-                {
-                    title: 'Mini Cookies',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: mini_cookies
-                },
-                {
-                    title: 'Oven Glove',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: oven_glove
-                },
-                {
-                    title: 'Ombré Pink Cake',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: pink_cake
-                },
-                {
-                    title: 'Baking Cookies Scene',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: baking_scene
-                },
-                {
-                    title: 'Ombré Pink Ice Cream',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: pink_ice_cream
-                },
-                {
-                    title: 'Plants',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: plants
-                },
-                {
-                    title: 'Pusheen Cookies Set',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: pusheen_cookies_set
-                },
-                {
-                    title: 'Pusheen Cookies',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: pusheen_cookies
-                },
-                {
-                    title: 'Pusheen Cookies',
-                    price: 5.90,
-                    desc: {
-                        Type: 'Handmade item',
-                        Material: 'polymer clay',
-                        Usage: 'Gift wrapping and message available'
-                    },
-                    image: yellow_set
-                }
-            ]
+                 {
+                     title: 'Chocolate Ice Creams',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: chocolate_ice_cream
+                 },
+                 {
+                     title: 'Croissant In Colors',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: colors_croissant
+                 },
+                 {
+                     title: 'Yellow Planner & Ice Cream & Croissant',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: yellow_set
+                 },
+                 {
+                     title: 'Ice Plant',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: ice_plant
+                 },
+                 {
+                     title: 'Strawberry Chocolate And Vanilla Ice Creams',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: ice_creams
+                 },
+                 {
+                     title: 'Jar Of Sweets',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: jar_of_sweets
+                 },
+                 {
+                     title: 'Macaroon Clips',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: macaroon_clips
+                 },
+                 {
+                     title: 'Marshmallow',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: marshmallow
+                 },
+                 {
+                     title: 'Mermaid Pusheen',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: mermaid_pusheen
+                 },
+                 {
+                     title: 'Mini Cookies',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: mini_cookies
+                 },
+                 {
+                     title: 'Oven Glove',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: oven_glove
+                 },
+                 {
+                     title: 'Ombré Pink Cake',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: pink_cake
+                 },
+                 {
+                     title: 'Baking Cookies Scene',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: baking_scene
+                 },
+                 {
+                     title: 'Ombré Pink Ice Cream',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: pink_ice_cream
+                 },
+                 {
+                     title: 'Plants',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: plants
+                 },
+                 {
+                     title: 'Pusheen Cookies Set',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: pusheen_cookies_set
+                 },
+                 {
+                     title: 'Pusheen Cookies',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: pusheen_cookies
+                 },
+                 {
+                     title: 'Pusheen Cookies',
+                     price: 5.90,
+                     desc: {
+                         Type: 'Handmade item',
+                         Material: 'polymer clay',
+                         Usage: 'Gift wrapping and message available'
+                     },
+                     image: yellow_set
+                 }
+             ]*/
         };
         this.toggleProduct=this.toggleProduct.bind(this);
         this._renderGalleryItems = this._renderGalleryItems.bind(this);
@@ -335,10 +337,10 @@ export default class Product extends React.Component {
 
     _renderGalleryItems () {
         let listItems = undefined;
-        listItems = this.state.galleryItemArr.map((galleryItem,i) =>
+        listItems = this.state._galleryArr.map((galleryItem,i) =>
                 (
                     <div className="gallery" key={i} onClick={this.toggleProduct.bind(i)}>
-                        <GalleryItem itemsArray={this.state.galleryItemArr}
+                        <GalleryItem itemsArray={this.state._galleryArr}
                                      index={i}
                                      onClose={this.toggleProduct}>
                         </GalleryItem>
@@ -353,7 +355,7 @@ export default class Product extends React.Component {
         return (
             <div className="gallery-display">
                 {this._renderGalleryItems()}
-                <ProductDisplay itemsArray={this.state.galleryItemArr}
+                <ProductDisplay itemsArray={this.state._galleryArr}
                                 index={this.state.isOpenIndex}
                                 show={this.state.isOpen}
                                 onClose={this.toggleProduct}>
