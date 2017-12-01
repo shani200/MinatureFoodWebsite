@@ -14,37 +14,15 @@ export default class ProductDisplay extends React.Component {
     }
 
     renderOverview(){
-
         let list = [];
         let item = this.props.itemsArray[this.props.index];
-        // list = this.item.desc.map((att,i) =>
-        //     (
-        //         <div >
-        //             list=(<div> {`${att.key} : ${att.value}`}</div>);
-        //         </div>
-        //     )
-        // list.push(<span> {`${item.desc[1].key} : ${item.desc[1].value}`}</span>);
-        // list.push(<span> {`${item.desc[2].key} : ${item.desc[2].value}`}</span>);
 
 
           for (let i=0; i< item.desc.length; i++) {
               list.push(<li> {`${item.desc[i].key} : ${item.desc[i].value}`}</li>);
           }
 
-
-        // );
         return list;
-
-
-      /*  let list = '';
-        let item = this.props.itemsArray[this.props.index];
-         for (let key in item.desc) {
-            if (item.desc.hasOwnProperty(key)) {
-                // list+=(<span> {`${key} : ${this.props.itemsArray[this.props.index].desc[key]}`}</span>);
-                list=(<span> {`${key} : ${item.desc[key]}`}</span>);
-            }
-        }
-      return list;*/
     }
 
     handleChange(event) {
