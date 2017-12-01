@@ -29,6 +29,7 @@ import yellow_set from '../view/pictures/yellow_set.jpg';
 let  websiteConfig = {
     galleryItemArr: [
         {
+            id:0,
             title: 'Confetti Birthday Cake',
             price: 15.90,
             desc: [
@@ -48,6 +49,7 @@ let  websiteConfig = {
             image: birthday_cake
         },
         {
+            id:1,
             title: 'Brown & White Oven Glove',
             price: 11.90,
             desc: [
@@ -67,6 +69,7 @@ let  websiteConfig = {
             image: burn_oven_glove
         },
         {
+            id:2,
             title: 'Twisted Ring Chocolate Cookies',
             price: 7.90,
             desc: [
@@ -86,6 +89,7 @@ let  websiteConfig = {
             image: cookies
         },
         {
+            id:3,
             title: 'Bread Loaves',
             price: 12.00,
             desc: [
@@ -105,6 +109,7 @@ let  websiteConfig = {
             image: breads
         },
         {
+            id:4,
             title: 'Blue Planner & Ice Cream & Croissant',
             price: 15.90,
             desc: [
@@ -128,6 +133,7 @@ let  websiteConfig = {
             image: blue_set
         },
         {
+            id:5,
             title: 'Blueberry Cake',
             price: 13.90,
             desc: [
@@ -147,6 +153,7 @@ let  websiteConfig = {
             image: blueberry_cake
         },
         {
+            id:6,
             title: 'Éclair',
             price: 5.90,
             desc: [
@@ -166,6 +173,7 @@ let  websiteConfig = {
             image: eclair
         },
         {
+            id:7,
             title: 'Mini Donuts',
             price: 7.90,
             desc: [
@@ -185,6 +193,7 @@ let  websiteConfig = {
             image: donuts
         },
         {
+            id:8,
             title: 'Mini Croissant',
             price: 5.90,
             desc: [
@@ -208,6 +217,7 @@ let  websiteConfig = {
             image: croissant
         },
         {
+            id:9,
             title: 'Ice Creams In Little Box',
             price: 9.90,
             desc: [
@@ -227,6 +237,7 @@ let  websiteConfig = {
             image: ice_cream_box
         },
         {
+            id:10,
             title: 'Chocolate Ice Creams',
             price: 5.90,
             desc: [
@@ -250,6 +261,7 @@ let  websiteConfig = {
             image: chocolate_ice_cream
         },
         {
+            id:11,
             title: 'Croissant In Colors',
             price: 5.90,
             desc: [
@@ -273,6 +285,7 @@ let  websiteConfig = {
             image: colors_croissant
         },
         {
+            id:12,
             title: 'Yellow Planner & Ice Cream & Croissant',
             price: 5.90,
             desc: [
@@ -292,6 +305,7 @@ let  websiteConfig = {
             image: yellow_set
         },
         {
+            id:13,
             title: 'Ice Plant',
             price: 5.90,
             desc: [
@@ -311,6 +325,7 @@ let  websiteConfig = {
             image: ice_plant
         },
         {
+            id:14,
             title: 'Strawberry Chocolate And Vanilla Ice Creams',
             price: 5.90,
             desc: [
@@ -334,6 +349,7 @@ let  websiteConfig = {
             image: ice_creams
         },
         {
+            id: 15,
             title: 'Jar Of Sweets',
             price: 5.90,
             desc: [
@@ -353,6 +369,7 @@ let  websiteConfig = {
             image: jar_of_sweets
         },
         {
+            id: 16,
             title: 'Macaroon Clips',
             price: 5.90,
             desc: [
@@ -372,6 +389,7 @@ let  websiteConfig = {
             image: macaroon_clips
         },
         {
+            id: 17,
             title: 'Marshmallow',
             price: 5.90,
             desc: [
@@ -391,6 +409,7 @@ let  websiteConfig = {
             image: marshmallow
         },
         {
+            id: 18,
             title: 'Mermaid Pusheen',
             price: 5.90,
             desc: [
@@ -410,6 +429,7 @@ let  websiteConfig = {
             image: mermaid_pusheen
         },
         {
+            id: 19,
             title: 'Mini Cookies',
             price: 5.90,
             desc: [
@@ -429,6 +449,7 @@ let  websiteConfig = {
             image: mini_cookies
         },
         {
+            id: 20,
             title: 'Oven Glove',
             price: 5.90,
             desc: [
@@ -448,6 +469,7 @@ let  websiteConfig = {
             image: oven_glove
         },
         {
+            id: 21,
             title: 'Ombré Pink Cake',
             price: 5.90,
             desc: [
@@ -467,6 +489,7 @@ let  websiteConfig = {
             image: pink_cake
         },
         {
+            id: 22,
             title: 'Baking Cookies Scene',
             price: 5.90,
             desc: [
@@ -486,6 +509,7 @@ let  websiteConfig = {
             image: baking_scene
         },
         {
+            id: 23,
             title: 'Ombré Pink Ice Cream',
             price: 5.90,
             desc: [
@@ -509,6 +533,7 @@ let  websiteConfig = {
             image: pink_ice_cream
         },
         {
+            id: 24,
             title: 'Plants',
             price: 5.90,
             desc: [
@@ -528,6 +553,7 @@ let  websiteConfig = {
             image: plants
         },
         {
+            id: 25,
             title: 'Pusheen Cookies Set',
             price: 5.90,
             desc: [
@@ -547,6 +573,7 @@ let  websiteConfig = {
             image: pusheen_cookies_set
         },
         {
+            id: 26,
             title: 'Pusheen Cookies',
             price: 5.90,
             desc: [
@@ -566,6 +593,7 @@ let  websiteConfig = {
             image: pusheen_cookies
         },
         {
+            id: 27,
             title: 'Pusheen Cookies',
             price: 5.90,
             desc: [

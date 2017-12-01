@@ -25,6 +25,22 @@ export default class ProductDisplay extends React.Component {
         return list;
     }
 
+    addToCart() {
+        // let product =this.props.itemsArray[this.props.index];
+        // localStorage.setItem("lastname", "Smith");
+
+        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        if (!productsStored) {
+            let products = [];
+            let item = this.props.itemsArray[this.props.index];
+            products[0] = item.id;
+            localStorage.setItem("cart", JSON.stringify(products));
+        } else {
+            productsStored.push(this.props.index);
+            localStorage.setItem("cart", JSON.stringify(productsStored));
+        }
+    }
+
     handleChange(event) {
         this.setState({value: event.target.value});
     }
@@ -64,7 +80,7 @@ export default class ProductDisplay extends React.Component {
                         </div>
 
                         <div className="cartBtn">
-                            <button  className="btn-cart" >
+                            <button  onClick={this.addToCart.bind(this)} className="btn-cart" >
                                 Add to cart
                             </button>
                         </div>
