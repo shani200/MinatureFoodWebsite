@@ -14,14 +14,37 @@ export default class ProductDisplay extends React.Component {
     }
 
     renderOverview(){
-        let list=undefined;
-         for (let key in this.props.itemsArray[this.props.index].desc) {
-            if (this.props.itemsArray[this.props.index].desc.hasOwnProperty(key)) {
 
-                list=(<span> {`${key} : ${this.props.itemsArray[this.props.index].desc[key]}`}</span>);
+        let list = [];
+        let item = this.props.itemsArray[this.props.index];
+        // list = this.item.desc.map((att,i) =>
+        //     (
+        //         <div >
+        //             list=(<div> {`${att.key} : ${att.value}`}</div>);
+        //         </div>
+        //     )
+        // list.push(<span> {`${item.desc[1].key} : ${item.desc[1].value}`}</span>);
+        // list.push(<span> {`${item.desc[2].key} : ${item.desc[2].value}`}</span>);
+
+
+          for (let i=0; i< item.desc.length; i++) {
+              list.push(<li> {`${item.desc[i].key} : ${item.desc[i].value}`}</li>);
+          }
+
+
+        // );
+        return list;
+
+
+      /*  let list = '';
+        let item = this.props.itemsArray[this.props.index];
+         for (let key in item.desc) {
+            if (item.desc.hasOwnProperty(key)) {
+                // list+=(<span> {`${key} : ${this.props.itemsArray[this.props.index].desc[key]}`}</span>);
+                list=(<span> {`${key} : ${item.desc[key]}`}</span>);
             }
         }
-      return list;
+      return list;*/
     }
 
     handleChange(event) {
@@ -33,6 +56,10 @@ export default class ProductDisplay extends React.Component {
         if(!this.props.show){
             return null;
         }
+
+        let divStyle = {
+            listStyleType: 'upper-roman'
+        };
 
         return(
             <div className="ProductBackdrop">
@@ -66,7 +93,10 @@ export default class ProductDisplay extends React.Component {
 
                         <div className="view">
                             <div className="overview">Overview</div>
-                            <span className="symbol">~</span>{this.renderOverview()}
+                            <ul class="myUl" style={divStyle}>
+                                {this.renderOverview()}
+                            </ul>
+
                         </div>
 
                     </div>
