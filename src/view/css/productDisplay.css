@@ -1,3 +1,4 @@
+
 .ProductBackdrop{
     display: flex;
     flex-direction: column;
@@ -8,7 +9,6 @@
     right: 0;
     bottom: 0;
     background-color: rgba(210, 214, 214, 0.78);
-
 }
 
 .ProductModal{
@@ -19,6 +19,7 @@
     margin: 0 auto;
     padding: 60px;
     color: white;
+    min-width: 444px;
     position: relative;
 }
 
@@ -112,7 +113,7 @@ h2{
     cursor: pointer;
     border :none;
     margin-left: 55px;
-    padding: 9px 195px;
+    padding: 2% 38%;
 }
 
 .btn-cart:hover{

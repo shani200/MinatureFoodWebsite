@@ -1,6 +1,7 @@
 import React from 'react';
-import Checkout from './Checkout';
-import CountItems from './CountItems';
+import WebsiteCommonService from '../../controller/WebsiteCommonService';
+import '../css/shoppingCart.css'
+
 /*import ProductTable from './ProductTable';*/
 
 
@@ -8,35 +9,64 @@ import CountItems from './CountItems';
 export default class ShoppingCart extends React.Component {
     constructor(props) {
         super(props);
+        this.WebsiteCommonService = new WebsiteCommonService();
+        this.state={
+            galleryArray: this.WebsiteCommonService.galleryItemArr
+        };
+
     }
 
-    render() {
+    renderCart(){
+        let productsStored = JSON.parse(localStorage.getItem("cart"));
+       let listItems;
+        listItems = productsStored.map((product,i) =>
+            (
+                <div className="cartProducts" >
 
+                    {this.renderProduct(productsStored[i])}
+                </div>
+            )
+        );
+       return listItems;
+
+      //   let list;
+      // list= this.renderProduct(productsStored[2]);
+      // return list;
+    }
+
+    renderProduct(index){
+        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        return(
+            <div className="cartDisplay">
+                <span className="cartImage"> <img className="imageProduct" src={this.state.galleryArray[index].image}/> </span>
+                <span className="cartDesc">{this.state.galleryArray[index].title}</span>
+                <span className="cartQuantity">1</span>
+                <span className="cartPrice">{this.state.galleryArray[index].price}</span>
+
+
+            </div>
+        );
+
+
+    }
+
+
+    render() {
         //render nothing if the prop show is false
         if (!this.props.show) {
             return null;
         }
         return (
-            <div className="backdrop">
-                <div className="LogInModal">
-                    <form>
-                        <h2>Sign in</h2>
-                        <label>
-                            Email or Username:
-                            <input type="text" name="name"/>
-                        </label>
-                        <label>
-                            Password:
-                            <input type="text" name="password"/>
-                        </label>
-                        <input type="submit" value="Sign in" className="submit" />
-                    </form>
+            <div className="cartBackdrop">
+                <div className="cartModal">
+                    {this.renderCart()}
 
-                    <div className="footer">
-                        <button className="btn-close" onClick={this.props.onClose}>
+                    <div className="btn-exit-cart">
+                        <button className="btn-close-cart" onClick={this.props.onClose}>
                             X
                         </button>
                     </div>
+
                 </div>
             </div>
 
@@ -44,4 +74,3 @@ export default class ShoppingCart extends React.Component {
         );
     }
 }
-/* <ProductTable products={PRODUCTS}/>   */

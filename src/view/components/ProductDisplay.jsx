@@ -1,4 +1,5 @@
 import React from 'react';
+import ShoppingCart from "./ShoppingCart";
 import '../css/productDisplay.css'
 
 
@@ -16,29 +17,26 @@ export default class ProductDisplay extends React.Component {
     renderOverview(){
         let list = [];
         let item = this.props.itemsArray[this.props.index];
-
-
-          for (let i=0; i< item.desc.length; i++) {
+         for (let i=0; i< item.desc.length; i++) {
               list.push(<li> {`${item.desc[i].key} : ${item.desc[i].value}`}</li>);
           }
-
         return list;
     }
 
     addToCart() {
         // let product =this.props.itemsArray[this.props.index];
         // localStorage.setItem("lastname", "Smith");
-
+        let item = this.props.itemsArray[this.props.index];
         let productsStored = JSON.parse(localStorage.getItem("cart"));
         if (!productsStored) {
             let products = [];
-            let item = this.props.itemsArray[this.props.index];
             products[0] = item.id;
             localStorage.setItem("cart", JSON.stringify(products));
         } else {
-            productsStored.push(this.props.index);
+            productsStored.push(item.id);
             localStorage.setItem("cart", JSON.stringify(productsStored));
         }
+
     }
 
     handleChange(event) {
