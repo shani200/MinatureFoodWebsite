@@ -14,11 +14,19 @@ export default class ShoppingCart extends React.Component {
             galleryArray: this.WebsiteCommonService.galleryItemArr
         };
 
+
     }
 
     renderCart(){
+        let listItems;
         let productsStored = JSON.parse(localStorage.getItem("cart"));
-       let listItems;
+        if(!productsStored){
+            return(
+                <div className="emptyCart">
+                    <span>YOUR CART IS EMPTY!</span>
+                </div>);
+        }
+        else{
         listItems = productsStored.map((product,i) =>
             (
                 <div className="cartProducts" >
@@ -26,28 +34,40 @@ export default class ShoppingCart extends React.Component {
                     {this.renderProduct(productsStored[i])}
                 </div>
             )
-        );
+        );}
        return listItems;
-
-      //   let list;
-      // list= this.renderProduct(productsStored[2]);
-      // return list;
     }
 
     renderProduct(index){
-        let productsStored = JSON.parse(localStorage.getItem("cart"));
-        return(
+         return(
             <div className="cartDisplay">
                 <span className="cartImage"> <img className="imageProduct" src={this.state.galleryArray[index].image}/> </span>
-                <span className="cartDesc">{this.state.galleryArray[index].title}</span>
-                <span className="cartQuantity">1</span>
-                <span className="cartPrice">{this.state.galleryArray[index].price}</span>
+                <span className="cartTitle">{this.state.galleryArray[index].title}</span>
+                <span className="cartQuantity">Quantity:1</span>
+                <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
 
-
+                <div className="btn-remove-cart">
+                    <button className="btn-remove" onClick={this.removeItem(index)}>
+                        Remove
+                    </button>
+                </div>
             </div>
         );
+    }
 
+    removeItem(i){
+        let products = JSON.parse(localStorage.getItem("cart"));
+        products.splice(i, 1);
+        localStorage.setItem('cart', JSON.stringify(products));
+    }
 
+    renderTotalPrice(){
+        let price = 10;
+        return(
+            <div className="price-zone">
+              <span>{`Total: ${price}$`}</span>
+            </div>
+        );
     }
 
 
@@ -60,7 +80,7 @@ export default class ShoppingCart extends React.Component {
             <div className="cartBackdrop">
                 <div className="cartModal">
                     {this.renderCart()}
-
+                    {this.renderTotalPrice()}
                     <div className="btn-exit-cart">
                         <button className="btn-close-cart" onClick={this.props.onClose}>
                             X

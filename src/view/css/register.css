@@ -12,7 +12,7 @@
 
 .RegisterModal{
     display: flex;
-    background-color: rgba(24, 53, 88, 0.72);
+    background-color: rgba(24, 53, 88, 0.85);;
     border-radius: 5px;
     max-width: 350px;
     min-height: 350px;
