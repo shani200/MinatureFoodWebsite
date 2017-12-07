@@ -20,10 +20,12 @@ export default class ShoppingCart extends React.Component {
     renderCart(){
         let listItems;
         let productsStored = JSON.parse(localStorage.getItem("cart"));
+        //  localStorage.removeItem("cart");
         if(!productsStored){
             return(
                 <div className="emptyCart">
-                    <span>YOUR CART IS EMPTY!</span>
+                    <div>Your shopping cart is empty,</div>
+                    <div>but it doesn't have to be.</div>
                 </div>);
         }
         else{
@@ -47,7 +49,7 @@ export default class ShoppingCart extends React.Component {
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
 
                 <div className="btn-remove-cart">
-                    <button className="btn-remove" onClick={this.removeItem(index)}>
+                    <button className="btn-remove" /*onClick={this.removeItem(index)}*/>
                         Remove
                     </button>
                 </div>
@@ -56,18 +58,32 @@ export default class ShoppingCart extends React.Component {
     }
 
     removeItem(i){
-        let products = JSON.parse(localStorage.getItem("cart"));
+        alert(i);
+         let products = JSON.parse(localStorage.getItem("cart"));
         products.splice(i, 1);
         localStorage.setItem('cart', JSON.stringify(products));
     }
 
+
     renderTotalPrice(){
-        let price = 10;
-        return(
-            <div className="price-zone">
-              <span>{`Total: ${price}$`}</span>
-            </div>
+        let price=0;
+        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        if(!productsStored){
+            return(
+               undefined
+            )
+        }
+        else{productsStored.map((product,i) =>
+            (
+               price += this.state.galleryArray[productsStored[i]].price
+            )
         );
+            return(
+            <div className="price-zone">
+                <span>{`Total: ${price}$`}</span>
+            </div>
+        );}
+
     }
 
 

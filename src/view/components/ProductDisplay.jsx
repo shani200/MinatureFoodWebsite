@@ -85,7 +85,7 @@ export default class ProductDisplay extends React.Component {
 
                         <div className="view">
                             <div className="overview">Overview</div>
-                            <ul class="myUl" style={divStyle}>
+                            <ul className="myUl" style={divStyle}>
                                 {this.renderOverview()}
                             </ul>
 

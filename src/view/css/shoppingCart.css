@@ -42,6 +42,8 @@
     display: flex;
     border: 1px solid #e6b5ce;
     position: relative;
+    width: 100%;
+    min-width: 560px;
 }
 
 .cartImage {
@@ -51,7 +53,7 @@
 .imageProduct{
     width: 9vw;
     height: 11vh;
-    padding: 1vw 11vw 1vw 2vw;
+    padding: 1vw 10vw 1vw 2vw;
 }
 
 .cartTitle{
