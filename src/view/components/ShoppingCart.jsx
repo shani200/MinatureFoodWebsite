@@ -13,6 +13,7 @@ export default class ShoppingCart extends React.Component {
         this.state={
             galleryArray: this.WebsiteCommonService.galleryItemArr
         };
+        this.removeItem = this.removeItem.bind(this);
 
 
     }
@@ -21,7 +22,7 @@ export default class ShoppingCart extends React.Component {
         let listItems;
         let productsStored = JSON.parse(localStorage.getItem("cart"));
         //  localStorage.removeItem("cart");
-        if(!productsStored){
+        if(!productsStored || !productsStored.length){
             return(
                 <div className="emptyCart">
                     <div>Your shopping cart is empty,</div>
@@ -33,15 +34,16 @@ export default class ShoppingCart extends React.Component {
             (
                 <div className="cartProducts" >
 
-                    {this.renderProduct(productsStored[i])}
+                    {this.renderProduct(productsStored[i],i)}
                 </div>
             )
         );}
        return listItems;
     }
 
-    renderProduct(index){
-         return(
+    renderProduct(index, indexInModal){
+        const classes = `indexInModal_${indexInModal} btn-remove`;
+        return(
             <div className="cartDisplay">
                 <span className="cartImage"> <img className="imageProduct" src={this.state.galleryArray[index].image}/> </span>
                 <span className="cartTitle">{this.state.galleryArray[index].title}</span>
@@ -49,7 +51,7 @@ export default class ShoppingCart extends React.Component {
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
 
                 <div className="btn-remove-cart">
-                    <button className="btn-remove" /*onClick={this.removeItem(index)}*/>
+                    <button className={classes} onClick={this.removeItem}>
                         Remove
                     </button>
                 </div>
@@ -57,11 +59,12 @@ export default class ShoppingCart extends React.Component {
         );
     }
 
-    removeItem(i){
-        alert(i);
+    removeItem(event){
          let products = JSON.parse(localStorage.getItem("cart"));
-        products.splice(i, 1);
+        let indexInModal = event.target.classList[0].split('_')[1];
+        products.splice(indexInModal, 1);
         localStorage.setItem('cart', JSON.stringify(products));
+        this.forceUpdate();
     }
 
 
