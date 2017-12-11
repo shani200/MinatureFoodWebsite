@@ -23,7 +23,16 @@ import baking_scene from '../view/pictures/baking_scene.jpg';
 import pink_ice_cream from '../view/pictures/pink_ice_cream.jpg';
 import plants from '../view/pictures/plants.jpg';
 import pusheen_cookies_set from '../view/pictures/pusheen_cookies_set.jpg';
-import pusheen_cookies from '../view/pictures/pusheen_cookies.jpg';
+import lollipops from '../view/pictures/lollipops.jpg';
+import berry_cake_with_strawberries from '../view/pictures/berry_cake_with_strawberries.jpg';
+import pink_macaroon from '../view/pictures/pink_macaroon.jpg';
+import cactus from '../view/pictures/cactus.jpg';
+import macaroons from '../view/pictures/macaroons.jpg';
+import rilakuma from '../view/pictures/rilakuma.jpg';
+import pocky from '../view/pictures/pocky.jpg';
+import plant from '../view/pictures/plant.jpg';
+import rilakuma_donut from '../view/pictures/rilakuma_donut.jpg';
+import macaroon_cat from '../view/pictures/macaroon_cat.jpg';
 import yellow_set from '../view/pictures/yellow_set.jpg';
 
 let  websiteConfig = {
@@ -111,7 +120,7 @@ let  websiteConfig = {
         {
             id:4,
             title: 'Blue Planner & Ice Cream & Croissant',
-            price: 15.90,
+            price: 13.90,
             desc: [
                 {
                     key: 'Type',
@@ -239,7 +248,7 @@ let  websiteConfig = {
         {
             id:10,
             title: 'Chocolate Ice Creams',
-            price: 5.90,
+            price: 7.90,
             desc: [
                 {
                     key: 'Type',
@@ -263,7 +272,7 @@ let  websiteConfig = {
         {
             id:11,
             title: 'Croissant In Colors',
-            price: 5.90,
+            price: 6.80,
             desc: [
                 {
                     key: 'Type',
@@ -287,7 +296,7 @@ let  websiteConfig = {
         {
             id:12,
             title: 'Yellow Planner & Ice Cream & Croissant',
-            price: 5.90,
+            price: 9.90,
             desc: [
                 {
                     key: 'Type',
@@ -307,7 +316,7 @@ let  websiteConfig = {
         {
             id:13,
             title: 'Ice Plant',
-            price: 5.90,
+            price: 7.90,
             desc: [
                 {
                     key: 'Type',
@@ -351,7 +360,7 @@ let  websiteConfig = {
         {
             id: 15,
             title: 'Jar Of Sweets',
-            price: 5.90,
+            price: 6.70,
             desc: [
                 {
                     key: 'Type',
@@ -391,7 +400,7 @@ let  websiteConfig = {
         {
             id: 17,
             title: 'Marshmallow',
-            price: 5.90,
+            price: 8.90,
             desc: [
                 {
                     key: 'Type',
@@ -411,7 +420,7 @@ let  websiteConfig = {
         {
             id: 18,
             title: 'Mermaid Pusheen',
-            price: 5.90,
+            price: 7.70,
             desc: [
                 {
                     key: 'Type',
@@ -431,7 +440,7 @@ let  websiteConfig = {
         {
             id: 19,
             title: 'Mini Cookies',
-            price: 5.90,
+            price: 6.90,
             desc: [
                 {
                     key: 'Type',
@@ -471,7 +480,7 @@ let  websiteConfig = {
         {
             id: 21,
             title: 'Ombré Pink Cake',
-            price: 5.90,
+            price: 13.90,
             desc: [
                 {
                     key: 'Type',
@@ -491,7 +500,7 @@ let  websiteConfig = {
         {
             id: 22,
             title: 'Baking Cookies Scene',
-            price: 5.90,
+            price: 14.70,
             desc: [
                 {
                     key: 'Type',
@@ -511,7 +520,7 @@ let  websiteConfig = {
         {
             id: 23,
             title: 'Ombré Pink Ice Cream',
-            price: 5.90,
+            price: 12.90,
             desc: [
                 {
                     key: 'Type',
@@ -535,7 +544,7 @@ let  websiteConfig = {
         {
             id: 24,
             title: 'Plants',
-            price: 5.90,
+            price: 10.90,
             desc: [
                 {
                     key: 'Type',
@@ -555,7 +564,7 @@ let  websiteConfig = {
         {
             id: 25,
             title: 'Pusheen Cookies Set',
-            price: 5.90,
+            price: 7.80,
             desc: [
                 {
                     key: 'Type',
@@ -574,8 +583,8 @@ let  websiteConfig = {
         },
         {
             id: 26,
-            title: 'Pusheen Cookies',
-            price: 5.90,
+            title: 'Lollipops',
+            price: 6.90,
             desc: [
                 {
                     key: 'Type',
@@ -590,12 +599,12 @@ let  websiteConfig = {
                     value: 'Gift wrapping and message available'
                 }
             ],
-            image: pusheen_cookies
+            image: lollipops
         },
         {
             id: 27,
-            title: 'Pusheen Cookies',
-            price: 5.90,
+            title: 'Berry Cake With Strawberries',
+            price: 11.90,
             desc: [
                 {
                     key: 'Type',
@@ -610,7 +619,167 @@ let  websiteConfig = {
                     value: 'Gift wrapping and message available'
                 }
             ],
-            image: yellow_set
+            image: berry_cake_with_strawberries
+        },
+        {
+            id: 28,
+            title: 'Ombré Pink Macaroons',
+            price: 6.50,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: pink_macaroon
+        },
+        {
+            id: 29,
+            title: 'Cactus',
+            price: 9.90,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: cactus
+        },
+        {
+            id: 30,
+            title: 'Macaroons',
+            price: 4.75,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: macaroons
+        },
+        {
+            id:31,
+            title: 'Rilakuma The Bear',
+            price: 8.80,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: rilakuma
+        },
+        {
+            id:32,
+            title: 'Pocky Japanese Snack',
+            price: 4.90,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: pocky
+        },
+        {
+            id:33,
+            title: 'plant',
+            price: 5.50,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: plant
+        },
+        {
+            id:34,
+            title: 'Rilakuma Stuck In Donut',
+            price: 9.70,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: rilakuma_donut
+        },
+        {
+            id:35,
+            title: 'Macaroon Cat',
+            price: 12.60,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: macaroon_cat
         }
     ]
 };

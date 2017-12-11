@@ -26,7 +26,16 @@
 .cartProducts{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    max-height: 90%;
+    overflow-y: auto;
 
+}
+
+.cartProduct{
+    display: flex;
+    width: 68vw;
+    height: 40vh;
 }
 
 .emptyCart{

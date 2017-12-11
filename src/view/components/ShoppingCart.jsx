@@ -14,14 +14,16 @@ export default class ShoppingCart extends React.Component {
             galleryArray: this.WebsiteCommonService.galleryItemArr
         };
         this.removeItem = this.removeItem.bind(this);
-
-
     }
+
+    componentDidMount(){
+        localStorage.removeItem("cart");
+    }
+
 
     renderCart(){
         let listItems;
         let productsStored = JSON.parse(localStorage.getItem("cart"));
-        //  localStorage.removeItem("cart");
         if(!productsStored || !productsStored.length){
             return(
                 <div className="emptyCart">
@@ -29,16 +31,17 @@ export default class ShoppingCart extends React.Component {
                     <div>but it doesn't have to be.</div>
                 </div>);
         }
-        else{
-        listItems = productsStored.map((product,i) =>
-            (
-                <div className="cartProducts" >
+        else {
+                listItems = productsStored.map((product,i) =>
+                (
+                <div className="cartProduct">
 
-                    {this.renderProduct(productsStored[i],i)}
+                    {this.renderProduct(productsStored[i], i)}
                 </div>
-            )
-        );}
+                 )
+                );}
        return listItems;
+
     }
 
     renderProduct(index, indexInModal){
@@ -98,7 +101,9 @@ export default class ShoppingCart extends React.Component {
         return (
             <div className="cartBackdrop">
                 <div className="cartModal">
+                    <div className="cartProducts">
                     {this.renderCart()}
+                    </div>
                     {this.renderTotalPrice()}
                     <div className="btn-exit-cart">
                         <button className="btn-close-cart" onClick={this.props.onClose}>
