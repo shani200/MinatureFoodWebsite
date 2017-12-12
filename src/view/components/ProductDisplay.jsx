@@ -12,7 +12,10 @@ export default class ProductDisplay extends React.Component {
         this.renderProducts=this.renderProducts.bind(this);
         this.renderOverview=this.renderOverview.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.addToCart = this.addToCart.bind(this);
+        this.onClick2 = this.onClick2.bind(this);
     }
+
 
     renderOverview(){
         let list = [];
@@ -24,31 +27,37 @@ export default class ProductDisplay extends React.Component {
     }
 
     addToCart() {
-        // let product =this.props.itemsArray[this.props.index];
-        // localStorage.setItem("lastname", "Smith");
-        let item = this.props.itemsArray[this.props.index];
-        let productsStored = JSON.parse(localStorage.getItem("cart"));
-        if (!productsStored) {
-            let products = [];
-            products[0] = item.id;
-            localStorage.setItem("cart", JSON.stringify(products));
-        } else {
-            productsStored.push(item.id);
-            localStorage.setItem("cart", JSON.stringify(productsStored));
-        }
+            // let product =this.props.itemsArray[this.props.index];
+            // localStorage.setItem("lastname", "Smith");
+            let item = this.props.itemsArray[this.props.index];
+            let productsStored = JSON.parse(localStorage.getItem("cart"));
+            if (!productsStored) {
+                let products = [];
+                products[0] = item.id;
+                localStorage.setItem("cart", JSON.stringify(products));
 
+            } else {
+                productsStored.push(item.id);
+                localStorage.setItem("cart", JSON.stringify(productsStored));
+            }
     }
 
     handleChange(event) {
         this.setState({value: event.target.value});
     }
 
+
+    onClick2(){
+       this.props.onClose()
+    }
+
+
+
     renderProducts(){
         //render nothing if the prop show is false
         if(!this.props.show){
             return null;
         }
-
         let divStyle = {
             listStyleType: 'upper-roman'
         };
@@ -78,7 +87,7 @@ export default class ProductDisplay extends React.Component {
                         </div>
 
                         <div className="cartBtn">
-                            <button  onClick={this.addToCart.bind(this)} className="btn-cart" >
+                            <button  onClick={()=>{ this.addToCart(); this.onClick2()}} className="btn-cart" >
                                 Add to cart
                             </button>
                         </div>

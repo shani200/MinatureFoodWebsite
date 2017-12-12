@@ -47,6 +47,7 @@ h2{
     display: inline-block;
     border-right: 1px solid lightblue;
     margin-top: 50px;
+    -webkit-filter: contrast(120%);filter: contrast(120%);
 }
 
 .description{

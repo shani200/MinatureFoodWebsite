@@ -74,7 +74,7 @@ export default class ShoppingCart extends React.Component {
     renderTotalPrice(){
         let price=0;
         let productsStored = JSON.parse(localStorage.getItem("cart"));
-        if(!productsStored){
+        if(!productsStored || !productsStored.length){
             return(
                undefined
             )
