@@ -18,14 +18,14 @@ export default class Body extends React.Component {
     render() {
         return(
          <div className="body-container">
-            <NavBar/>
+            <NavBar notification={this.props.notification}/>
             <Checkout/>
             <div className="explain">
                 Hi,I'm Shani welcome to my website.<br/>
                 I love to make miniatures out of polymer clay, especially minature food.<br/>
                 These is my creations.
             </div>
-            <Product/>
+            <Product notification={this.props.notification}/>
         </div>
         );
     }

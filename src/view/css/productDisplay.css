@@ -97,8 +97,11 @@ h2{
 
 .btn-exit{
     position: absolute;
-    top: -20px;
-    right: -15px;
+    top: -25px;
+    right: -19px;
+}
+.btn-exit:hover{
+  opacity: 0.5;
 }
 
 .symbol{

@@ -1,5 +1,6 @@
 import React from 'react';
 import WebsiteCommonService from '../../controller/WebsiteCommonService';
+import NotificationSystem from 'react-notification-system';
 import '../css/shoppingCart.css'
 
 /*import ProductTable from './ProductTable';*/
@@ -14,12 +15,22 @@ export default class ShoppingCart extends React.Component {
             galleryArray: this.WebsiteCommonService.galleryItemArr
         };
         this.removeItem = this.removeItem.bind(this);
+        this._addNotification = this._addNotification.bind(this);
     }
 
     componentDidMount(){
         localStorage.removeItem("cart");
+        this.props.notification = this.refs.notificationSystem;
     }
 
+
+    _addNotification(event){
+        event.preventDefault();
+        this.props.notification.addNotification({
+            message: 'Item deleted',
+            level: 'success'
+        });
+    }
 
     renderCart(){
         let listItems;
@@ -44,6 +55,8 @@ export default class ShoppingCart extends React.Component {
 
     }
 
+    // onClick={()=>{ this.removeItem() ; this._addNotification()}}
+
     renderProduct(index, indexInModal){
         const classes = `indexInModal_${indexInModal} btn-remove`;
         return(
@@ -54,9 +67,10 @@ export default class ShoppingCart extends React.Component {
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
 
                 <div className="btn-remove-cart">
-                    <button className={classes} onClick={this.removeItem}>
+                    <button className={classes}  onClick={this.removeItem}>
                         Remove
                     </button>
+                    <NotificationSystem ref="notificationSystem" />
                 </div>
             </div>
         );

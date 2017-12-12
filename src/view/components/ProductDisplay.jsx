@@ -1,6 +1,7 @@
 import React from 'react';
 import ShoppingCart from "./ShoppingCart";
 import '../css/productDisplay.css'
+import NotificationSystem from 'react-notification-system';
 
 
 export default class ProductDisplay extends React.Component {
@@ -13,9 +14,22 @@ export default class ProductDisplay extends React.Component {
         this.renderOverview=this.renderOverview.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.addToCart = this.addToCart.bind(this);
-        this.onClick2 = this.onClick2.bind(this);
+        this.onExit = this.onExit.bind(this);
+        this._addNotification = this._addNotification.bind(this);
     }
 
+
+    componentDidMount() {
+        this.props.notification = this.refs.notificationSystem;
+    }
+
+    _addNotification(event){
+        event.preventDefault();
+        this.props.notification.addNotification({
+            message: 'Item added',
+            level: 'success'
+        });
+    }
 
     renderOverview(){
         let list = [];
@@ -47,7 +61,8 @@ export default class ProductDisplay extends React.Component {
     }
 
 
-    onClick2(){
+
+    onExit(){
        this.props.onClose()
     }
 
@@ -87,9 +102,10 @@ export default class ProductDisplay extends React.Component {
                         </div>
 
                         <div className="cartBtn">
-                            <button  onClick={()=>{ this.addToCart(); this.onClick2()}} className="btn-cart" >
+                            <button onClick={()=>{ this.addToCart(); this._addNotification(); this.onExit()}} className="btn-cart" >
                                 Add to cart
                             </button>
+                            <NotificationSystem ref="notificationSystem" />
                         </div>
 
                         <div className="view">

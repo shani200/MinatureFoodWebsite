@@ -49,7 +49,8 @@ export default class Product extends React.Component {
                 <ProductDisplay itemsArray={this.state._galleryArr}
                                 index={this.state.isOpenIndex}
                                 show={this.state.isOpen}
-                                onClose={this.toggleProduct}>
+                                onClose={this.toggleProduct}
+                                notifi={this.props.notif}>
                 </ProductDisplay>
             </div>
         );

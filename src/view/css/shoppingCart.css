@@ -120,14 +120,14 @@
 
 .btn-exit-cart {
     position: absolute;
-    top: -20px;
-    right: -15px;
+    top: -25px;
+    right: -19px;
 }
 
 .btn-close-cart{
   background-color: rgba(43, 36, 43, 0.8);
   color: white;
-  padding: 3px;
+  padding: 5px;
   text-align: center;
   text-decoration: none;
   font-size: 15px;
