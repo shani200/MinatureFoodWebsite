@@ -60,13 +60,9 @@ export default class ProductDisplay extends React.Component {
         this.setState({value: event.target.value});
     }
 
-
-
     onExit(){
-       this.props.onClose()
+       this.props.onClose();
     }
-
-
 
     renderProducts(){
         //render nothing if the prop show is false

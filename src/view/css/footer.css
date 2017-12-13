@@ -20,6 +20,11 @@
     margin-top: 3px;
  }
 
+.create:hover{
+    color:white;
+}
+
+
 .year{
     display: flex;
     flex-direction: column;
@@ -27,8 +32,16 @@
     margin-top: 3px;
 }
 
+.year:hover{
+    color:white;
+}
+
 .contact{
     display: flex;
     flex-direction: column;
     margin-top: 3px;
+}
+
+.contact:hover{
+    color:white;
 }

@@ -45,9 +45,14 @@ h2{
     width: 45%;
     height: 90%;
     display: inline-block;
-    border-right: 1px solid lightblue;
+    border: 2px solid #eadfff;
     margin-top: 50px;
+    border-radius: 5px;
     -webkit-filter: contrast(120%);filter: contrast(120%);
+}
+
+.images:hover{
+    border-radius: 50%;
 }
 
 .description{
@@ -60,11 +65,17 @@ h2{
     font-size: 29px;
     padding: 0 0 5px 0;
     font-family: Arial , sans-serif;
-    color: white;
+    color: #b1cfd8;
     text-align: center;
     margin: 0 0 35px 17px;
-    border-bottom: 1px solid white;
+    border-bottom: 5px double #b1cfd8;
+    text-shadow: 4px -5px 2px #bfc6c859;
 
+}
+
+.title:hover{
+   color:white;
+   border-bottom: 5px double white;
 }
 
 .price{
@@ -80,6 +91,12 @@ h2{
     padding-right: 3px;
 }
 
+.price-tag:hover ,.price:hover{
+    background-color: #c2eed5;
+    color:black;
+    width: 17%;
+    height: 20%;
+}
 
 .view {
     font-size: 17px;
@@ -93,6 +110,18 @@ h2{
     color:white;
     font-style: italic;
     font-size: 19px;
+}
+
+.overview:hover{
+    color:black;
+    background-color: #a8f7ff;
+    width: 85%;
+}
+
+ul:hover{
+    color:black;
+    width: 80%;
+    background-color: #ead5fb;
 }
 
 .btn-exit{
@@ -130,9 +159,16 @@ h2{
 }
 
 .amount{
- display: inline-flex;
- justify-content: center;
+   display: inline-flex;
+   justify-content: center;
     margin-left: 50px;
+}
+
+.quantity:hover{
+    background-color: #ffbcff;
+    color:black;
+    width: 20%;
+    height: 20%;
 }
 
 .amount-box{
@@ -141,4 +177,13 @@ h2{
     width: 25px;
     font-size:18px;
     border:3px rgba(5, 78, 127, 0.45) solid;
+    border-radius: 3px;
+}
+
+.amount-box:hover{
+    border: 5px double #ffcef9;
+}
+
+input[type=text]:focus{
+    border:2px solid rgb(230, 207, 249);
 }

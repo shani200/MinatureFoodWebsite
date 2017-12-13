@@ -100,7 +100,7 @@ let  websiteConfig = {
         {
             id:3,
             title: 'Bread Loaves',
-            price: 12.00,
+            price: 12.30,
             desc: [
                 {
                     key: 'Type',

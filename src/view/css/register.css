@@ -21,6 +21,7 @@
     margin: 0 auto;
     padding: 60px;
     color: white;
+    position: relative;
 }
 
 .modal-header{
@@ -37,7 +38,7 @@
     padding: 3px 0 2px 0;
 }
 
-h2{
+h1{
     text-shadow: 4px -5px 2px rgb(131, 156, 177);
 }
 
@@ -78,6 +79,16 @@ input[type=text]:focus{
     border :none;
 }
 
+.register:hover{
+    opacity: 0.5;
+}
+
+.btn-exit{
+    position: absolute;
+    top: -25px;
+    right: -19px;
+}
+
 .btn-close{
     background-color: rgba(43, 36, 43, 0.8);
     color: white;
@@ -88,4 +99,17 @@ input[type=text]:focus{
     cursor: pointer;
     border :none;
 
+}
+
+.btn-close:hover{
+    opacity: 0.5;
+}
+
+h1:hover{
+    color: #9fd0fb;
+    opacity: 0.6;
+}
+
+label:hover{
+    color: #02ffe2;
 }

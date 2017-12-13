@@ -1,7 +1,7 @@
 .body-container{
     flex-grow: 1;
     width: 100%;
-    height: 85%;
+    height: 83%;
     overflow: auto;
 }
 /*
@@ -30,3 +30,7 @@
     text-align: center;
 }
 
+.explain:hover{
+    text-transform: uppercase;
+
+}

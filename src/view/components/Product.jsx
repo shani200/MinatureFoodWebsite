@@ -19,7 +19,7 @@ export default class Product extends React.Component {
     }
 
     toggleProduct(event, i){
-        let index= 0;
+        let index;
         index= i.substr(i.indexOf('$')+1);
         this.setState( {isOpenIndex: index});
         this.setState( {isOpen: !this.state.isOpen});

@@ -97,13 +97,24 @@ export default class ShoppingCart extends React.Component {
             (
                price += this.state.galleryArray[productsStored[i]].price
             )
-        );
-            return(
-            <div className="price-zone">
-                <span>{`Total: ${price}$`}</span>
-            </div>
         );}
-
+            let strPrice = JSON.stringify(price);
+            let dot = strPrice.indexOf('.');
+            if(dot !== -1){
+                let decimal = strPrice.substr(0 , dot);
+                let remainder = strPrice.substr(dot, dot+1);
+                return(
+                    <div className="price-zone">
+                        <span>{`Total: ${decimal}${remainder}$`}</span>
+                    </div>
+                );}
+              else{
+                return(
+                <div className="price-zone">
+                    <span>{`Total: ${strPrice}$`}</span>
+                </div>
+            );
+        }
     }
 
 

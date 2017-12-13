@@ -59,19 +59,19 @@ export default class LogIn extends React.Component {
             <div className="backdrop">
                 <div className="LogInModal">
                     <form>
-                        <h2>Sign in</h2>
+                        <h1>Sign in</h1>
                         <label>
                           Email or Username:
-                            <input type="text" name="name" />
+                            <input type="text" name="name"  placeholder="Your name.." />
                         </label>
                         <label>
                             Password:
-                            <input type="text" name="password" />
+                            <input type="text" name="password"   placeholder="Your password.."/>
                         </label>
-                        <input type="submit" value="Sign in" className="submit" onClick={this.randomUser}/>
+                        <input type="submit" value="Sign in" className="submit" onClick={this.randomUser}  />
                     </form>
 
-                  <div className="footer">
+                  <div className="btn-exit">
                     <button  className="btn-close" onClick={this.props.onClose}>
                         X
                     </button>

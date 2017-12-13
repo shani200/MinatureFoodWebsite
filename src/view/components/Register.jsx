@@ -28,27 +28,27 @@ export default class Register extends React.Component {
                 <div className="RegisterModal">
 
                     <form>
-                        <h2>Register</h2>
+                        <h1>Register</h1>
                         <label>
                             First Name:
-                            <input type="text" name="first-name" />
+                            <input type="text" name="first-name" placeholder="Your name.." />
                         </label>
                         <label>
                             Email:
-                            <input type="text" name="email" />
+                            <input type="text" name="email" placeholder="Your email.." />
                         </label>
                         <label>
                             Password:
-                            <input type="text" name="password" />
+                            <input type="text" name="password" placeholder="Your password.." />
                         </label>
                         <label>
                             Confirm Password:
-                            <input type="text" name="confirm-password" />
+                            <input type="text" name="confirm-password" placeholder="Your password again.." />
                         </label>
                         <input type="submit" value="Register" className="register"/>
                     </form>
 
-                    <div className="footer">
+                    <div className="btn-exit">
                         <button  className="btn-close" onClick={this.props.onClose}>
                             X
                         </button>
