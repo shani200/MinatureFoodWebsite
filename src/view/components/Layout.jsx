@@ -15,6 +15,7 @@ export default class Layout extends  React.Component {
 
     componentDidMount() {
         this._notificationSystem = this.refs.notificationSystem;
+        this.forceUpdate();
     }
 
 

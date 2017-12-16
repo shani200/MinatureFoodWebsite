@@ -43,7 +43,8 @@ export default class ShoppingCart extends React.Component {
                 </div>);
         }
         else {
-                listItems = productsStored.map((product,i) =>
+
+                listItems = productsStored.map((product, i) =>
                 (
                 <div className="cartProduct">
 
@@ -61,7 +62,7 @@ export default class ShoppingCart extends React.Component {
         const classes = `indexInModal_${indexInModal} btn-remove`;
         return(
             <div className="cartDisplay">
-                <span className="cartImage"> <img className="imageProduct" src={this.state.galleryArray[index].image}/> </span>
+                <img className="imageProduct" src={this.state.galleryArray[index].image}/>
                 <span className="cartTitle">{this.state.galleryArray[index].title}</span>
                 <span className="cartQuantity">Quantity:1</span>
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>

@@ -16,6 +16,8 @@ export default class Product extends React.Component {
         };
         this.toggleProduct=this.toggleProduct.bind(this);
         this._renderGalleryItems = this._renderGalleryItems.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.toggleProduct = this.toggleProduct.bind(this);
     }
 
     toggleProduct(event, i){
@@ -25,6 +27,9 @@ export default class Product extends React.Component {
         this.setState( {isOpen: !this.state.isOpen});
     }
 
+    closeModal() {
+        this.setState( {isOpen: false});
+    }
 
     _renderGalleryItems () {
         let listItems = undefined;
@@ -50,7 +55,8 @@ export default class Product extends React.Component {
                                 index={this.state.isOpenIndex}
                                 show={this.state.isOpen}
                                 onClose={this.toggleProduct}
-                                notifi={this.props.notif}>
+                                notification={this.props.notification}
+                               closeModal={this.closeModal}>
                 </ProductDisplay>
             </div>
         );

@@ -1,7 +1,7 @@
 import React from 'react';
 import ShoppingCart from "./ShoppingCart";
 import '../css/productDisplay.css'
-import NotificationSystem from 'react-notification-system';
+
 
 
 export default class ProductDisplay extends React.Component {
@@ -16,12 +16,11 @@ export default class ProductDisplay extends React.Component {
         this.addToCart = this.addToCart.bind(this);
         this.onExit = this.onExit.bind(this);
         this._addNotification = this._addNotification.bind(this);
+        this.handleOnClickAddToCart = this._handleOnClickAddToCart.bind(this);
     }
 
 
-    componentDidMount() {
-        this.props.notification = this.refs.notificationSystem;
-    }
+
 
     _addNotification(event){
         event.preventDefault();
@@ -47,11 +46,18 @@ export default class ProductDisplay extends React.Component {
             let productsStored = JSON.parse(localStorage.getItem("cart"));
             if (!productsStored) {
                 let products = [];
-                products[0] = item.id;
+                // products[0] = item.id;
+                products[0] = {
+                    id: item.id,
+                    amount: 5
+                };
+
+                // products[1] = this.state.value;
                 localStorage.setItem("cart", JSON.stringify(products));
 
             } else {
                 productsStored.push(item.id);
+                // productsStored.push(this.state.value);
                 localStorage.setItem("cart", JSON.stringify(productsStored));
             }
     }
@@ -60,8 +66,14 @@ export default class ProductDisplay extends React.Component {
         this.setState({value: event.target.value});
     }
 
+    _handleOnClickAddToCart(event) {
+        this.addToCart();
+        this._addNotification(event);
+        this.onExit()
+    }
+
     onExit(){
-       this.props.onClose();
+       this.props.closeModal();
     }
 
     renderProducts(){
@@ -98,10 +110,10 @@ export default class ProductDisplay extends React.Component {
                         </div>
 
                         <div className="cartBtn">
-                            <button onClick={()=>{ this.addToCart(); this._addNotification(); this.onExit()}} className="btn-cart" >
+                            <button onClick={this.handleOnClickAddToCart} className="btn-cart" >
                                 Add to cart
                             </button>
-                            <NotificationSystem ref="notificationSystem" />
+
                         </div>
 
                         <div className="view">
