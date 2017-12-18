@@ -46,11 +46,11 @@ export default class ProductDisplay extends React.Component {
             let productsStored = JSON.parse(localStorage.getItem("cart"));
             if (!productsStored) {
                 let products = [];
-                // products[0] = item.id;
-                products[0] = {
+                products[0] = item.id;
+               /* products[0] = {
                     id: item.id,
                     amount: 5
-                };
+                };*/
 
                 // products[1] = this.state.value;
                 localStorage.setItem("cart", JSON.stringify(products));

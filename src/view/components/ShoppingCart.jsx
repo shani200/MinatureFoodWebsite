@@ -62,7 +62,7 @@ export default class ShoppingCart extends React.Component {
         const classes = `indexInModal_${indexInModal} btn-remove`;
         return(
             <div className="cartDisplay">
-                <img className="imageProduct" src={this.state.galleryArray[index].image}/>
+                <span className="cartImage"><img className="imageProduct" src={this.state.galleryArray[index].image}/></span>
                 <span className="cartTitle">{this.state.galleryArray[index].title}</span>
                 <span className="cartQuantity">Quantity:1</span>
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
