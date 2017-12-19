@@ -16,11 +16,11 @@ export default class ShoppingCart extends React.Component {
         };
         this.removeItem = this.removeItem.bind(this);
         this._addNotification = this._addNotification.bind(this);
+      //  this.handleOnClickDelete = this._handleOnClickDelete.bind(this);
     }
 
     componentDidMount(){
         localStorage.removeItem("cart");
-        this.props.notification = this.refs.notificationSystem;
     }
 
 
@@ -48,7 +48,7 @@ export default class ShoppingCart extends React.Component {
                 (
                 <div className="cartProduct">
 
-                    {this.renderProduct(productsStored[i], i)}
+                    {this.renderProduct(productsStored[i].id , i)}
                 </div>
                  )
                 );}
@@ -59,31 +59,39 @@ export default class ShoppingCart extends React.Component {
     // onClick={()=>{ this.removeItem() ; this._addNotification()}}
 
     renderProduct(index, indexInModal){
+        let productsStored = JSON.parse(localStorage.getItem("cart"));
         const classes = `indexInModal_${indexInModal} btn-remove`;
         return(
             <div className="cartDisplay">
                 <span className="cartImage"><img className="imageProduct" src={this.state.galleryArray[index].image}/></span>
                 <span className="cartTitle">{this.state.galleryArray[index].title}</span>
-                <span className="cartQuantity">Quantity:1</span>
+                <span className="cartQuantity">{`Quantity: ${productsStored[indexInModal].amount}`}</span>
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
 
                 <div className="btn-remove-cart">
                     <button className={classes}  onClick={this.removeItem}>
                         Remove
                     </button>
-                    <NotificationSystem ref="notificationSystem" />
                 </div>
             </div>
         );
     }
+
+  /*  _handleOnClickDelete(event){
+        this.removeItem(event);
+        this._addNotification(event);
+    }*/
 
     removeItem(event){
          let products = JSON.parse(localStorage.getItem("cart"));
         let indexInModal = event.target.classList[0].split('_')[1];
         products.splice(indexInModal, 1);
         localStorage.setItem('cart', JSON.stringify(products));
+        this._addNotification(event);
         this.forceUpdate();
     }
+
+
 
 
     renderTotalPrice(){
@@ -96,7 +104,7 @@ export default class ShoppingCart extends React.Component {
         }
         else{productsStored.map((product,i) =>
             (
-               price += this.state.galleryArray[productsStored[i]].price
+               price += this.state.galleryArray[productsStored[i].id].price * [productsStored[i].amount]
             )
         );}
             let strPrice = JSON.stringify(price);

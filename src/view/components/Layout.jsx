@@ -10,7 +10,7 @@ export default class Layout extends  React.Component {
     constructor(props){
         super(props);
         this._notificationSystem = null;
-        this._addNotification = this._addNotification.bind(this);
+       // this._addNotification = this._addNotification.bind(this);
     }
 
     componentDidMount() {
@@ -20,23 +20,27 @@ export default class Layout extends  React.Component {
 
 
 
-    _addNotification(event){
+ /*   _addNotification(event){
         event.preventDefault();
         this._notificationSystem.addNotification({
             message: 'Notification message',
             level: 'success'
         });
     }
+*/
 
+ /*
+   <div className="Notification">
+                    <button className="notification_btn" onClick={this._addNotification}>Add notification</button>
+                    <NotificationSystem ref="notificationSystem" />
+                </div>
+  */
 
     render() {
         return (
             <div className="mainScreen">
                 <Header />
-                <div className="Notification">
-                    <button className="notification_btn" onClick={this._addNotification}>Add notification</button>
-                    <NotificationSystem ref="notificationSystem" />
-                </div>
+                <NotificationSystem ref="notificationSystem" />
                 <Body notification={this._notificationSystem}/>
                 <Footer  message={this.props.message} />
             </div>

@@ -28,6 +28,9 @@
     border: 2px solid lightgrey;
     padding: 9px;
     text-align: center;
+   /* position: relative;
+    top: 35px;*/
+
 }
 
 .explain:hover{

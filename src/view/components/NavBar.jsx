@@ -56,8 +56,8 @@ export default class NavBar extends React.Component {
                     <img src={'http://findicons.com/files/icons/1700/2d/512/cart.png'} width="200" height="100" alt="shopping-cart" className="img-cart"  />
                     </button>
                     <ShoppingCart show={this.state.isShoppingCartOpen}
-                             onClose={this.toggleShoppingCart}
-                              notification={this.props.notification}>
+                                  onClose={this.toggleShoppingCart}
+                                  notification={this.props.notification}>
                     </ShoppingCart>
                 </div>
             </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import ShoppingCart from "./ShoppingCart";
 import '../css/productDisplay.css'
 
 
@@ -46,17 +45,15 @@ export default class ProductDisplay extends React.Component {
             let productsStored = JSON.parse(localStorage.getItem("cart"));
             if (!productsStored) {
                 let products = [];
-                products[0] = item.id;
-               /* products[0] = {
+                products[0] = {
                     id: item.id,
-                    amount: 5
-                };*/
-
-                // products[1] = this.state.value;
+                    amount: 3
+                };
                 localStorage.setItem("cart", JSON.stringify(products));
 
             } else {
-                productsStored.push(item.id);
+                let product = {id:item.id, amount:3};
+                productsStored.push(product);
                 // productsStored.push(this.state.value);
                 localStorage.setItem("cart", JSON.stringify(productsStored));
             }

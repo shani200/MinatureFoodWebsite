@@ -32,7 +32,7 @@ export default class Product extends React.Component {
     }
 
     _renderGalleryItems () {
-        let listItems = undefined;
+        let listItems;
         listItems = this.state._galleryArr.map((galleryItem,i) =>
                 (
                     <div className="gallery" key={i} onClick={this.toggleProduct.bind(i)}>
@@ -47,7 +47,6 @@ export default class Product extends React.Component {
     }
 
     render() {
-        let iterator=0;
         return (
             <div className="gallery-display">
                 {this._renderGalleryItems()}
