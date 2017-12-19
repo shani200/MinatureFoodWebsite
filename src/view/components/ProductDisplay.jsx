@@ -7,7 +7,7 @@ export default class ProductDisplay extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ''
+            value: '1'
         };
         this.renderProducts=this.renderProducts.bind(this);
         this.renderOverview=this.renderOverview.bind(this);
@@ -15,6 +15,7 @@ export default class ProductDisplay extends React.Component {
         this.addToCart = this.addToCart.bind(this);
         this.onExit = this.onExit.bind(this);
         this._addNotification = this._addNotification.bind(this);
+        this.clearAmount = this.clearAmount.bind(this);
         this.handleOnClickAddToCart = this._handleOnClickAddToCart.bind(this);
     }
 
@@ -42,18 +43,30 @@ export default class ProductDisplay extends React.Component {
             // let product =this.props.itemsArray[this.props.index];
             // localStorage.setItem("lastname", "Smith");
             let item = this.props.itemsArray[this.props.index];
+            // let listOfCosenId = [];
             let productsStored = JSON.parse(localStorage.getItem("cart"));
             if (!productsStored) {
                 let products = [];
                 products[0] = {
                     id: item.id,
-                    amount: 3
+                    amount: this.state.value
                 };
                 localStorage.setItem("cart", JSON.stringify(products));
 
             } else {
-                let product = {id:item.id, amount:3};
-                productsStored.push(product);
+                let product = {id:item.id, amount: this.state.value};
+                let oldAmount;
+                let newAmount;
+                if(product.id){
+                    for (let i=0; i< productsStored.length; i++) {
+                        if(productsStored[i].id === product.id){
+                            oldAmount = productsStored[i].amount;
+                            newAmount = parseInt(oldAmount) + parseInt(product.amount);
+                            productsStored[i].amount = newAmount;
+                        }
+                    }
+                }
+                else{productsStored.push(product);}
                 // productsStored.push(this.state.value);
                 localStorage.setItem("cart", JSON.stringify(productsStored));
             }
@@ -66,7 +79,12 @@ export default class ProductDisplay extends React.Component {
     _handleOnClickAddToCart(event) {
         this.addToCart();
         this._addNotification(event);
+        this.clearAmount();
         this.onExit()
+    }
+
+    clearAmount(){
+        this.setState({value: 1});
     }
 
     onExit(){
