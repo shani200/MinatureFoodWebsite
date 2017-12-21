@@ -27,6 +27,7 @@
     overflow-y: auto;
     height: 90%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .cartProduct{

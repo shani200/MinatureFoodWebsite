@@ -168,15 +168,15 @@ ul:hover{
 .quantity:hover{
     background-color: #ffbcff;
     color:black;
-    width: 12%;
+    width: 2vw;
     height: 2vh;
 }
 
 
 input[type=text], .amount-box {
   /*text-align: center;*/
-    width: 4vw;
-    height: 4vh;
+    width: 3vw;
+    height: 2vh;
     font-size:18px;
     border:3px rgba(5, 78, 127, 0.45) solid;
     border-radius: 3px;

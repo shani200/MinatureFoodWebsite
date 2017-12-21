@@ -16,7 +16,7 @@ export default class ProductDisplay extends React.Component {
         this.onExit = this.onExit.bind(this);
         this._addNotification = this._addNotification.bind(this);
         this.clearAmount = this.clearAmount.bind(this);
-       //  this.isIdExists = this.isIdExists.bind(this);
+        this.isIdExists = this.isIdExists.bind(this);
         this.handleOnClickAddToCart = this._handleOnClickAddToCart.bind(this);
 
     }
@@ -24,12 +24,26 @@ export default class ProductDisplay extends React.Component {
 
 
 
-    _addNotification(event){
+    _addNotification(event,itemIsUpdate,amountExist){
         event.preventDefault();
-        this.props.notification.addNotification({
-            message: 'Item added',
-            level: 'success'
-        });
+        if(!amountExist && !itemIsUpdate ){
+            this.props.notification.addNotification({
+                message: 'you must enter quantity',
+                level: 'success'
+            });
+        }
+        if(itemIsUpdate && amountExist){
+            this.props.notification.addNotification({
+                message: "Item's amount updated",
+                level: 'success'
+            });
+        }
+        if(!itemIsUpdate && amountExist){
+            this.props.notification.addNotification({
+                message: 'Item added',
+                level: 'success'
+            });
+        }
     }
 
     renderOverview(){
@@ -42,69 +56,73 @@ export default class ProductDisplay extends React.Component {
     }
 
     addToCart() {
-        // let product =this.props.itemsArray[this.props.index];
-        // localStorage.setItem("lastname", "Smith");
         let item = this.props.itemsArray[this.props.index];
         let productsStored = JSON.parse(localStorage.getItem("cart"));
-        if (!productsStored) {
+        let itemIsUpdate = false;
+        let amount;
+        let amountExist  = true;
+        amount = this.state.value;
+        if(amount === '' || amount <= '0'){
+            amountExist = false;
+            this._addNotification(event,itemIsUpdate,amountExist);
+            return undefined;
+        }
+        if (!productsStored  ){
             let products = [];
             products[0] = {
                 id: item.id,
                 amount: this.state.value
             };
-
             localStorage.setItem("cart", JSON.stringify(products));
 
         } else {
+
+            // if(productsStored.length===1){
+            //     productsStored = productsStored.splice(0,0,products[0]);
+            //     alert(productsStored);
+            // }
+
             let product = {id: item.id, amount: this.state.value};
             let oldAmount;
             let newAmount;
             let index;
 
-           // let index = this.isIdExists(product.id, productsStored);
-            for (let i=0; i< productsStored.length; i++) {
-                if(productsStored[i].id === product.id) {
-                    index= i;
-                  }
-                }
+            index = this.isIdExists(product.id, productsStored);
+
             if (index) {
-                // for (let i=0; i< productsStored.length; i++) {
-                //     if(productsStored[i].id === product.id){
                 oldAmount = productsStored[index].amount;
                 newAmount = parseInt(oldAmount) + parseInt(product.amount);
                 productsStored[index].amount = newAmount;
+                itemIsUpdate = true;
             }
             // }
 
             else {
-                productsStored.push(product);
+                productsStored.push(product)
             }
-            // productsStored.push(this.state.value);
+            this._addNotification(event,itemIsUpdate,amountExist);
             localStorage.setItem("cart", JSON.stringify(productsStored));
         }
     }
 
-    // isIdExists(id, list){
-    //     let index;
-    //     for (let i = 0; i < list.length; i++) {
-    //         if(list[i].id ===id){
-    //             index=i;
-    //         }
-    //         else{
-    //             index=null;
-    //         }
-    //     }
-    //      return index;
-    //     }
+    isIdExists(id, list){
+        let index;
+        for (let i=0; i< list.length; i++) {
+            if(list[i].id === id) {
+                index= i;
+            }
+        }
+        return index;
+     }
 
 
     handleChange(event) {
         this.setState({value: event.target.value});
     }
 
-    _handleOnClickAddToCart(event) {
+    _handleOnClickAddToCart() {
         this.addToCart();
-        this._addNotification(event);
+       // this._addNotification(event);
         this.clearAmount();
         this.onExit()
     }
