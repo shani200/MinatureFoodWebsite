@@ -51,10 +51,22 @@ input[type=text] {
     border-bottom: 2px solid black;
 }
 
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
 input[type=text]:focus{
     border:2px dotted rgb(124, 129, 152);
 }
 
+input[type=password]:focus{
+    border:2px dotted rgb(124, 129, 152);
+}
 /*
 .tabs-clear{
     list-style: none;
