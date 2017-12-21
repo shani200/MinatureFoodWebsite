@@ -17,6 +17,7 @@ export default class Product extends React.Component {
         this.toggleProduct=this.toggleProduct.bind(this);
         this._renderGalleryItems = this._renderGalleryItems.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.openModal = this.openModal.bind(this);
         this.toggleProduct = this.toggleProduct.bind(this);
     }
 
@@ -29,6 +30,10 @@ export default class Product extends React.Component {
 
     closeModal() {
         this.setState( {isOpen: false});
+    }
+
+    openModal(){
+        this.setState( {isOpen: true});
     }
 
     _renderGalleryItems () {
@@ -55,7 +60,8 @@ export default class Product extends React.Component {
                                 show={this.state.isOpen}
                                 onClose={this.toggleProduct}
                                 notification={this.props.notification}
-                               closeModal={this.closeModal}>
+                                closeModal={this.closeModal}
+                                stayOpenModal={this.openModal}>
                 </ProductDisplay>
             </div>
         );

@@ -14,6 +14,7 @@ export default class ProductDisplay extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.addToCart = this.addToCart.bind(this);
         this.onExit = this.onExit.bind(this);
+        this.onStayOpenModal = this.onStayOpenModal.bind(this);
         this._addNotification = this._addNotification.bind(this);
         this.clearAmount = this.clearAmount.bind(this);
         this.isIdExists = this.isIdExists.bind(this);
@@ -65,6 +66,7 @@ export default class ProductDisplay extends React.Component {
         if(amount === '' || amount <= '0'){
             amountExist = false;
             this._addNotification(event,itemIsUpdate,amountExist);
+            this.onStayOpenModal();
             return undefined;
         }
         if (!productsStored  ){
@@ -74,7 +76,7 @@ export default class ProductDisplay extends React.Component {
                 amount: this.state.value
             };
             localStorage.setItem("cart", JSON.stringify(products));
-
+            this.onExit();
         } else {
 
             // if(productsStored.length===1){
@@ -102,6 +104,7 @@ export default class ProductDisplay extends React.Component {
             }
             this._addNotification(event,itemIsUpdate,amountExist);
             localStorage.setItem("cart", JSON.stringify(productsStored));
+            this.onExit();
         }
     }
 
@@ -124,7 +127,7 @@ export default class ProductDisplay extends React.Component {
         this.addToCart();
        // this._addNotification(event);
         this.clearAmount();
-        this.onExit()
+
     }
 
     clearAmount(){
@@ -134,6 +137,10 @@ export default class ProductDisplay extends React.Component {
     onExit(){
        this.props.closeModal();
     }
+
+    onStayOpenModal(){
+        this.props.stayOpenModal();
+}
 
     renderProducts(){
         //render nothing if the prop show is false
