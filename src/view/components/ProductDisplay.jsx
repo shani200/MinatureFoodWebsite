@@ -76,6 +76,7 @@ export default class ProductDisplay extends React.Component {
                 amount: this.state.value
             };
             localStorage.setItem("cart", JSON.stringify(products));
+            this._addNotification(event,itemIsUpdate,amountExist);
             this.onExit();
         } else {
 
@@ -91,15 +92,12 @@ export default class ProductDisplay extends React.Component {
 
             index = this.isIdExists(product.id, productsStored);
 
-            if (index) {
+            if (index !== undefined) {
                 oldAmount = productsStored[index].amount;
                 newAmount = parseInt(oldAmount) + parseInt(product.amount);
                 productsStored[index].amount = newAmount;
                 itemIsUpdate = true;
-            }
-            // }
-
-            else {
+            } else {
                 productsStored.push(product)
             }
             this._addNotification(event,itemIsUpdate,amountExist);
