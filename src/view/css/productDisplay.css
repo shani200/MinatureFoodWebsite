@@ -47,13 +47,13 @@ h2{
     display: inline-block;
     border: 2px solid #eadfff;
     margin-top: 50px;
-    border-radius: 5px;
+    border-radius: 50%;
     -webkit-filter: contrast(120%);filter: contrast(120%);
 }
 
-.images:hover{
+/*.images:hover{
     border-radius: 50%;
-}
+}*/
 
 .description{
     width: 49%;
@@ -91,12 +91,12 @@ h2{
     padding-right: 6px;
 }
 
-.price-tag:hover ,.price:hover{
+/*.price-tag:hover ,.price:hover{
     background-color: #c2eed5;
     color:black;
     width: 17%;
     height: 1vh;
-}
+}*/
 
 .view {
     font-size: 17px;
@@ -144,13 +144,14 @@ ul:hover{
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
-    border :none;
     margin-left: 55px;
     padding: 2% 38%;
+    border:none;
 }
 
 .btn-cart:hover{
     opacity:0.5;
+    border: 1px solid rgb(249, 204, 203);
 }
 .quantity{
     font-size: 15px;
@@ -165,27 +166,23 @@ ul:hover{
     margin-left: 50px;
 }
 
-.quantity:hover{
+/*.quantity:hover{
     background-color: #ffbcff;
     color:black;
     width: 2vw;
     height: 2vh;
-}
+}*/
 
 
-input[type=text]{
+.ProductModal input[type=text]{
   /*text-align: center;*/
-    width: 100%;
-    height: 2vh;
+    width: 3vw;
+    height: 4vh;
     font-size:18px;
-    border:3px rgba(5, 78, 127, 0.45) solid;
+    border: 3px solid rgb(230, 207, 249);
     border-radius: 3px;
 }
 
-.amount-box:hover{
-    border: 3px solid #ffcef9;
-}
-
-input[type=text]:focus{
-    border:2px solid rgb(230, 207, 249);
+.ProductModal  input[type=text]:focus{
+    border: 3px solid rgb(182, 247, 249);
 }

@@ -23,8 +23,6 @@ export default class ProductDisplay extends React.Component {
     }
 
 
-
-
     _addNotification(event,itemIsUpdate,amountExist){
         event.preventDefault();
         if(!amountExist && !itemIsUpdate ){
@@ -51,7 +49,7 @@ export default class ProductDisplay extends React.Component {
         let list = [];
         let item = this.props.itemsArray[this.props.index];
          for (let i=0; i< item.desc.length; i++) {
-              list.push(<li> {`${item.desc[i].key} : ${item.desc[i].value}`}</li>);
+              list.push(<li> {`${item.desc[i].key} : ${item.desc[i].nameValue}`}</li>);
           }
         return list;
     }
@@ -62,7 +60,7 @@ export default class ProductDisplay extends React.Component {
         let itemIsUpdate = false;
         let amount;
         let amountExist  = true;
-        amount = this.state.value;
+        amount = this.state.nameValue;
         if(amount === '' || amount <= '0'){
             amountExist = false;
             this._addNotification(event,itemIsUpdate,amountExist);
@@ -73,19 +71,13 @@ export default class ProductDisplay extends React.Component {
             let products = [];
             products[0] = {
                 id: item.id,
-                amount: this.state.value
+                amount: this.state.nameValue
             };
             localStorage.setItem("cart", JSON.stringify(products));
             this._addNotification(event,itemIsUpdate,amountExist);
             this.onExit();
         } else {
-
-            // if(productsStored.length===1){
-            //     productsStored = productsStored.splice(0,0,products[0]);
-            //     alert(productsStored);
-            // }
-
-            let product = {id: item.id, amount: this.state.value};
+            let product = {id: item.id, amount: this.state.nameValue};
             let oldAmount;
             let newAmount;
             let index;
@@ -108,17 +100,19 @@ export default class ProductDisplay extends React.Component {
 
     isIdExists(id, list){
         let index;
-        for (let i=0; i< list.length; i++) {
-            if(list[i].id === id) {
-                index= i;
+        list.map((listItem,i) =>
+            {
+                if (listItem.id === id)
+                    index = i
             }
-        }
+
+        );
         return index;
      }
 
 
     handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({value: event.target.nameValue});
     }
 
     _handleOnClickAddToCart() {
@@ -167,7 +161,7 @@ export default class ProductDisplay extends React.Component {
                         <div className="amount">
                             <span className="quantity">Quantity:</span>
                             <input type="text"
-                                   value={this.state.value}
+                                   value={this.state.nameValue}
                                    className="amount-box"
                                    onChange={this.handleChange}
                             />

@@ -48,7 +48,8 @@ export default class ShoppingCart extends React.Component {
                 (
                 <div className="cartProduct">
 
-                    {this.renderProduct(productsStored[i].id , i)}
+                    {/*{this.renderProduct(productsStored[i].id , i)}*/}
+                    {this.renderProduct(product.id , i)}
                 </div>
                  )
                 );}
