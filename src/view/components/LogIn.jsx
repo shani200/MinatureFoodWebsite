@@ -17,7 +17,11 @@ export default class LogIn extends React.Component {
         this._addNotification = this._addNotification.bind(this);
         this.saveInputs = this.saveInputs.bind(this);
         this.clearState = this.clearState.bind(this);
+        this.setStateOfUserSignIn = this.setStateOfUserSignIn.bind(this);
         this.onStayOpenModal = this.onStayOpenModal.bind(this);
+    }
+    componentDidMount(){
+        sessionStorage.removeItem("user");
     }
 
     _addNotification(event,missInput,nameIsWrong){
@@ -58,6 +62,10 @@ export default class LogIn extends React.Component {
 
     onStayOpenModal(){
         this.props.onOpen();
+    }
+
+    setStateOfUserSignIn(){
+        this.setState({userSignedIn: true})
     }
 
     saveInputs(event) {

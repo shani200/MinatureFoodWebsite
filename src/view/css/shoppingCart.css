@@ -115,8 +115,27 @@
 }
 
 .cartQuantity:hover{
-    opacity: 0.4;
+    /*opacity: 0.4;*/
     color: #44fff0;
+}
+
+.cartModal input[type=text]{
+    /*text-align: center;*/
+    width: 4vw;
+    height: 4vh;
+    font-size:18px;
+    border: 2px solid rgb(230, 207, 249);
+    border-radius: 3px;
+}
+
+.cartModal  input[type=text]:hover{
+    opacity:1;
+    border: 2px solid rgb(182, 247, 249);
+}
+
+.cartModal  input[type=number]:focus{
+    opacity:1;
+    border: 2px solid rgb(182, 247, 249);
 }
 
 .cartPrice{

@@ -10,11 +10,15 @@ import '../css/shoppingCart.css'
 export default class ShoppingCart extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            amountValue: '1'
+        };
         this.WebsiteCommonService = new WebsiteCommonService();
         this.state={
             galleryArray: this.WebsiteCommonService.galleryItemArr
         };
         this.removeItem = this.removeItem.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this._addNotification = this._addNotification.bind(this);
       //  this.handleOnClickDelete = this._handleOnClickDelete.bind(this);
     }
@@ -56,17 +60,27 @@ export default class ShoppingCart extends React.Component {
        return listItems;
 
     }
-
+    handleChange(event) {
+        this.setState({amountValue: event.target.value});
+    }
     // onClick={()=>{ this.removeItem() ; this._addNotification()}}
 
     renderProduct(index, indexInModal){
         let productsStored = JSON.parse(localStorage.getItem("cart"));
+        let amount = productsStored[indexInModal].amount;
+        // this.setState({amountValue: amount});
         const classes = `indexInModal_${indexInModal} btn-remove`;
         return(
             <div className="cartDisplay">
                 <span className="cartImage"><img className="imageProduct" src={this.state.galleryArray[index].image}/></span>
                 <span className="cartTitle">{this.state.galleryArray[index].title}</span>
-                <span className="cartQuantity">{`Quantity: ${productsStored[indexInModal].amount}`}</span>
+                <span className="cartQuantity">Quantity:
+                    <input type="text"
+                           value={amount}
+                           className="amount-box"
+                           onChange={this.handleChange}
+                    />
+                </span>
                 <span className="cartPrice">Price:{this.state.galleryArray[index].price}$</span>
 
                 <div className="btn-remove-cart">
