@@ -7,7 +7,7 @@ export default class ProductDisplay extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: '1'
+            amountValue: '1'
         };
         this.renderProducts=this.renderProducts.bind(this);
         this.renderOverview=this.renderOverview.bind(this);
@@ -27,7 +27,7 @@ export default class ProductDisplay extends React.Component {
         event.preventDefault();
         if(!amountExist && !itemIsUpdate ){
             this.props.notification.addNotification({
-                message: 'you must enter quantity',
+                message: 'you must enter a valid quantity',
                 level: 'success'
             });
         }
@@ -60,8 +60,8 @@ export default class ProductDisplay extends React.Component {
         let itemIsUpdate = false;
         let amount;
         let amountExist  = true;
-        amount = this.state.nameValue;
-        if(amount === '' || amount <= '0'){
+        amount = this.state.amountValue;
+        if(amount === '' || amount <= '0' || isNaN(amount)){
             amountExist = false;
             this._addNotification(event,itemIsUpdate,amountExist);
             this.onStayOpenModal();
@@ -71,13 +71,13 @@ export default class ProductDisplay extends React.Component {
             let products = [];
             products[0] = {
                 id: item.id,
-                amount: this.state.nameValue
+                amount: this.state.amountValue
             };
             localStorage.setItem("cart", JSON.stringify(products));
             this._addNotification(event,itemIsUpdate,amountExist);
             this.onExit();
         } else {
-            let product = {id: item.id, amount: this.state.nameValue};
+            let product = {id: item.id, amount: this.state.amountValue};
             let oldAmount;
             let newAmount;
             let index;
@@ -112,7 +112,7 @@ export default class ProductDisplay extends React.Component {
 
 
     handleChange(event) {
-        this.setState({value: event.target.nameValue});
+        this.setState({amountValue: event.target.value});
     }
 
     _handleOnClickAddToCart() {
@@ -123,7 +123,7 @@ export default class ProductDisplay extends React.Component {
     }
 
     clearAmount(){
-        this.setState({value: 1});
+        this.setState({amountValue: '1'});
     }
 
     onExit(){
@@ -161,7 +161,7 @@ export default class ProductDisplay extends React.Component {
                         <div className="amount">
                             <span className="quantity">Quantity:</span>
                             <input type="text"
-                                   value={this.state.nameValue}
+                                   value={this.state.amountValue}
                                    className="amount-box"
                                    onChange={this.handleChange}
                             />

@@ -174,7 +174,7 @@ ul:hover{
 }*/
 
 
-.ProductModal input[type=text]{
+.ProductModal  input[type=text]{
   /*text-align: center;*/
     width: 3vw;
     height: 4vh;
