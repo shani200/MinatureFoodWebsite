@@ -20,21 +20,27 @@ export default class LogIn extends React.Component {
         this.onStayOpenModal = this.onStayOpenModal.bind(this);
     }
 
-    _addNotification(event,missInput){
-        if(missInput ){
+    _addNotification(event,missInput,nameIsWrong){
+        if(nameIsWrong && !missInput ){
+            event.preventDefault();
+            this.props.notification.addNotification({
+                message: 'name is wrong',
+                level: 'success'
+            });
+        }
+        if(missInput && !nameIsWrong ){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'name or password are missing',
                 level: 'success'
             });
-        }else{
+        }if(!missInput && !nameIsWrong){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'You signed in',
                 level: 'success'
             });
         }
-
     }
 
     handleNameChange(event) {
@@ -59,15 +65,21 @@ export default class LogIn extends React.Component {
             let name = this.state.nameValue;
             let password =this.state.passwordValue;
             let missInput = false;
-            if(!name || !password){
+            let nameIsWrong = false;
+            if(!isNaN(name) && name){
+                nameIsWrong = true;
+                this._addNotification(event,missInput,nameIsWrong);
+                return undefined;
+            }
+            if(!name || !password ){
                 missInput = true;
                this.onStayOpenModal();
-                this._addNotification(event,missInput);
+                this._addNotification(event,missInput,nameIsWrong);
                 return undefined;
             }else{
                 let user = {name: this.state.nameValue, password: this.state.passwordValue};
                 sessionStorage.setItem("user", JSON.stringify(user));
-                this._addNotification(event,missInput);
+                this._addNotification(event,missInput,nameIsWrong);
                 this.props.onClose();
             }
         } else {
