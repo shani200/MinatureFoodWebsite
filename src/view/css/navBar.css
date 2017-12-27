@@ -1,7 +1,6 @@
 .nav-bar-header{
     display: -webkit-flex;
     display: flex;
-    position: fixed;
     background-color: rgba(169, 153, 167, 0.96);
     width: 100%;
     -webkit-box-align: center;

@@ -14,20 +14,72 @@ export default class LogIn extends React.Component {
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this._addNotification = this._addNotification.bind(this);
+        this.saveInputs = this.saveInputs.bind(this);
+        this.clearState = this.clearState.bind(this);
+        this.onStayOpenModal = this.onStayOpenModal.bind(this);
+    }
+
+    _addNotification(event,missInput){
+        if(missInput ){
+            event.preventDefault();
+            this.props.notification.addNotification({
+                message: 'name or password are missing',
+                level: 'success'
+            });
+        }else{
+            event.preventDefault();
+            this.props.notification.addNotification({
+                message: 'You signed in',
+                level: 'success'
+            });
+        }
+
     }
 
     handleNameChange(event) {
-        this.setState({nameValue: event.target.value});
+            this.setState({nameValue: event.target.value});
     }
 
     handlePasswordChange(event){
         this.setState({passwordValue: event.target.value});
     }
 
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.nameValue);
-        alert('A password was submitted: ' + this.state.passwordValue);
+    clearState(){
+        this.setState({nameValue: ''});
+        this.setState({passwordValue: ''});
+    }
+
+    onStayOpenModal(){
+        this.props.onOpen();
+    }
+
+    saveInputs(event) {
+        if (typeof(Storage) !== "undefined") {
+            let name = this.state.nameValue;
+            let password =this.state.passwordValue;
+            let missInput = false;
+            if(!name || !password){
+                missInput = true;
+               this.onStayOpenModal();
+                this._addNotification(event,missInput);
+                return undefined;
+            }else{
+                let user = {name: this.state.nameValue, password: this.state.passwordValue};
+                sessionStorage.setItem("user", JSON.stringify(user));
+                this._addNotification(event,missInput);
+                this.props.onClose();
+            }
+        } else {
+            alert('Sorry, your browser does not support web storage...');
+        }
         event.preventDefault();
+    }
+
+    handleSubmit(event){
+        this.saveInputs(event);
+        this.clearState();
+
     }
 
 

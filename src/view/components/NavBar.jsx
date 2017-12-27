@@ -14,6 +14,7 @@ export default class NavBar extends React.Component {
             isShoppingCartOpen: false
         };
         this.toggleSignIn = this.toggleSignIn.bind(this);
+        this.StayOpenSignIn = this.StayOpenSignIn.bind(this);
         this.toggleRegister = this.toggleRegister.bind(this);
         this.toggleShoppingCart = this.toggleShoppingCart.bind(this);
     }
@@ -21,6 +22,10 @@ export default class NavBar extends React.Component {
     toggleSignIn(){
      this.setState({isOpen: !this.state.isOpen});
    }
+
+    StayOpenSignIn(){
+        this.setState({isOpen: open});
+    }
 
     toggleRegister(){
         this.setState({isOpenRegister: !this.state.isOpenRegister});
@@ -40,7 +45,9 @@ export default class NavBar extends React.Component {
                             Sign in
                         </button>
                          <LogIn show={this.state.isOpen}
-                           onClose={this.toggleSignIn}>
+                           onClose={this.toggleSignIn}
+                            onOpen={this.StayOpenSignIn}
+                            notification={this.props.notification}>
                          </LogIn>
                         <span> or </span>
                         <button className="register-button" onClick={this.toggleRegister}>
