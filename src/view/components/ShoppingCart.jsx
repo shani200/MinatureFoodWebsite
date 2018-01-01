@@ -19,6 +19,7 @@ export default class ShoppingCart extends React.Component {
         };
         this.removeItem = this.removeItem.bind(this);
         this.handleChange = this.handleChange.bind(this);
+         this.findIndex = this.findIndex.bind(this);
         this._addNotification = this._addNotification.bind(this);
       //  this.handleOnClickDelete = this._handleOnClickDelete.bind(this);
     }
@@ -51,15 +52,26 @@ export default class ShoppingCart extends React.Component {
                 listItems = productsStored.map((product, i) =>
                 (
                 <div className="cartProduct">
-
-                    {/*{this.renderProduct(productsStored[i].id , i)}*/}
-                    {this.renderProduct(product.id , i)}
+                    {this.renderProduct(this.findIndex(product.id) , i)}
                 </div>
                  )
                 );}
        return listItems;
-
     }
+
+    /*  {indexId = this.findIndex(product.id)}*/
+
+    findIndex(id){
+        let index;
+        this.state.galleryArray.map((listItem,i) =>
+            {
+                if (listItem.id === id)
+                    index = i
+            }
+        );
+        return index;
+    }
+
     handleChange(event) {
         this.setState({amountValue: event.target.value});
     }
@@ -117,9 +129,14 @@ export default class ShoppingCart extends React.Component {
                undefined
             )
         }
-        else{productsStored.map((product,i) =>
+        else{
+            let index;
+            productsStored.map((product,i) =>
             (
-               price += this.state.galleryArray[productsStored[i].id].price * [productsStored[i].amount]
+                <div className="totalPrice">
+                {index= this.findIndex(product.id)}
+                {price += this.state.galleryArray[index].price * [product.amount]}
+                </div>
             )
         );}
             let strPrice = JSON.stringify(price);

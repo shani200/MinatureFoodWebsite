@@ -38,7 +38,7 @@ import yellow_set from '../view/pictures/yellow_set.jpg';
 let  websiteConfig = {
     galleryItemArr: [
         {
-            id:0,
+            id: 'A6567',
             title: 'Confetti Birthday Cake',
             price: 15.90,
             desc: [
@@ -58,7 +58,7 @@ let  websiteConfig = {
             image: birthday_cake
         },
         {
-            id:1,
+            id: 'G3374',
             title: 'Brown & White Oven Glove',
             price: 11.90,
             desc: [
@@ -78,7 +78,7 @@ let  websiteConfig = {
             image: burn_oven_glove
         },
         {
-            id:2,
+            id: 'C34B7',
             title: 'Twisted Ring Chocolate Cookies',
             price: 7.90,
             desc: [
@@ -98,7 +98,7 @@ let  websiteConfig = {
             image: cookies
         },
         {
-            id:3,
+            id: 'K355M',
             title: 'Bread Loaves',
             price: 12.30,
             desc: [
@@ -118,7 +118,7 @@ let  websiteConfig = {
             image: breads
         },
         {
-            id:4,
+            id: 'C3007',
             title: 'Blue Planner & Ice Cream & Croissant',
             price: 13.90,
             desc: [
@@ -142,7 +142,7 @@ let  websiteConfig = {
             image: blue_set
         },
         {
-            id:5,
+            id: 'NM227',
             title: 'Blueberry Cake',
             price: 13.90,
             desc: [
@@ -162,7 +162,7 @@ let  websiteConfig = {
             image: blueberry_cake
         },
         {
-            id:6,
+            id: '544C7',
             title: 'Éclair',
             price: 5.90,
             desc: [
@@ -182,7 +182,7 @@ let  websiteConfig = {
             image: eclair
         },
         {
-            id:7,
+            id: 'L34B7',
             title: 'Mini Donuts',
             price: 7.90,
             desc: [
@@ -202,7 +202,7 @@ let  websiteConfig = {
             image: donuts
         },
         {
-            id:8,
+            id: 'P1117',
             title: 'Mini Croissant',
             price: 5.90,
             desc: [
@@ -226,7 +226,7 @@ let  websiteConfig = {
             image: croissant
         },
         {
-            id:9,
+            id: '1111F',
             title: 'Ice Creams In Little Box',
             price: 9.90,
             desc: [
@@ -246,7 +246,7 @@ let  websiteConfig = {
             image: ice_cream_box
         },
         {
-            id:10,
+            id: 'B3417',
             title: 'Chocolate Ice Creams',
             price: 7.90,
             desc: [
@@ -270,7 +270,7 @@ let  websiteConfig = {
             image: chocolate_ice_cream
         },
         {
-            id:11,
+            id: 'J6987',
             title: 'Croissant In Colors',
             price: 6.80,
             desc: [
@@ -294,7 +294,7 @@ let  websiteConfig = {
             image: colors_croissant
         },
         {
-            id:12,
+            id: 'CC4B7',
             title: 'Yellow Planner & Ice Cream & Croissant',
             price: 9.90,
             desc: [
@@ -314,7 +314,7 @@ let  websiteConfig = {
             image: yellow_set
         },
         {
-            id:13,
+            id: 'D4447',
             title: 'Ice Plant',
             price: 7.90,
             desc: [
@@ -334,7 +334,7 @@ let  websiteConfig = {
             image: ice_plant
         },
         {
-            id:14,
+            id: 'W2727',
             title: 'Strawberry Chocolate And Vanilla Ice Creams',
             price: 5.90,
             desc: [
@@ -358,7 +358,7 @@ let  websiteConfig = {
             image: ice_creams
         },
         {
-            id: 15,
+            id: 'W1111',
             title: 'Jar Of Sweets',
             price: 6.70,
             desc: [
@@ -378,7 +378,7 @@ let  websiteConfig = {
             image: jar_of_sweets
         },
         {
-            id: 16,
+            id: 'JK272',
             title: 'Macaroon Clips',
             price: 5.90,
             desc: [
@@ -398,7 +398,7 @@ let  websiteConfig = {
             image: macaroon_clips
         },
         {
-            id: 17,
+            id: 'O1272',
             title: 'Marshmallow',
             price: 8.90,
             desc: [
@@ -418,7 +418,7 @@ let  websiteConfig = {
             image: marshmallow
         },
         {
-            id: 18,
+            id: 'F2527',
             title: 'Mermaid Pusheen',
             price: 7.70,
             desc: [
@@ -438,7 +438,7 @@ let  websiteConfig = {
             image: mermaid_pusheen
         },
         {
-            id: 19,
+            id: '1K252',
             title: 'Mini Cookies',
             price: 6.90,
             desc: [
@@ -458,7 +458,7 @@ let  websiteConfig = {
             image: mini_cookies
         },
         {
-            id: 20,
+            id: 'JL272',
             title: 'Oven Glove',
             price: 5.90,
             desc: [
@@ -478,7 +478,7 @@ let  websiteConfig = {
             image: oven_glove
         },
         {
-            id: 21,
+            id: 'UK582',
             title: 'Ombré Pink Cake',
             price: 13.90,
             desc: [
@@ -498,7 +498,7 @@ let  websiteConfig = {
             image: pink_cake
         },
         {
-            id: 22,
+            id: 'JJJ22',
             title: 'Baking Cookies Scene',
             price: 14.70,
             desc: [
@@ -518,7 +518,7 @@ let  websiteConfig = {
             image: baking_scene
         },
         {
-            id: 23,
+            id: '2K582',
             title: 'Ombré Pink Ice Cream',
             price: 12.90,
             desc: [
@@ -542,7 +542,7 @@ let  websiteConfig = {
             image: pink_ice_cream
         },
         {
-            id: 24,
+            id: 'BO272',
             title: 'Plants',
             price: 10.90,
             desc: [
@@ -562,7 +562,7 @@ let  websiteConfig = {
             image: plants
         },
         {
-            id: 25,
+            id: 'J0272',
             title: 'Pusheen Cookies Set',
             price: 7.80,
             desc: [
@@ -582,7 +582,7 @@ let  websiteConfig = {
             image: pusheen_cookies_set
         },
         {
-            id: 26,
+            id: 'K0242',
             title: 'Lollipops',
             price: 6.90,
             desc: [
@@ -602,7 +602,7 @@ let  websiteConfig = {
             image: lollipops
         },
         {
-            id: 27,
+            id: 'JH213',
             title: 'Berry Cake With Strawberries',
             price: 11.90,
             desc: [
@@ -622,7 +622,7 @@ let  websiteConfig = {
             image: berry_cake_with_strawberries
         },
         {
-            id: 28,
+            id: 'A1292',
             title: 'Ombré Pink Macaroons',
             price: 6.50,
             desc: [
@@ -642,7 +642,7 @@ let  websiteConfig = {
             image: pink_macaroon
         },
         {
-            id: 29,
+            id: 'SS554',
             title: 'Cactus',
             price: 9.90,
             desc: [
@@ -662,7 +662,7 @@ let  websiteConfig = {
             image: cactus
         },
         {
-            id: 30,
+            id: 'P6297',
             title: 'Macaroons',
             price: 4.75,
             desc: [
@@ -682,7 +682,7 @@ let  websiteConfig = {
             image: macaroons
         },
         {
-            id:31,
+            id: 'V1773',
             title: 'Rilakuma The Bear',
             price: 8.80,
             desc: [
@@ -702,7 +702,7 @@ let  websiteConfig = {
             image: rilakuma
         },
         {
-            id:32,
+            id: 'E1947',
             title: 'Pocky Japanese Snack',
             price: 4.90,
             desc: [
@@ -722,7 +722,7 @@ let  websiteConfig = {
             image: pocky
         },
         {
-            id:33,
+            id: 'J1948',
             title: 'plant',
             price: 5.50,
             desc: [
@@ -742,7 +742,7 @@ let  websiteConfig = {
             image: plant
         },
         {
-            id:34,
+            id: 'YK558',
             title: 'Rilakuma Stuck In Donut',
             price: 9.70,
             desc: [
@@ -762,7 +762,7 @@ let  websiteConfig = {
             image: rilakuma_donut
         },
         {
-            id:35,
+            id: 'JJ001',
             title: 'Macaroon Cat',
             price: 12.60,
             desc: [

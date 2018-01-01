@@ -79,7 +79,7 @@ export default class Register extends React.Component {
                 return undefined;
             }else{
                 let register = {name: this.state.nameValue, email: this.state.emailValue, password: this.state.passwordValue, confirmPassword: this.state.confirmPasswordValue};
-                sessionStorage.setItem("user", JSON.stringify(register));
+                sessionStorage.setItem("register", JSON.stringify(register));
                 this._addNotification(event,missInput);
                 this.props.onClose();
             }
