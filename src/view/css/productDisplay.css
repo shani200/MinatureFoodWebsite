@@ -45,15 +45,15 @@ h2{
     width: 45%;
     height: 90%;
     display: inline-block;
-    border: 2px solid #eadfff;
+    border: 2px solid #ccc3df;
     margin-top: 50px;
     border-radius: 50%;
     -webkit-filter: contrast(120%);filter: contrast(120%);
 }
 
-/*.images:hover{
-    border-radius: 50%;
-}*/
+.images:hover{
+    border: 2px solid #d3ffe2;
+}
 
 .description{
     width: 49%;

@@ -28,19 +28,22 @@ export default class ProductDisplay extends React.Component {
         if(!amountExist && !itemIsUpdate ){
             this.props.notification.addNotification({
                 message: 'you must enter a valid quantity',
-                level: 'success'
+                level: 'error',
+                position: 'bl'
             });
         }
         if(itemIsUpdate && amountExist){
             this.props.notification.addNotification({
                 message: "Item's amount updated",
-                level: 'success'
+                level: 'info',
+                position: 'bl'
             });
         }
         if(!itemIsUpdate && amountExist){
             this.props.notification.addNotification({
                 message: 'Item added',
-                level: 'success'
+                level: 'success',
+                position: 'bl'
             });
         }
     }

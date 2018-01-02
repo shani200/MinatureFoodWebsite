@@ -17,13 +17,17 @@ export default class Header extends React.Component {
 
 
     componentWillMount() {
+        /* this._createFetch().then((response) => {
+             alert(response)
+             });*/
         this._createFetch();
-    }
 
+    }
+    //&& this.props.isLogIn
+//   this.state.userSignedIn = this.setState({userSignedIn: this.props.isLogIn});
     _renderAuthors () {
         let listItems;
         if (this.state.authors ) {
-             // if(this.state.userSignedIn){
                  listItems = this.state.authors.map((author,i) =>
                      (
                          <div className="user_container" key={i}>
@@ -33,7 +37,6 @@ export default class Header extends React.Component {
                      )
                  );
              }
-            // }
         return listItems;
     }
 

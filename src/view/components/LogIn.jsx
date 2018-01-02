@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import '../css/login.css'
 
 
@@ -9,7 +10,8 @@ export default class LogIn extends React.Component {
         super(props);
         this.state = {
             nameValue: '',
-            passwordValue: ''
+            passwordValue: '',
+            userSignedIn: false
         };
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
@@ -19,30 +21,43 @@ export default class LogIn extends React.Component {
         this.clearState = this.clearState.bind(this);
         this.setStateOfUserSignIn = this.setStateOfUserSignIn.bind(this);
         this.onStayOpenModal = this.onStayOpenModal.bind(this);
+        this.renderPicture = this.renderPicture.bind(this);
     }
     componentDidMount(){
         sessionStorage.removeItem("user");
     }
 
-    _addNotification(event,missInput,nameIsWrong){
-        if(nameIsWrong && !missInput ){
+    _addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword){
+        if(nameOrEmailIsWrong && !missInput ){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'name is wrong',
-                level: 'success'
+                level: 'error',
+                position: 'tc'
             });
         }
-        if(missInput && !nameIsWrong ){
+        if(missInput && !nameOrEmailIsWrong){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'name or password are missing',
-                level: 'success'
+                level: 'error',
+                position: 'tc'
             });
-        }if(!missInput && !nameIsWrong){
+        }
+        if(notValidPassword){
+            event.preventDefault();
+            this.props.notification.addNotification({
+                message: 'Password must contain at least 4 letters',
+                level: 'error',
+                position: 'tc'
+            });
+        }
+        if(!missInput && !nameOrEmailIsWrong && !notValidPassword){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'You signed in',
-                level: 'success'
+                level: 'success',
+                position: 'tc'
             });
         }
     }
@@ -73,21 +88,30 @@ export default class LogIn extends React.Component {
             let name = this.state.nameValue;
             let password =this.state.passwordValue;
             let missInput = false;
-            let nameIsWrong = false;
-            if(!isNaN(name) && name){
-                nameIsWrong = true;
-                this._addNotification(event,missInput,nameIsWrong);
-                return undefined;
-            }
+            let nameOrEmailIsWrong = false;
+            let notValidPassword = false;
+            //let checkEmail;
             if(!name || !password ){
                 missInput = true;
-               this.onStayOpenModal();
-                this._addNotification(event,missInput,nameIsWrong);
+                this.onStayOpenModal();
+                this._addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword);
                 return undefined;
-            }else{
+            }
+
+            if(!isNaN(name) && name ){
+                nameOrEmailIsWrong = true;
+                this._addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword);
+                return undefined;
+            }
+            if(password.length < 4){
+                notValidPassword = true;
+                this._addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword);
+                return undefined;
+            }
+            if(name && password){
                 let user = {name: this.state.nameValue, password: this.state.passwordValue};
                 sessionStorage.setItem("user", JSON.stringify(user));
-                this._addNotification(event,missInput,nameIsWrong);
+                this._addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword);
                 this.props.onClose();
             }
         } else {
@@ -96,9 +120,15 @@ export default class LogIn extends React.Component {
         event.preventDefault();
     }
 
+    renderPicture(){
+      return(<Header isLogIn={this.state.userSignedIn}/>);
+
+    }
+
     handleSubmit(event){
         this.saveInputs(event);
         this.clearState();
+        this.renderPicture();
 
     }
 
@@ -131,7 +161,6 @@ export default class LogIn extends React.Component {
                   </div>
                 </div>
             </div>
-
 
         );
     }

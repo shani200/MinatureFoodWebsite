@@ -21,18 +21,37 @@ export default class Register extends React.Component {
 
     }
 
-    _addNotification(event,missInput){
-        if(missInput ){
+    _addNotification(event,missInput,wrongPassword,wrongEmail){
+        if(missInput){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'one or more inputs are missing',
-                level: 'success'
+                level: 'error',
+                position: 'tc'
             });
-        }else{
+        }
+        if(wrongEmail){
+            event.preventDefault();
+            this.props.notification.addNotification({
+                message: "the email isn't valid",
+                level: 'error',
+                position: 'tc'
+            });
+        }
+        if(wrongPassword){
+            event.preventDefault();
+            this.props.notification.addNotification({
+                message: 'the passwords are not equals, try again',
+                level: 'error',
+                position: 'tc'
+            });
+        }
+        if(!missInput && !wrongPassword && !wrongEmail){
             event.preventDefault();
             this.props.notification.addNotification({
                 message: 'You signed in',
-                level: 'success'
+                level: 'success',
+                position: 'tc'
             });
         }
     }
@@ -71,16 +90,32 @@ export default class Register extends React.Component {
             let email = this.state.emailValue;
             let password = this.state.passwordValue;
             let confirmPassword = this.state.confirmPasswordValue;
+            let wrongPassword = false;
             let missInput = false;
+            let wrongEmail = false;
+            let checkEmail;
             if(!name || !email || !password ||!confirmPassword){
                 missInput = true;
                 this.onStayOpenModal();
-                this._addNotification(event,missInput);
+                this._addNotification(event,missInput,wrongPassword,wrongEmail);
                 return undefined;
-            }else{
+            }
+            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            checkEmail = re.test(email) ;
+            if(!checkEmail){
+                wrongEmail = true;
+                this._addNotification(event,missInput,wrongPassword,wrongEmail);
+                return undefined;
+            }
+            if(password !== confirmPassword){
+                wrongPassword = true;
+                this._addNotification(event,missInput,wrongPassword,wrongEmail);
+                return undefined;
+            }
+            if(name && email && password && confirmPassword){
                 let register = {name: this.state.nameValue, email: this.state.emailValue, password: this.state.passwordValue, confirmPassword: this.state.confirmPasswordValue};
                 sessionStorage.setItem("register", JSON.stringify(register));
-                this._addNotification(event,missInput);
+                this._addNotification(event,missInput,wrongPassword,wrongEmail);
                 this.props.onClose();
             }
         } else {

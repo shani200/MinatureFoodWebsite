@@ -33,7 +33,8 @@ export default class ShoppingCart extends React.Component {
         event.preventDefault();
         this.props.notification.addNotification({
             message: 'Item deleted',
-            level: 'success'
+            level: 'success',
+            position: 'bl'
         });
     }
 

@@ -24,11 +24,12 @@ export default class WebsiteCommonService {
 
     createFetch(){
         const url = 'https://randomuser.me/api/?results=1';
-        let myThis=this;
+       let myThis=this;
         fetch(url)
             .then((resp) => resp.json())
             .then(function(data) {
                 myThis.setState({authors: data.results})
+                //return (Promise.resolve(data.results));
             })
             .catch(function(error) {
                 console.log(error);
