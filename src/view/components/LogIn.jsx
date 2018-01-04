@@ -71,8 +71,8 @@ export default class LogIn extends React.Component {
     }
 
     clearState(){
-        this.setState({nameValue: ''});
-        this.setState({passwordValue: ''});
+        this.setState({nameValue: '', passwordValue: ''});
+
     }
 
     onStayOpenModal(){
@@ -97,8 +97,9 @@ export default class LogIn extends React.Component {
                 this._addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword);
                 return undefined;
             }
-
-            if(!isNaN(name) && name ){
+            let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            let checkEmail = re.test(name);
+            if(!isNaN(name) && name){
                 nameOrEmailIsWrong = true;
                 this._addNotification(event,missInput,nameOrEmailIsWrong,notValidPassword);
                 return undefined;

@@ -1,4 +1,5 @@
 import React from 'react';
+import WebsiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/productDisplay.css'
 
 
@@ -9,6 +10,9 @@ export default class ProductDisplay extends React.Component {
         this.state = {
             amountValue: '1'
         };
+        this.WebsiteCommonService = new WebsiteCommonService();
+        this._getLoaclStorage = this.WebsiteCommonService.getLocalStorage;
+        this._setLoaclStorage = this.WebsiteCommonService.setLocalStorage;
         this.renderProducts=this.renderProducts.bind(this);
         this.renderOverview=this.renderOverview.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -59,7 +63,7 @@ export default class ProductDisplay extends React.Component {
 
     addToCart() {
         let item = this.props.itemsArray[this.props.index];
-        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        let productsStored = JSON.parse(this._getLoaclStorage());
         let itemIsUpdate = false;
         let amount;
         let amountExist  = true;
@@ -76,7 +80,7 @@ export default class ProductDisplay extends React.Component {
                 id: item.id,
                 amount: this.state.amountValue
             };
-            localStorage.setItem("cart", JSON.stringify(products));
+            this._setLoaclStorage(products);
             this._addNotification(event,itemIsUpdate,amountExist);
             this.onExit();
         } else {
@@ -96,7 +100,7 @@ export default class ProductDisplay extends React.Component {
                 productsStored.push(product)
             }
             this._addNotification(event,itemIsUpdate,amountExist);
-            localStorage.setItem("cart", JSON.stringify(productsStored));
+            this._setLoaclStorage(productsStored);
             this.onExit();
         }
     }

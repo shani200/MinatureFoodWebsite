@@ -45,19 +45,19 @@ creteStyle(){
             },
 
             success: { // Applied only to the success notification item
-                color: '#6b766e',
-                borderTop: '4px solid #9fb4a4',
+                color: '#657268',
+                borderTop: '4px solid #afbeb2',
                 backgroundColor: '#fbfdf9',
 
             },
             info:{
-                color: '#58678a',
-                borderTop: '4px solid #677ca2',
+                color: '#5d6c8f',
+                borderTop: '4px solid #788ab7',
                 backgroundColor: '#fbfdf9',
             },
             error:{
-                color: '#852f49',
-                borderTop: '4px solid #a0385a',
+                color: '#7a2b42',
+                borderTop: '4px solid #bf446a',
                 backgroundColor: '#fbfdf9',
             }
         }

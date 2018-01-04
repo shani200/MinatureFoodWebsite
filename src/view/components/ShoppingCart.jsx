@@ -1,6 +1,5 @@
 import React from 'react';
 import WebsiteCommonService from '../../controller/WebsiteCommonService';
-import NotificationSystem from 'react-notification-system';
 import '../css/shoppingCart.css'
 
 /*import ProductTable from './ProductTable';*/
@@ -14,6 +13,8 @@ export default class ShoppingCart extends React.Component {
             amountValue: '1'
         };
         this.WebsiteCommonService = new WebsiteCommonService();
+        this._getLoaclStorage = this.WebsiteCommonService.getLocalStorage;
+        this._deleteCart = this.WebsiteCommonService.deleteCart;
         this.state={
             galleryArray: this.WebsiteCommonService.galleryItemArr
         };
@@ -25,7 +26,7 @@ export default class ShoppingCart extends React.Component {
     }
 
     componentDidMount(){
-        localStorage.removeItem("cart");
+        this._deleteCart();
     }
 
 
@@ -33,14 +34,14 @@ export default class ShoppingCart extends React.Component {
         event.preventDefault();
         this.props.notification.addNotification({
             message: 'Item deleted',
-            level: 'success',
+            level: 'error',
             position: 'bl'
         });
     }
 
     renderCart(){
         let listItems;
-        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        let productsStored = JSON.parse(this._getLoaclStorage());
         if(!productsStored || !productsStored.length){
             return(
                 <div className="emptyCart">
@@ -79,7 +80,7 @@ export default class ShoppingCart extends React.Component {
     // onClick={()=>{ this.removeItem() ; this._addNotification()}}
 
     renderProduct(index, indexInModal){
-        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        let productsStored = JSON.parse(this._getLoaclStorage());
         let amount = productsStored[indexInModal].amount;
         // this.setState({amountValue: amount});
         const classes = `indexInModal_${indexInModal} btn-remove`;
@@ -111,7 +112,7 @@ export default class ShoppingCart extends React.Component {
     }*/
 
     removeItem(event){
-         let products = JSON.parse(localStorage.getItem("cart"));
+         let products = JSON.parse(this._getLoaclStorage());
         let indexInModal = event.target.classList[0].split('_')[1];
         products.splice(indexInModal, 1);
         localStorage.setItem('cart', JSON.stringify(products));
@@ -124,7 +125,7 @@ export default class ShoppingCart extends React.Component {
 
     renderTotalPrice(){
         let price=0;
-        let productsStored = JSON.parse(localStorage.getItem("cart"));
+        let productsStored = JSON.parse(this._getLoaclStorage());
         if(!productsStored || !productsStored.length){
             return(
                undefined

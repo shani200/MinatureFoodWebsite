@@ -17,10 +17,10 @@ export default class Header extends React.Component {
 
 
     componentWillMount() {
-        /* this._createFetch().then((response) => {
-             alert(response)
-             });*/
-        this._createFetch();
+        // this._createFetch().then((response) => {
+        //      alert(response)
+        //      });
+       this._createFetch();
 
     }
     //&& this.props.isLogIn

@@ -74,10 +74,7 @@ export default class Register extends React.Component {
     }
 
     clearState(){
-        this.setState({nameValue: ''});
-        this.setState({emailValue: ''});
-        this.setState({passwordValue: ''});
-        this.setState({confirmPasswordValue: ''});
+        this.setState({nameValue: '',emailValue: '',passwordValue: '',confirmPasswordValue: ''});
     }
 
     onStayOpenModal(){
