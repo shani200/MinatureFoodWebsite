@@ -1,5 +1,5 @@
 import React from 'react';
-import WebsiteCommonService from '../../controller/WebsiteCommonService';
+import websiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/shoppingCart.css'
 
 /*import ProductTable from './ProductTable';*/
@@ -12,11 +12,10 @@ export default class ShoppingCart extends React.Component {
         this.state = {
             amountValue: '1'
         };
-        this.WebsiteCommonService = new WebsiteCommonService();
-        this._getLoaclStorage = this.WebsiteCommonService.getLocalStorage;
-        this._deleteCart = this.WebsiteCommonService.deleteCart;
+        this._getLoaclStorage = websiteCommonService.getLocalStorage;
+        this._deleteCart = websiteCommonService.deleteCart;
         this.state={
-            galleryArray: this.WebsiteCommonService.galleryItemArr
+            galleryArray: websiteCommonService.galleryItemArr
         };
         this.removeItem = this.removeItem.bind(this);
         this.handleChange = this.handleChange.bind(this);

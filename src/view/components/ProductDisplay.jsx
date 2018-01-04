@@ -1,5 +1,5 @@
 import React from 'react';
-import WebsiteCommonService from '../../controller/WebsiteCommonService';
+import websiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/productDisplay.css'
 
 
@@ -10,9 +10,8 @@ export default class ProductDisplay extends React.Component {
         this.state = {
             amountValue: '1'
         };
-        this.WebsiteCommonService = new WebsiteCommonService();
-        this._getLoaclStorage = this.WebsiteCommonService.getLocalStorage;
-        this._setLoaclStorage = this.WebsiteCommonService.setLocalStorage;
+        this._getLoaclStorage = websiteCommonService.getLocalStorage;
+        this._setLoaclStorage = websiteCommonService.setLocalStorage;
         this.renderProducts=this.renderProducts.bind(this);
         this.renderOverview=this.renderOverview.bind(this);
         this.handleChange = this.handleChange.bind(this);

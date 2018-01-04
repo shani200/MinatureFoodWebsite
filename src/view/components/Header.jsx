@@ -1,18 +1,17 @@
 import React from 'react';
 import 'whatwg-fetch';
-import WebsiteCommonService from '../../controller/WebsiteCommonService';
+import websiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/header.css'
 
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.WebsiteCommonService = new WebsiteCommonService();
         this.state = {authors: false,
             userSignedIn: false
         };
         this._renderAuthors = this._renderAuthors.bind(this);
         this._notificationSystem = null;
-        this._createFetch = this.WebsiteCommonService.createFetch;
+        this._createFetch = websiteCommonService.createFetch;
     }
 
 

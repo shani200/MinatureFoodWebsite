@@ -1,7 +1,7 @@
 import websiteConfig from './websiteConfig';
 import 'whatwg-fetch';
 
-export default class WebsiteCommonService {
+ class WebsiteCommonService {
 
     constructor() {
         this._galleryItemArr = websiteConfig.galleryItemArr;
@@ -38,3 +38,6 @@ export default class WebsiteCommonService {
     }
 
 }
+
+let websiteCommonService =  new WebsiteCommonService();
+export default websiteCommonService;

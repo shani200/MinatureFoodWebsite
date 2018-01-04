@@ -2,17 +2,15 @@ import React from 'react';
 import '../css/product.css'
 import GalleryItem from "./GalleryItem";
 import ProductDisplay from './ProductDisplay.jsx'
-import WebsiteCommonService from '../../controller/WebsiteCommonService';
+import websiteCommonService from '../../controller/WebsiteCommonService';
 
 export default class Product extends React.Component {
     constructor(props) {
         super(props);
-        this.WebsiteCommonService = new WebsiteCommonService();
-
         this.state={
             isOpen: false,
             isOpenIndex: 0,
-            _galleryArr: this.WebsiteCommonService.galleryItemArr
+            _galleryArr: websiteCommonService.galleryItemArr
         };
         this.toggleProduct=this.toggleProduct.bind(this);
         this._renderGalleryItems = this._renderGalleryItems.bind(this);
