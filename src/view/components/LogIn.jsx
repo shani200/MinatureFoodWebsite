@@ -116,7 +116,7 @@ export default class LogIn extends React.Component {
                 this.props.onClose();
             }
         } else {
-            alert('Sorry, your browser does not support web storage...');
+            alert('Sorry, your browser does not support web storage....');
         }
         event.preventDefault();
     }
