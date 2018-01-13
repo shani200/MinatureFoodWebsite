@@ -10,16 +10,15 @@ export default class Body extends React.Component {
         super(props);
     }
 
-
-
-
-
-
+    getAuthors (authors) {
+        alert('1' + authors);
+    }
     render() {
         return(
          <div className="body-container">
-            <NavBar notification={this.props.notification}/>
-
+             <NavBar notification={this.props.notification}
+                     getAuthors={this.getAuthors}
+             />
             <div className="explain">
                 Hi,I'm Shani welcome to my website.<br/>
                 I love to make miniatures out of polymer clay, especially minature food.<br/>

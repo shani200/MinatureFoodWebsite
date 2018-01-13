@@ -69,9 +69,10 @@ creteStyle(){
     render() {
 
         let style = this.creteStyle();
+        let authors;
         return (
             <div className="mainScreen">
-                <Header />
+                <Header authors={authors}/>
                 <NotificationSystem ref="notificationSystem" style={style}/>
                 <Body notification={this._notificationSystem}/>
                 <Footer  message={this.props.message} />

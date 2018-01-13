@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import websiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/login.css'
 
 
@@ -21,7 +21,7 @@ export default class LogIn extends React.Component {
         this.clearState = this.clearState.bind(this);
         this.setStateOfUserSignIn = this.setStateOfUserSignIn.bind(this);
         this.onStayOpenModal = this.onStayOpenModal.bind(this);
-        this.renderPicture = this.renderPicture.bind(this);
+
     }
     componentDidMount(){
         sessionStorage.removeItem("user");
@@ -121,15 +121,20 @@ export default class LogIn extends React.Component {
         event.preventDefault();
     }
 
-    renderPicture(){
-      return(<Header isLogIn={this.state.userSignedIn}/>);
-
-    }
+    // renderPicture(){
+    //   return(<Header isLogIn={this.state.userSignedIn}/>);
+    //
+    // }
 
     handleSubmit(event){
         this.saveInputs(event);
         this.clearState();
-        this.renderPicture();
+        // this.renderPicture();
+
+        websiteCommonService.createFetch().then((response) => {
+            // this.setState({authors: response});
+            this.props.getAuthors(response);
+        });
 
     }
 

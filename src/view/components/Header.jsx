@@ -1,8 +1,6 @@
 import React from 'react';
 import 'whatwg-fetch';
-import websiteCommonService from '../../controller/WebsiteCommonService';
 import '../css/header.css'
-
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -11,17 +9,26 @@ export default class Header extends React.Component {
         };
         this._renderAuthors = this._renderAuthors.bind(this);
         this._notificationSystem = null;
-        this._createFetch = websiteCommonService.createFetch;
+        // this._createFetch = websiteCommonService.createFetch;
     }
 
 
     componentWillMount() {
-        // this._createFetch().then((response) => {
-        //      alert(response)
-        //      });
-       this._createFetch();
+
+        // websiteCommonService.createFetch().then((response) => {
+        //     this.setState({authors: response});
+        //       });
+
+       //this._createFetch();
 
     }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.authors) {
+            this.setState({authors: nextProps.authors});
+        }
+    }
+
     //&& this.props.isLogIn
 //   this.state.userSignedIn = this.setState({userSignedIn: this.props.isLogIn});
     _renderAuthors () {

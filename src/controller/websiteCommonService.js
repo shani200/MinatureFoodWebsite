@@ -24,17 +24,18 @@ import 'whatwg-fetch';
     }
 
     createFetch(){
-        const url = 'https://randomuser.me/api/?results=1';
-       let myThis=this;
-        fetch(url)
-            .then((resp) => resp.json())
-            .then(function(data) {
-                myThis.setState({authors: data.results})
-                // return  Promise.resolve('data.results');
-            })
-            .catch(function(error) {
-                console.log(error);
-            });
+        return new Promise(function(resolve, reject) {
+            const url = 'https://randomuser.me/api/?results=1';
+            fetch(url)
+                .then((resp) => resp.json())
+                .then(function(data) {
+                     resolve(data.results);
+                })
+                .catch(function(error) {
+                    console.log(error);
+                    reject(error);
+                });
+    });
     }
 
 }
