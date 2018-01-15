@@ -8,11 +8,14 @@ import '../css/body.css';
 export default class Body extends React.Component {
     constructor(props) {
         super(props);
+        this.getAuthors = this.getAuthors.bind(this);
     }
 
-    getAuthors (authors) {
-        alert('1' + authors);
+    getAuthors(authors) {
+       // alert('1' + authors);
+        this.props.getAuthors(authors);
     }
+
     render() {
         return(
          <div className="body-container">

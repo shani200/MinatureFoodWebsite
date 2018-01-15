@@ -4,8 +4,7 @@ import '../css/header.css'
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {authors: false,
-            userSignedIn: false
+        this.state = {authors: false
         };
         this._renderAuthors = this._renderAuthors.bind(this);
         this._notificationSystem = null;

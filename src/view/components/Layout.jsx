@@ -9,8 +9,10 @@ import '../css/layout.css'
 export default class Layout extends  React.Component {
     constructor(props){
         super(props);
+        this.state = {authors: false,
+        };
         this._notificationSystem = null;
-       // this._addNotification = this._addNotification.bind(this);
+        this.getAuthors = this.getAuthors.bind(this);
     }
 
     componentDidMount() {
@@ -18,24 +20,11 @@ export default class Layout extends  React.Component {
         this.forceUpdate();
     }
 
-
-
- /*   _addNotification(event){
-        event.preventDefault();
-        this._notificationSystem.addNotification({
-            message: 'Notification message',
-            level: 'success'
-        });
+    getAuthors (authors) {
+        this.setState({authors: authors});
     }
-*/
 
- /*
-   <div className="Notification">
-                    <button className="notification_btn" onClick={this._addNotification}>Add notification</button>
-                    <NotificationSystem ref="notificationSystem" />
-                </div>
 
- */
 
 creteStyle(){
     let createStyle = {
@@ -69,12 +58,13 @@ creteStyle(){
     render() {
 
         let style = this.creteStyle();
-        let authors;
         return (
             <div className="mainScreen">
-                <Header authors={authors}/>
+                <Header authors={this.state.authors}/>
                 <NotificationSystem ref="notificationSystem" style={style}/>
-                <Body notification={this._notificationSystem}/>
+                <Body notification={this._notificationSystem}
+                      getAuthors={this.getAuthors}
+                />
                 <Footer  message={this.props.message} />
             </div>
         );
