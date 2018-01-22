@@ -10,8 +10,8 @@
 .gallery {
     border: 3px double #97f2e7;
     width: 220px;
-    height: 220px;
-    margin: 32px 24px 7px 35px;
+    height: 204px;
+    margin: 12px 130px 7px 35px;
 }
 
 div.gallery:hover {

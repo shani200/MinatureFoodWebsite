@@ -4,6 +4,7 @@ import Body from './Body';
 import Footer from './Footer';
 import NotificationSystem from 'react-notification-system';
 import '../css/layout.css'
+import HeaderMobile from "./HeaderMobile";
 
 
 export default class Layout extends  React.Component {
@@ -13,6 +14,7 @@ export default class Layout extends  React.Component {
         };
         this._notificationSystem = null;
         this.getAuthors = this.getAuthors.bind(this);
+
     }
 
     componentDidMount() {
@@ -54,22 +56,41 @@ creteStyle(){
   return createStyle;
 }
 
+    isMobile(){
+        const ua = navigator.userAgent;
+        return (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)) && (screen.width <= 750);
+    }
 
     render() {
-
         let style = this.creteStyle();
-        return (
-            <div className="mainScreen">
-                <Header authors={this.state.authors}/>
-                <NotificationSystem ref="notificationSystem" style={style}/>
-                <Body notification={this._notificationSystem}
-                      getAuthors={this.getAuthors}
-                />
-                <Footer  message={this.props.message} />
-            </div>
-        );
+        if(this.isMobile()){
+            return (
+                <div className="mainScreen">
+                    <HeaderMobile authors={this.state.authors}/>
+                    <NotificationSystem ref="notificationSystem" style={style}/>
+                    <Body notification={this._notificationSystem}
+                          getAuthors={this.getAuthors}
+                    />
+                </div>
+        );}
+        else{
+           return(
+               <div className="mainScreen">
+                   <Header authors={this.state.authors}/>
+                   <NotificationSystem ref="notificationSystem" style={style}/>
+                   <Body notification={this._notificationSystem}
+                         getAuthors={this.getAuthors}
+                   />
+                   <Footer  message={this.props.message} />
+               </div>
+           );}
     }
 }
+
+
+
+
+
 
 
 
