@@ -1,8 +1,8 @@
 import React from 'react';
-import LogIn from './LogIn';
+import LogInMobile from './LogInMobile';
 import ShoppingCart from './ShoppingCart';
 import '../css/navbarMobile.css'
-import Register from "./Register";
+import RegisterMobile from "./RegisterMobile";
 
 
 export default class NavBar extends React.Component {
@@ -54,21 +54,21 @@ export default class NavBar extends React.Component {
                     <button className="signIn-mobile-button" onClick={this.toggleSignIn}>
                         Sign in
                     </button>
-                    <LogIn show={this.state.isOpen}
+                    <LogInMobile show={this.state.isOpen}
                            onClose={this.toggleSignIn}
                            onOpen={this.StayOpenSignIn}
                            notification={this.props.notification}
                            getAuthors={this.getAuthors}>
-                    </LogIn>
+                    </LogInMobile>
                     <span> or </span>
                     <button className="register-mobile-button" onClick={this.toggleRegister}>
                         Register
                     </button>
-                    <Register show={this.state.isOpenRegister}
+                    <RegisterMobile show={this.state.isOpenRegister}
                               onClose={this.toggleRegister}
                               onOpen={this.StayOpenRegister}
                               notification={this.props.notification}>
-                    </Register>
+                    </RegisterMobile>
 
                 </div>
                 <div className="shopping-cart">

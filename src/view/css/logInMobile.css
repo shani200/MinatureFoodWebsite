@@ -1,0 +1,133 @@
+.backdrop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(210, 214, 214, 0.78);
+}
+
+.signIn{
+    font-size: 6vw;
+}
+
+.signIn{
+    text-shadow: 4px -5px 2px rgb(131, 156, 177);
+}
+
+.signIn:hover{
+    color: #9fd0fb;
+    opacity: 0.6;
+}
+
+label:hover{
+    color: #02ffe2;
+}
+
+.LogInMobileModal{
+    display: flex;
+    background-color: rgba(24, 53, 88, 0.85);
+    border-radius: 5px;
+    max-width: 75vw;
+    margin: 0 auto;
+    padding: 5vw;
+    color: white;
+    position: relative;
+}
+
+.modal-header{
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(181, 161, 179, 0.8);
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: baseline;
+    flex-shrink: 0;
+    font-size: 15px;
+    max-height: 30px;
+    padding: 3px 0 2px 0;
+}
+
+
+
+.LogInMobileModal input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 3vw;
+    height: 6vw;
+}
+
+.LogInMobileModal input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 3vw;
+    height: 6vw;
+}
+
+.LogInMobileModal input[type=text]:focus{
+    border:5px double rgb(151, 242, 231);
+}
+
+.LogInMobileModal input[type=password]:focus{
+    border:5px double rgb(151, 242, 231);
+}
+/*
+.tabs-clear{
+    list-style: none;
+    padding: 0 10px 0 40px;
+    margin: 20px 0 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #FAF9F5;
+    border-bottom: 1px solid #E1E3DF;
+    border-top: 1px solid #FFF;
+    border-radius: 5px 5px 0 0;
+}
+*/
+.submitMobile{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border :none;
+    font-size: 3.5vw;
+    margin-top: 0.9vh;
+}
+
+.submitMobile:hover {
+    opacity: 0.5;
+}
+
+.btn-exit-mobile{
+    position: absolute;
+    top: -65px;
+    right: -48px;
+}
+
+.btn-close-mobile{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4vw;
+    cursor: pointer;
+    border :none;
+
+}
+
+.btn-close:hover{
+    opacity: 0.5;
+}

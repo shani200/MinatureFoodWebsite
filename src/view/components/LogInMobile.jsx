@@ -1,6 +1,6 @@
 import React from 'react';
 import websiteCommonService from '../../controller/WebsiteCommonService';
-import '../css/login.css'
+import '../css/logInMobile.css'
 
 
 
@@ -63,7 +63,7 @@ export default class LogIn extends React.Component {
     }
 
     handleNameChange(event) {
-            this.setState({nameValue: event.target.value});
+        this.setState({nameValue: event.target.value});
     }
 
     handlePasswordChange(event){
@@ -146,25 +146,25 @@ export default class LogIn extends React.Component {
         }
         return (
             <div className="backdrop">
-                <div className="LogInModal">
+                <div className="LogInMobileModal">
                     <form onSubmit={this.handleSubmit}>
-                        <h1> Sign in </h1>
+                        <div className="signIn">Sign in</div>
                         <label>
-                          Email or Username:
+                            Email or Username:
                             <input type="text" name="name" placeholder="Your name.." value={this.state.nameValue} onChange={this.handleNameChange}/>
                         </label>
                         <label>
                             Password:
                             <input type="password" name="password"   placeholder="Your password.." value={this.state.passwordValue} onChange={this.handlePasswordChange}/>
                         </label>
-                        <input type="submit" value="Sign in" className="submit"   />
+                        <input type="submit" value="Sign in" className="submitMobile"   />
                     </form>
 
-                  <div className="btn-exit">
-                    <button  className="btn-close" onClick={this.props.onClose}>
-                        X
-                    </button>
-                  </div>
+                    <div className="btn-exit-mobile">
+                        <button  className="btn-close-mobile" onClick={this.props.onClose}>
+                            X
+                        </button>
+                    </div>
                 </div>
             </div>
 

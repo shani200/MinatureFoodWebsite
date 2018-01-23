@@ -1,0 +1,135 @@
+.RegisterBackdrop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(210, 214, 214, 0.78);
+
+
+}
+
+.RegisterModalMobile{
+    display: flex;
+    background-color: rgba(24, 53, 88, 0.85);;
+    border-radius: 5px;
+    width: 75vw;
+    margin: 0 auto;
+    padding: 7vw;
+    color: white;
+    position: relative;
+}
+
+.modal-header{
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(181, 161, 179, 0.8);
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: baseline;
+    flex-shrink: 0;
+    font-size: 15px;
+    max-height: 30px;
+    padding: 3px 0 2px 0;
+}
+
+.registerMobile{
+    font-size: 6vw;
+}
+
+.registerMobile{
+    text-shadow: 4px -5px 2px rgb(131, 156, 177);
+}
+
+.RegisterModalMobile input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 3.5vw;
+    height: 6vw;
+}
+
+.RegisterModalMobile input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 3.5vw;
+    height: 6vw;
+}
+
+.RegisterModalMobile input[type=text]:focus{
+    border:2px dotted rgb(124, 129, 152);
+}
+
+.RegisterModalMobile input[type=password]:focus{
+    border:2px dotted rgb(124, 129, 152);
+}
+/*
+.tabs-clear{
+    list-style: none;
+    padding: 0 10px 0 40px;
+    margin: 20px 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #FAF9F5;
+    border-bottom: 1px solid #E1E3DF;
+    border-top: 1px solid #FFF;
+    border-radius: 5px 5px 0 0;
+}
+*/
+.buttonMobileRegister{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border :none;
+    font-size: 3.5vw;
+    margin-top: 1.3vh;
+    padding: 1vw;
+}
+
+.buttonMobileRegister:hover{
+    opacity: 0.5;
+}
+
+.btn-exit-mobile{
+    position: absolute;
+    top: -65px;
+    right: -48px;
+}
+
+.btn-close-mobile{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4vw;
+    cursor: pointer;
+    border :none;
+
+}
+
+.btn-close:hover{
+    opacity: 0.5;
+}
+
+h1:hover{
+    color: #9fd0fb;
+    opacity: 0.6;
+}
+
+label:hover{
+    color: #02ffe2;
+}
