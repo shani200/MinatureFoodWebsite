@@ -1,0 +1,24 @@
+.galleryItemMobile{
+    /*display: flex;*/
+    /*align-items:center;*/
+}
+
+
+.image {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px double #97f2e7;
+    /*-webkit-filter: contrast(120%);filter: contrast(120%);*/
+
+}
+
+
+.desc-mobile {
+    padding: 1.3vh;
+    text-align: center;
+    font-size: 3.7vw;
+}
+

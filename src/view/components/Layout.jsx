@@ -3,9 +3,9 @@ import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
 import NotificationSystem from 'react-notification-system';
-import '../css/layout.css'
 import HeaderMobile from "./HeaderMobile";
-
+import BodyMobile from "./BodyMobile";
+import '../css/layout.css'
 
 export default class Layout extends  React.Component {
     constructor(props){
@@ -68,7 +68,7 @@ creteStyle(){
                 <div className="mainScreen">
                     <HeaderMobile authors={this.state.authors}/>
                     <NotificationSystem ref="notificationSystem" style={style}/>
-                    <Body notification={this._notificationSystem}
+                    <BodyMobile notification={this._notificationSystem}
                           getAuthors={this.getAuthors}
                     />
                 </div>

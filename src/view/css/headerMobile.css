@@ -1,26 +1,26 @@
-.flex-container-Mobile{
+.flex-container-mobile{
     display: -webkit-flex;
     display: flex;
-    background-color: rgba(243, 96, 213, 0.54);
+    background-color: rgba(51, 17, 44, 0.54);
     width: 100%;
     -webkit-box-align: center;
     align-items: center;
-    justify-content: center;
     flex-shrink: 0;
     font-size: 50px;
     max-height: 50px;
-    padding: 10px 20px 10px 15px;
+    padding: 5%;
 }
 
 
-.name{
+.name-mobile{
     display: flex;
     color: white;
     width: 100px;
-    margin: 30px 10px;
     padding: 10px;
     box-sizing: border-box;
     text-shadow: 6px -1px 6px #111111;
+    margin-left: 17vh;
+    font-size: 6vw;
 }
 
 .Notification{
@@ -52,12 +52,13 @@
     align-items: center;
 }
 
-.user_img{
-    width: 55px;
-    height: 50px;
+.user_img_mobile{
+    width: 12vw;
+    height: 5vh;
 }
 
-.user_name{
+.user_name_mobile{
     text-align: center;
-    padding-left: 9px;
+    padding-left: 16px;
+    font-size: 3vw;
 }

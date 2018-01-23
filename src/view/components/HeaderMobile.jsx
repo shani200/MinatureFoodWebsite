@@ -36,8 +36,8 @@ export default class HeaderMobile extends React.Component {
             listItems = this.state.authors.map((author,i) =>
                 (
                     <div className="user_container" key={i}>
-                        <img  src={author.picture.medium} alt="user's-image" className="user_img"/>
-                        <span className="user_name">{`Hello ${author.name.first} ${author.name.last}`}</span>
+                        <img  src={author.picture.medium} alt="user's-image" className="user_img_mobile"/>
+                        <span className="user_name_mobile">{`Hello ${author.name.first} ${author.name.last}`}</span>
                     </div>
                 )
             );
@@ -48,9 +48,9 @@ export default class HeaderMobile extends React.Component {
     render() {
         return (
 
-            <div className="flex-container-Mobile">
+            <div className="flex-container-mobile">
                 <div className="user">{this._renderAuthors()}</div>
-                <div className="name"> Sample </div>
+                <div className="name-mobile"> Sample </div>
 
             </div>
 
