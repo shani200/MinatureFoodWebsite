@@ -1,0 +1,203 @@
+
+.ProductBackdrop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(210, 214, 214, 0.78);
+}
+
+.ProductModalMobile{
+    background-color: rgba(24, 53, 88, 0.72);
+    border-radius: 5px;
+    width: 83vw;
+    height: 60vh;
+    margin: 0 auto;
+    padding: 60px;
+    color: white;
+    min-width: 444px;
+    position: relative;
+}
+
+.modal-header{
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(181, 161, 179, 0.8);
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: baseline;
+    flex-shrink: 0;
+    font-size: 15px;
+    max-height: 30px;
+    padding: 3px 0 2px 0;
+}
+
+h2{
+    text-shadow: 4px -5px 2px rgb(131, 156, 177);
+}
+
+
+.imagesMobile {
+    width: 100%;
+    height: 40%;
+    display: inline-block;
+    border: 2px solid #ccc3df;
+    margin-top: 50px;
+    border-radius: 1%;
+    -webkit-filter: contrast(120%);filter: contrast(120%);
+}
+
+.imagesMobile:hover{
+    border: 2px solid #d3ffe2;
+}
+
+.description{
+    width: 49%;
+    display: inline-block;
+    position: absolute;
+}
+
+.titleMobile{
+    font-size: 5vw;
+    padding: 0 0 5px 0;
+    font-family: Arial , sans-serif;
+    color: #fbfbfb;
+    text-align: center;
+    border-bottom: 5px double #fbfbfb;
+    text-shadow: 4px -5px 2px #bfc6c859;
+}
+
+.title:hover{
+    color:white;
+    border-bottom: 5px double white;
+}
+
+.priceMobile{
+    font-size: 3.7vw;
+    font-style: italic;
+    color: white;
+    position: relative;
+    margin-top: 2.8vw;
+    left: 56px;
+    padding-bottom: 22px;
+}
+
+.price-tag-mobile{
+    padding-right: 6px;
+}
+
+/*.price-tag:hover ,.price:hover{
+    background-color: #c2eed5;
+    color:black;
+    width: 17%;
+    height: 1vh;
+}*/
+
+.view {
+    font-size: 17px;
+    color: white;
+    position: relative;
+    left: 55px;
+    padding-top: 25px;
+}
+
+.overviewMobile{
+    color:white;
+    font-style: italic;
+    font-size: 3.7vw;
+}
+
+.overviewMobile:hover{
+    color:black;
+    background-color: #a8f7ff;
+    width: 85%;
+}
+
+ul:hover{
+    color:black;
+    width: 80%;
+    background-color: #ead5fb;
+}
+
+.btn-close-mobile{
+           background-color: rgba(43, 36, 43, 0.8);
+           color: white;
+           padding: 1.5vw;
+           text-align: center;
+           text-decoration: none;
+           font-size: 3vw;
+           cursor: pointer;
+           border: none;
+ }
+
+.btn-exit-mobile{
+    position: absolute;
+    top: -60px;
+    right: -22px;
+}
+.btn-exit-mobile:hover{
+    opacity: 0.5;
+}
+
+.symbol{
+    padding-right: 7px;
+}
+
+.btn-cart-mobile{
+    background-color: rgba(43, 36, 43, 0.8);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3.7vw;
+    cursor: pointer;
+    margin-top: 1vh;
+    border: none;
+    width: 83vw;
+    padding: 2vw;
+}
+
+.btn-cart-mobile:hover{
+    opacity:0.5;
+    border: 1px solid rgb(249, 204, 203);
+}
+.quantityMobile{
+    font-size: 3.7vw;
+    color:white;
+    padding-right: 6px;
+    align-self: center;
+}
+
+.amount{
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+/*.quantity:hover{
+    background-color: #ffbcff;
+    color:black;
+    width: 2vw;
+    height: 2vh;
+}*/
+
+
+.ProductModalMobile  input[type=text]{
+    /*text-align: center;*/
+    width: 7vw;
+    height: 2.5vh;
+    font-size: 3.7vw;
+    border: 3px solid rgb(230, 207, 249);
+    border-radius: 3px;
+}
+
+.ProductModalMobile  input[type=text]:focus{
+    border: 3px solid rgb(182, 247, 249);
+}
+
+.ProductModalMobile li{
+    font-size: 3.7vw;
+}

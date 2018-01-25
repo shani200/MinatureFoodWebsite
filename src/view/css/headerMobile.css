@@ -20,7 +20,7 @@
     box-sizing: border-box;
     text-shadow: 6px -1px 6px #111111;
     margin-left: 17vh;
-    font-size: 6vw;
+    font-size: 6.9vw;
 }
 
 .Notification{
@@ -60,5 +60,5 @@
 .user_name_mobile{
     text-align: center;
     padding-left: 16px;
-    font-size: 3vw;
+    font-size: 3.6vw;
 }

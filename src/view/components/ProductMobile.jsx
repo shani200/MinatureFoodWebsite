@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/productMobile.css'
 import GalleryItemMobile from "./GalleryItemMobile";
-import ProductDisplay from './ProductDisplay.jsx'
+import ProductDisplayMobile from './ProductDisplayMobile.jsx'
 import websiteCommonService from '../../controller/WebsiteCommonService';
 
 export default class Product extends React.Component {
@@ -53,14 +53,14 @@ export default class Product extends React.Component {
         return (
             <div className="gallery-display">
                 {this._renderGalleryItems()}
-                <ProductDisplay itemsArray={this.state._galleryArr}
+                <ProductDisplayMobile itemsArray={this.state._galleryArr}
                                 index={this.state.isOpenIndex}
                                 show={this.state.isOpen}
                                 onClose={this.toggleProduct}
                                 notification={this.props.notification}
                                 closeModal={this.closeModal}
                                 stayOpenModal={this.openModal}>
-                </ProductDisplay>
+                </ProductDisplayMobile>
             </div>
         );
     }

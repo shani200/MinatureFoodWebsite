@@ -37,7 +37,7 @@ export default class HeaderMobile extends React.Component {
                 (
                     <div className="user_container" key={i}>
                         <img  src={author.picture.medium} alt="user's-image" className="user_img_mobile"/>
-                        <span className="user_name_mobile">{`Hello ${author.name.first} ${author.name.last}`}</span>
+                        <span className="user_name_mobile">{`Hello ${author.name.first}`}</span>
                     </div>
                 )
             );
