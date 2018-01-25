@@ -157,8 +157,8 @@ export default class Register extends React.Component {
                         <input type="submit" value="Register" className="buttonMobileRegister"/>
                     </form>
 
-                    <div className="btn-exit-mobile">
-                        <button  className="btn-close-mobile" onClick={this.props.onClose}>
+                    <div className="btn-register-exit-mobile">
+                        <button  className="btn-register-close-mobile" onClick={this.props.onClose}>
                             X
                         </button>
                     </div>

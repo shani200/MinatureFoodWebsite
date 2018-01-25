@@ -1,8 +1,8 @@
 import React from 'react';
 import LogInMobile from './LogInMobile';
-import ShoppingCart from './ShoppingCart';
 import '../css/navbarMobile.css'
 import RegisterMobile from "./RegisterMobile";
+import ShoppingCartMobile from "./ShoppingCartMobile";
 
 
 export default class NavBar extends React.Component {
@@ -75,10 +75,10 @@ export default class NavBar extends React.Component {
                     <button className="shopping-button" onClick={this.toggleShoppingCart}>
                         <img src={'http://findicons.com/files/icons/1700/2d/512/cart.png'} width="200" height="100" alt="shopping-cart" className="img-cart-mobile"  />
                     </button>
-                    <ShoppingCart show={this.state.isShoppingCartOpen}
+                    <ShoppingCartMobile show={this.state.isShoppingCartOpen}
                                   onClose={this.toggleShoppingCart}
                                   notification={this.props.notification}>
-                    </ShoppingCart>
+                    </ShoppingCartMobile>
                 </div>
             </div>
         );

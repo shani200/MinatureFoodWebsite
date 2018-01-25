@@ -127,7 +127,7 @@ ul:hover{
 .btn-close-mobile{
            background-color: rgba(43, 36, 43, 0.8);
            color: white;
-           padding: 1.5vw;
+           padding: 10px;
            text-align: center;
            text-decoration: none;
            font-size: 3vw;
@@ -137,7 +137,7 @@ ul:hover{
 
 .btn-exit-mobile{
     position: absolute;
-    top: -60px;
+    top: -50px;
     right: -22px;
 }
 .btn-exit-mobile:hover{

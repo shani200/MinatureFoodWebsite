@@ -110,19 +110,19 @@ label:hover{
     opacity: 0.5;
 }
 
-.btn-exit-mobile{
+.btn-logIn-exit-mobile{
     position: absolute;
-    top: -65px;
-    right: -48px;
+    top: -52px;
+    right: -38px;
 }
 
-.btn-close-mobile{
+.btn-logIn-close-mobile{
     background-color: rgba(43, 36, 43, 0.8);
     color: white;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
-    font-size: 4vw;
+    font-size: 3vw;
     cursor: pointer;
     border :none;
 

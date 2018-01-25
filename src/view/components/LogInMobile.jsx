@@ -160,8 +160,8 @@ export default class LogIn extends React.Component {
                         <input type="submit" value="Sign in" className="submitMobile"   />
                     </form>
 
-                    <div className="btn-exit-mobile">
-                        <button  className="btn-close-mobile" onClick={this.props.onClose}>
+                    <div className="btn-logIn-exit-mobile">
+                        <button  className="btn-logIn-close-mobile" onClick={this.props.onClose}>
                             X
                         </button>
                     </div>
