@@ -138,7 +138,7 @@ export default class ProductDisplay extends React.Component {
 
     onStayOpenModal(){
         this.props.stayOpenModal();
-}
+    }
 
     renderProducts(){
         //render nothing if the prop show is false

@@ -59,7 +59,9 @@ export default class Product extends React.Component {
                                 onClose={this.toggleProduct}
                                 notification={this.props.notification}
                                 closeModal={this.closeModal}
-                                stayOpenModal={this.openModal}>
+                                stayOpenModal={this.openModal}
+                                onRequestClose={this.toggleProduct}
+                                shouldCloseOnOverlayClick={true}>
                 </ProductDisplay>
             </div>
         );
