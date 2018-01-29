@@ -64,7 +64,7 @@ creteStyle(){
                     fontSize: '7vw'
                 },
                 success: { // Applied only to the success notification item
-                    fontSize: '3.7vw',
+                    fontSize: '4vw',
                     width:'45vw',
                     color: '#657268',
                     borderTop: '1.4vw solid #afbeb2',
