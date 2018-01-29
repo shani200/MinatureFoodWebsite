@@ -87,7 +87,8 @@ export default class ShoppingCart extends React.Component {
             <div className="cartDisplay">
                 <span className="cartImage"><img className="imageProduct" src={this.state.galleryArray[index].image}/></span>
                 <span className="cartTitle">{this.state.galleryArray[index].title}</span>
-                <span className="cartQuantity">Quantity:
+                <span className="cartQuantity">
+                    <span className="quantityTitle"> Quantity:</span>
                     <input type="text"
                            value={amount}
                            className="amount-box"

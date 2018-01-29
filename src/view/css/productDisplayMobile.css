@@ -15,7 +15,7 @@
     background-color: rgba(24, 53, 88, 0.72);
     border-radius: 5px;
     width: 83vw;
-    height: 60vh;
+    height: 73vh;
     margin: 0 auto;
     padding: 60px;
     color: white;
@@ -98,12 +98,13 @@ h2{
     height: 1vh;
 }*/
 
-.view {
+.viewMobile {
     font-size: 17px;
     color: white;
     position: relative;
     left: 55px;
     padding-top: 25px;
+    width: 90vw;
 }
 
 .overviewMobile{
@@ -112,17 +113,7 @@ h2{
     font-size: 3.7vw;
 }
 
-.overviewMobile:hover{
-    color:black;
-    background-color: #a8f7ff;
-    width: 85%;
-}
 
-ul:hover{
-    color:black;
-    width: 80%;
-    background-color: #ead5fb;
-}
 
 .btn-close-mobile{
            background-color: rgba(43, 36, 43, 0.8);

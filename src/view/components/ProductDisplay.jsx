@@ -55,7 +55,7 @@ export default class ProductDisplay extends React.Component {
         let list = [];
         let item = this.props.itemsArray[this.props.index];
          for (let i=0; i< item.desc.length; i++) {
-              list.push(<li> {`${item.desc[i].key} : ${item.desc[i].nameValue}`}</li>);
+              list.push(<li> {`${item.desc[i].key} : ${item.desc[i].value}`}</li>);
           }
         return list;
     }

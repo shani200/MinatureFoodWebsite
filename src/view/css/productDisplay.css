@@ -45,14 +45,13 @@ h2{
     width: 45%;
     height: 90%;
     display: inline-block;
-    border: 2px solid #ccc3df;
     margin-top: 50px;
-    border-radius: 50%;
+    border-radius: 1%;
     -webkit-filter: contrast(120%);filter: contrast(120%);
 }
 
 .images:hover{
-    border: 2px solid #d3ffe2;
+    filter: saturate(180%);
 }
 
 .description{
@@ -74,8 +73,7 @@ h2{
 }
 
 .title:hover{
-   color:white;
-   border-bottom: 5px double white;
+  opacity: 0.7;
 }
 
 .price{
@@ -89,6 +87,10 @@ h2{
 
 .price-tag{
     padding-right: 6px;
+}
+
+.price-tag:hover{
+    color: #a8f7ff;
 }
 
 /*.price-tag:hover ,.price:hover{
@@ -113,15 +115,13 @@ h2{
 }
 
 .overview:hover{
-    color:black;
-    background-color: #a8f7ff;
+    color: #a8f7ff;
     width: 85%;
 }
 
-ul:hover{
-    color:black;
+.ProductModal ul:hover{
     width: 80%;
-    background-color: #ead5fb;
+    color: #ead5fb;
 }
 
 .btn-exit{
@@ -146,7 +146,7 @@ ul:hover{
     cursor: pointer;
     margin-left: 55px;
     padding: 2% 38%;
-    border:none;
+    border: 1px solid rgba(43, 36, 43, 0.8);
 }
 
 .btn-cart:hover{
@@ -158,6 +158,10 @@ ul:hover{
     color:white;
     padding-right: 6px;
     align-self: center;
+}
+
+.quantity:hover{
+    color: #a8f7ff;
 }
 
 .amount{

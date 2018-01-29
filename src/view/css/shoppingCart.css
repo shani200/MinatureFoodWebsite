@@ -107,6 +107,9 @@
     color: #44fff0;
 }
 
+.quantityTitle{
+ margin-right: 0.5vw;
+}
 
 .cartQuantity{
     text-align: center;
@@ -121,7 +124,7 @@
 
 .cartModal input[type=text]{
     /*text-align: center;*/
-    width: 4vw;
+    width: 2.4vw;
     height: 4vh;
     font-size:18px;
     border: 2px solid rgb(230, 207, 249);
