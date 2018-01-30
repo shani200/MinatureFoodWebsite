@@ -1,3 +1,21 @@
+# Miniature Food
+
+Simulator website of shopping clay miniatures food.
+You can pick your favorites items and add them to your shopping cart.
+When you click on the cart button you  will see a summary of your list items with the price.
+
+## Usage
+
+npm install
+npm start
+open http://localhost:3000
+
+### Authors
+
+ ~Shani Kahila
+
+---
+
 # react-basscss-hot-boilerplate
 
 Fork of [gaearon/react-hot-boilerplate](https://github.com/gaearon/react-hot-boilerplate)
