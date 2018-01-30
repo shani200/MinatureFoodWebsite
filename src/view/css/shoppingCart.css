@@ -187,19 +187,19 @@
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
-    border: none;
+    border: 1px #111f57 solid;
     border-radius: 5px;
 
 }
 
 .btn-remove:hover{
-    background-color: #a08cb4;
+    background-color: #111f57;
 }
 
 
 .btn-remove:active {
-    background-color: #a08cb4;
-    transform: translateY(5px);
+    background-color: #111f57;
+    transform: translateY(3px);
 }
 
 .price-zone{
@@ -213,8 +213,8 @@
 }
 
 .price-zone:hover{
-    color: #ad0d49;
-    border-top: 1px solid #ad0d49;
-    border-bottom: 1px solid #ad0d49;
+    color: #ff0030;
+    border-top: 1px solid #ff0030;
+    border-bottom: 1px solid #ff0030;
     opacity: 0.6;
 }
