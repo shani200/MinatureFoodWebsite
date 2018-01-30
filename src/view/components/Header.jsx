@@ -50,8 +50,7 @@ export default class Header extends React.Component {
 
             <div className="flex-container">
                <div className="user">{this._renderAuthors()}</div>
-               <div className="name"> Sample </div>
-
+               <div className="name">Miniature Food</div>
            </div>
             
         );

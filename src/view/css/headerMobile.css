@@ -14,13 +14,15 @@
 
 .name-mobile{
     display: flex;
-    color: white;
+    color: #f7f7f7;
     width: 100px;
     padding: 10px;
     box-sizing: border-box;
-    text-shadow: 6px -1px 6px #111111;
+    text-shadow: 5px -5px 6px #111111;
     margin-left: 17vh;
-    font-size: 6.9vw;
+    font-family: cursive;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .Notification{

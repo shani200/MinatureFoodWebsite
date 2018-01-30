@@ -50,7 +50,7 @@ export default class HeaderMobile extends React.Component {
 
             <div className="flex-container-mobile">
                 <div className="user">{this._renderAuthors()}</div>
-                <div className="name-mobile"> Sample </div>
+                <div className="name-mobile"> Miniature Food </div>
 
             </div>
 
