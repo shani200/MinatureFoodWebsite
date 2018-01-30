@@ -12,7 +12,7 @@ open http://localhost:3000
 
 ### Authors
 
- ~Shani Kahila
+ -Shani Kahila
 
 ---
 
