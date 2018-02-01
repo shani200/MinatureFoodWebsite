@@ -166,7 +166,7 @@ export default class ProductDisplay extends React.Component {
                             {this.props.itemsArray[this.props.index].price}$
                         </div>
 
-                        <div className="amount">
+                        <div className="amount-mobile">
                             <span className="quantityMobile">Quantity:</span>
                             <input type="text"
                                    value={this.state.amountValue}

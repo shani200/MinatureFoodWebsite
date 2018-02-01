@@ -83,12 +83,12 @@ h2{
     color: white;
     position: relative;
     margin-top: 2.8vw;
-    left: 56px;
+    left: 5vw;
     padding-bottom: 22px;
 }
 
 .price-tag-mobile{
-    padding-right: 6px;
+    padding-right: 1vw;
 }
 
 /*.price-tag:hover ,.price:hover{
@@ -159,13 +159,13 @@ h2{
 .quantityMobile{
     font-size: 3.7vw;
     color:white;
-    padding-right: 6px;
+    padding-right: 1vw;
     align-self: center;
 }
 
-.amount{
+.amount-mobile{
     justify-content: flex-start;
-    margin-left: 50px;
+    margin-left: 5vw;
 }
 
 /*.quantity:hover{
