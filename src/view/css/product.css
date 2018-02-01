@@ -15,8 +15,8 @@
 }
 
 div.gallery:hover {
-    -webkit-filter: saturate(200%);
-    filter: saturate(200%);
+    -webkit-filter: saturate(230%);
+    filter: saturate(230%);
     border: 3px solid #beffec;
     background-color: #b7bec0;
     color: white;

@@ -15,11 +15,10 @@ import jar_of_sweets from '../view/pictures/jar_of_sweets.jpg';
 import macaroon_clips from '../view/pictures/macaroon_clips.jpg';
 import ice_creams from '../view/pictures/ice_creams.jpg';
 import mermaid_pusheen from '../view/pictures/mermaid_pusheen.jpg';
-import marshmallow from '../view/pictures/marshmallow.jpg';
+import cinnamon_bun from '../view/pictures/cinnamon_bun.jpg';
 import mini_cookies from '../view/pictures/mini_cookies.jpg';
 import oven_glove from '../view/pictures/oven_glove.jpg';
 import pink_cake from '../view/pictures/pink_cake.jpg';
-import baking_scene from '../view/pictures/baking_scene.jpg';
 import pink_ice_cream from '../view/pictures/pink_ice_cream.jpg';
 import plants from '../view/pictures/plants.jpg';
 import pusheen_cookies_set from '../view/pictures/pusheen_cookies_set.jpg';
@@ -31,12 +30,53 @@ import macaroons from '../view/pictures/macaroons.jpg';
 import rilakuma from '../view/pictures/rilakuma.jpg';
 import pocky from '../view/pictures/pocky.jpg';
 import plant from '../view/pictures/plant.jpg';
-import rilakuma_donut from '../view/pictures/rilakuma_donut.jpg';
-import macaroon_cat from '../view/pictures/macaroon_cat.jpg';
 import yellow_set from '../view/pictures/yellow_set.jpg';
+import gingerbread_house from '../view/pictures/gingerbread_house.jpg';
+import gingerbread_man from '../view/pictures/gingerbread_man.jpg';
+import heart_cookies from '../view/pictures/heart_cookies.jpg';
 
 let  websiteConfig = {
     galleryItemArr: [
+        {
+            id: 'A1117',
+            title: 'Gingerbread House',
+            price: 20.90,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: gingerbread_house
+        },
+        {
+            id: 'A1117',
+            title: 'Gingerbread Man',
+            price: 12.90,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                }
+            ],
+            image: gingerbread_man
+        },
         {
             id: 'A6567',
             title: 'Confetti Birthday Cake',
@@ -140,6 +180,30 @@ let  websiteConfig = {
                 }
             ],
             image: blue_set
+        },
+        {
+            id: 'C3007',
+            title: 'Heart Cookies',
+            price: 14.90,
+            desc: [
+                {
+                    key: 'Type',
+                    value: 'Handmade item'
+                },
+                {
+                    key: 'Material',
+                    value: 'polymer clay'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Gift wrapping and message available'
+                },
+                {
+                    key: 'Usage',
+                    value: 'Can use as a pendent'
+                }
+            ],
+            image: heart_cookies
         },
         {
             id: 'NM227',
@@ -399,7 +463,7 @@ let  websiteConfig = {
         },
         {
             id: 'O1272',
-            title: 'Marshmallow',
+            title: 'Cinnamon Bun',
             price: 8.90,
             desc: [
                 {
@@ -415,7 +479,7 @@ let  websiteConfig = {
                     value: 'Gift wrapping and message available'
                 }
             ],
-            image: marshmallow
+            image: cinnamon_bun
         },
         {
             id: 'F2527',
@@ -496,26 +560,6 @@ let  websiteConfig = {
                 }
             ],
             image: pink_cake
-        },
-        {
-            id: 'JJJ22',
-            title: 'Baking Cookies Scene',
-            price: 14.70,
-            desc: [
-                {
-                    key: 'Type',
-                    value: 'Handmade item'
-                },
-                {
-                    key: 'Material',
-                    value: 'polymer clay'
-                },
-                {
-                    key: 'Usage',
-                    value: 'Gift wrapping and message available'
-                }
-            ],
-            image: baking_scene
         },
         {
             id: '2K582',
@@ -642,9 +686,9 @@ let  websiteConfig = {
             image: pink_macaroon
         },
         {
-            id: 'SS554',
-            title: 'Cactus',
-            price: 9.90,
+            id: 'V1773',
+            title: 'Rilakuma The Bear',
+            price: 8.80,
             desc: [
                 {
                     key: 'Type',
@@ -659,7 +703,7 @@ let  websiteConfig = {
                     value: 'Gift wrapping and message available'
                 }
             ],
-            image: cactus
+            image: rilakuma
         },
         {
             id: 'P6297',
@@ -682,9 +726,9 @@ let  websiteConfig = {
             image: macaroons
         },
         {
-            id: 'V1773',
-            title: 'Rilakuma The Bear',
-            price: 8.80,
+            id: 'SS554',
+            title: 'Cactus',
+            price: 9.90,
             desc: [
                 {
                     key: 'Type',
@@ -699,7 +743,7 @@ let  websiteConfig = {
                     value: 'Gift wrapping and message available'
                 }
             ],
-            image: rilakuma
+            image: cactus
         },
         {
             id: 'E1947',
@@ -741,46 +785,8 @@ let  websiteConfig = {
             ],
             image: plant
         },
-        {
-            id: 'YK558',
-            title: 'Rilakuma Stuck In Donut',
-            price: 9.70,
-            desc: [
-                {
-                    key: 'Type',
-                    value: 'Handmade item'
-                },
-                {
-                    key: 'Material',
-                    value: 'polymer clay'
-                },
-                {
-                    key: 'Usage',
-                    value: 'Gift wrapping and message available'
-                }
-            ],
-            image: rilakuma_donut
-        },
-        {
-            id: 'JJ001',
-            title: 'Macaroon Cat',
-            price: 12.60,
-            desc: [
-                {
-                    key: 'Type',
-                    value: 'Handmade item'
-                },
-                {
-                    key: 'Material',
-                    value: 'polymer clay'
-                },
-                {
-                    key: 'Usage',
-                    value: 'Gift wrapping and message available'
-                }
-            ],
-            image: macaroon_cat
-        }
+
+
     ]
 };
 export default websiteConfig;
