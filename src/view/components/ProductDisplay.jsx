@@ -21,6 +21,7 @@ export default class ProductDisplay extends React.Component {
         this._addNotification = this._addNotification.bind(this);
         this.clearAmount = this.clearAmount.bind(this);
         this.isIdExists = this.isIdExists.bind(this);
+        this.onAlert = this.onAlert.bind(this);
         this.handleOnClickAddToCart = this._handleOnClickAddToCart.bind(this);
 
     }
@@ -137,8 +138,25 @@ export default class ProductDisplay extends React.Component {
     }
 
     onStayOpenModal(){
-        this.props.stayOpenModal();
+        this.props.onStayOpenModal();
     }
+
+    onAlert(event){
+        // let className = event.target.className;
+        // if(className === 'ProductModal' || 'ProductModal'<className ){
+        //     this.onStayOpenModal();
+        // }else{
+        //     this.onExit();
+        // }
+
+        let className = event.target.className;
+        if(className === 'ProductBackdrop'){
+            this.onExit();
+        }
+        else{
+            this.onStayOpenModal();
+        }
+}
 
     renderProducts(){
         //render nothing if the prop show is false
@@ -148,9 +166,8 @@ export default class ProductDisplay extends React.Component {
         let divStyle = {
             listStyleType: 'upper-roman'
         };
-
         return(
-            <div className="ProductBackdrop">
+            <div className="ProductBackdrop" onClick={this.onAlert}>
                 <div className="ProductModal">
                     <img className="images" src={this.props.itemsArray[this.props.index].image}/>
                     <div className="description">
