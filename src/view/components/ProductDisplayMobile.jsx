@@ -22,6 +22,7 @@ export default class ProductDisplay extends React.Component {
         this.clearAmount = this.clearAmount.bind(this);
         this.isIdExists = this.isIdExists.bind(this);
         this.handleOnClickAddToCart = this._handleOnClickAddToCart.bind(this);
+        this.onOutsideClick = this.onOutsideClick.bind(this);
 
     }
 
@@ -140,6 +141,14 @@ export default class ProductDisplay extends React.Component {
         this.props.stayOpenModal();
     }
 
+
+    onOutsideClick(event) {
+        let className = event.target.className;
+        if (className === 'ProductBackdrop') {
+            this.onExit();
+        }
+    }
+
     renderProducts(){
         //render nothing if the prop show is false
         if(!this.props.show){
@@ -150,7 +159,7 @@ export default class ProductDisplay extends React.Component {
         };
 
         return(
-            <div className="ProductBackdrop">
+            <div className="ProductBackdrop" onClick={this.onOutsideClick}>
                 <div className="ProductModalMobile">
 
                     <div className="titleMobile">

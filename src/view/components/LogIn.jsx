@@ -21,6 +21,7 @@ export default class LogIn extends React.Component {
         this.clearState = this.clearState.bind(this);
         this.setStateOfUserSignIn = this.setStateOfUserSignIn.bind(this);
         this.onStayOpenModal = this.onStayOpenModal.bind(this);
+        this.onOutsideClick = this.onOutsideClick.bind(this);
 
     }
     componentDidMount(){
@@ -138,6 +139,12 @@ export default class LogIn extends React.Component {
 
     }
 
+    onOutsideClick(event) {
+        let className = event.target.className;
+        if (className === 'backdrop') {
+            this.props.onClose();
+        }
+    }
 
     render() {
         //render nothing if the prop show is false
@@ -145,7 +152,7 @@ export default class LogIn extends React.Component {
             return null;
         }
         return (
-            <div className="backdrop">
+            <div className="backdrop" onClick={this.onOutsideClick}>
                 <div className="LogInModal">
                     <form onSubmit={this.handleSubmit}>
                         <h1> Sign in </h1>

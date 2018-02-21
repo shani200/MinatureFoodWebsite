@@ -141,22 +141,12 @@ export default class ProductDisplay extends React.Component {
         this.props.onStayOpenModal();
     }
 
-    onAlert(event){
-        // let className = event.target.className;
-        // if(className === 'ProductModal' || 'ProductModal'<className ){
-        //     this.onStayOpenModal();
-        // }else{
-        //     this.onExit();
-        // }
-
+    onAlert(event) {
         let className = event.target.className;
-        if(className === 'ProductBackdrop'){
+        if (className === 'ProductBackdrop') {
             this.onExit();
         }
-        else{
-            this.onStayOpenModal();
-        }
-}
+    }
 
     renderProducts(){
         //render nothing if the prop show is false

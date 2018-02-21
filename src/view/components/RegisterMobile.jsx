@@ -18,6 +18,7 @@ export default class Register extends React.Component {
         this.clearState = this.clearState.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onStayOpenModal = this.onStayOpenModal.bind(this);
+        this.onOutsideClick = this.onOutsideClick.bind(this);
 
     }
 
@@ -127,13 +128,20 @@ export default class Register extends React.Component {
 
     }
 
+    onOutsideClick(event) {
+        let className = event.target.className;
+        if (className === 'RegisterBackdrop') {
+            this.props.onClose();
+        }
+    }
+
     render() {
         //render nothing if the prop show is false
         if(!this.props.show){
             return null;
         }
         return (
-            <div className="RegisterBackdrop">
+            <div className="RegisterBackdrop" onClick={this.onOutsideClick}>
                 <div className="RegisterModalMobile">
 
                     <form onSubmit={this.handleSubmit}>

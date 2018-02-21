@@ -22,6 +22,7 @@ export default class ShoppingCartMobile extends React.Component {
         this.findIndex = this.findIndex.bind(this);
         this._addNotification = this._addNotification.bind(this);
         //  this.handleOnClickDelete = this._handleOnClickDelete.bind(this);
+        this.onOutsideClick = this.onOutsideClick.bind(this);
     }
 
     componentDidMount(){
@@ -159,6 +160,12 @@ export default class ShoppingCartMobile extends React.Component {
         }
     }
 
+    onOutsideClick(event) {
+        let className = event.target.className;
+        if (className === 'cartBackdrop') {
+            this.props.onClose();
+        }
+    }
 
     render() {
         //render nothing if the prop show is false
@@ -166,7 +173,7 @@ export default class ShoppingCartMobile extends React.Component {
             return null;
         }
         return (
-            <div className="cartBackdrop">
+            <div className="cartBackdrop" onClick={this.onOutsideClick}>
                 <div className="cartModalMobile">
                     <div className="cartProductsMobile">
                         {this.renderCart()}

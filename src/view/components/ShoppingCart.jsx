@@ -21,6 +21,7 @@ export default class ShoppingCart extends React.Component {
         this.handleChange = this.handleChange.bind(this);
          this.findIndex = this.findIndex.bind(this);
         this._addNotification = this._addNotification.bind(this);
+        this.onOutsideClick = this.onOutsideClick.bind(this);
       //  this.handleOnClickDelete = this._handleOnClickDelete.bind(this);
     }
 
@@ -161,13 +162,20 @@ export default class ShoppingCart extends React.Component {
     }
 
 
+    onOutsideClick(event) {
+        let className = event.target.className;
+        if (className === 'cartBackdrop') {
+            this.props.onClose();
+        }
+    }
+
     render() {
         //render nothing if the prop show is false
         if (!this.props.show) {
             return null;
         }
         return (
-            <div className="cartBackdrop">
+            <div className="cartBackdrop" onClick={this.onOutsideClick}>
                 <div className="cartModal">
                     <div className="cartProducts">
                     {this.renderCart()}
