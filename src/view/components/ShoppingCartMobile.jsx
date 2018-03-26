@@ -44,10 +44,10 @@ export default class ShoppingCartMobile extends React.Component {
         let productsStored = JSON.parse(this._getLoaclStorage());
         if(!productsStored || !productsStored.length){
             return(
-                 <div className="emptyCartMobile">
-                     <div>Your shopping cart is empty,</div>
-                     <div>but it doesn't have to be.</div>
-                 </div>);
+                <div className="emptyCartMobile">
+                    <div>Your shopping cart is empty,</div>
+                    <div>but it doesn't have to be.</div>
+                </div>);
         }
         else {
 
